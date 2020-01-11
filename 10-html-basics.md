@@ -34,13 +34,13 @@ jupyter:
 <!-- #region trusted=true slideshow={"slide_type": "slide"} -->
 # regular setup
 
-![](client-server.svg)
+![](figures/client-server.svg)
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "slide"} -->
 # our setup today
 
-![](local-file.svg)
+![](figures/local-file.svg)
 <!-- #endregion -->
 
 <!-- #region trusted=true slideshow={"slide_type": "slide"} -->
