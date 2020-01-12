@@ -97,12 +97,8 @@ using a right click on the 'Hello' text
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-you can reach your browser's devel tools  
-may need additional preparation, depending on your browser;  
-use Chrome in case it is not working as expected
-<!-- #endregion -->
-
-<!-- #region slideshow={"slide_type": ""} -->
+you can reach your browser's devel tools  (may need additional prep / install)  
+use Chrome in case it is not working as expected  
 ![](../media/inspect-element-elements.png) 
 <!-- #endregion -->
 
