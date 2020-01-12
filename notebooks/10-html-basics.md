@@ -60,13 +60,13 @@ show_html.one_column(fragment1)
 <!-- #region slideshow={"slide_type": ""} cell_style="split" -->
 ### regular setup
 
-![](media/client-server.svg)
+![](../media/client-server.svg)
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": ""} cell_style="split" -->
 ### our setup today
 
-![](media/local-file.svg)
+![](../media/local-file.svg)
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "slide"} -->
