@@ -46,7 +46,7 @@ tools.use_style('../media/in-out.css');
   * JavaScript (a.k.a. ECMAScript)
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-# Evolution Speed
+# evolution speed
 <!-- #endregion -->
 
 * all this started in a very awkward way
@@ -57,10 +57,16 @@ tools.use_style('../media/in-out.css');
   * in the way all the pieces are integrating together
   * as well as with over-layers that try to improve / mitigate some flaws
   * like less for css, TypeScript for JavaScript, and many many more
+
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+#  focus
+
 * we will only focus on **grassroots level**
   * that will likely remain valid for a while
 * versions for our focus
   * HTML-5, CSS-3, ECMAScript-6
+<!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "slide"} -->
 # backend and frontend 
