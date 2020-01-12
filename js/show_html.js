@@ -1,7 +1,7 @@
 // css
-console.log("loading show_html")
 var css = `
 .show-html-top {
+    font-size: 0.6em;
     display:grid;
     grid-template-columns: auto auto;
 }

@@ -30,7 +30,8 @@ jupyter:
 </div>
 
 ```javascript slideshow={"slide_type": "-"}
-show_html = require('./show_html');
+tools = require('../js/tools');
+tools.use_style('../media/in-out.css');
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
@@ -49,7 +50,7 @@ fragment1 = `<html>
 </html>
 `;
 
-show_html.one_column(fragment1)
+tools.one_column(fragment1)
 
 ```
 
@@ -78,6 +79,6 @@ show_html.one_column(fragment1)
 <!-- #endregion -->
 
 ```javascript hide_input=true slideshow={"slide_type": "slide"}
-show_html.two_columns(fragment1)
+tools.two_columns(fragment1)
 
 ```
