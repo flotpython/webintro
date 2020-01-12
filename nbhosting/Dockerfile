@@ -5,9 +5,6 @@
 # as of today this is python-3.7.1
 FROM nbhosting/minimal-notebook
 
-RUN pip install jupytext
-
-
 # prerequisites with apt-get
 # we do install python(2) here because
 # some npm build part named gyp still requires it
@@ -36,8 +33,14 @@ ENV PATH="/opt/conda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin
 ENV NODE_PATH="/opt/conda/lib/node_modules/"
 USER jovyan
 
-
-# for displaying html fragments
-RUN npm install -g jsdom d3 ijavascript-plotly plotly-notebook-js
+# jupyter
+RUN pip install jupytext rise
 
 RUN jupyter nbextension enable hide_input/main
+
+# node - one can display html fragments using $$.html
+# that appears to ship with ijavascript
+# additional npm packages can of course be added, like e.g
+RUN npm install -g jsdom d3
+# RUN npm install -g ijavascript-plotly plotly-notebook-js
+
