@@ -36,6 +36,7 @@ USER jovyan
 # jupyter
 RUN pip install jupytext rise
 
+RUN jupyter nbextension enable rise/main
 RUN jupyter nbextension enable hide_input/main
 
 # node - one can display html fragments using $$.html
