@@ -38,6 +38,8 @@ tools.use_style('../media/in-out.css');
 # html basics
 <!-- #endregion -->
 
+the overall structure of a HTML document looks like this :
+
 ```javascript hide_input=true
 fragment1 = `<html>
   <head>
@@ -76,9 +78,39 @@ tools.one_column(fragment1)
 * create a file named in `.html`
 * copy the above template
 * open it in your web browser
+* you will see something like this
 <!-- #endregion -->
 
 ```javascript hide_input=true slideshow={"slide_type": "slide"}
 tools.two_columns(fragment1)
 
 ```
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+# devel tools
+<!-- #endregion -->
+
+using a right click on the 'Hello' text
+
+<!-- #region slideshow={"slide_type": ""} -->
+![](../media/inspect-element-menu.png)
+<!-- #endregion -->
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+you can reach your browser's devel tools  
+may need additional preparation, depending on your browser;  
+use Chrome in case it is not working as expected
+<!-- #endregion -->
+
+<!-- #region slideshow={"slide_type": ""} -->
+![](../media/inspect-element-elements.png) 
+<!-- #endregion -->
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+another interesting part is the (javascript) Console  
+where you can interact with the browser (more on this later)
+<!-- #endregion -->
+
+<!-- #region slideshow={"slide_type": ""} -->
+![](../media/inspect-element-console.png) 
+<!-- #endregion -->
