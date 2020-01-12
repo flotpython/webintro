@@ -13,7 +13,7 @@ def tracks(coursedir):
               sections=[
                 Section(name="html basics",
                         coursedir=coursedir,
-                        notebooks=notebooks_by_pattern(coursedir,"1*.md")),
+                        notebooks=notebooks_by_pattern(coursedir,"notebooks/1*.md")),
                 ],
               description="Intro aux outils Web frontend"),
         ]
