@@ -29,14 +29,23 @@ jupyter:
 <span>Thierry Parmentelat</span>
 </div>
 
-```javascript slideshow={"slide_type": "-"}
-// TIP: run all cells before playing the slideshow
+<!-- #region slideshow={"slide_type": "slide"} -->
+# html basics
+<!-- #endregion -->
+
+```javascript
+// run these 2 cells cell, and then 
+// click the created button
 tools = require('../js/tools');
 tools.use_style('../media/in-out.css');
 ```
 
+```javascript
+tools.run_all_button();
+```
+
 <!-- #region slideshow={"slide_type": "slide"} -->
-# html basics
+# html document structure
 <!-- #endregion -->
 
 the overall structure of a HTML document looks like this :

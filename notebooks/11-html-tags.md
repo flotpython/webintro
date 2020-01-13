@@ -33,10 +33,15 @@ jupyter:
 # basic tags
 <!-- #endregion -->
 
-```javascript slideshow={"slide_type": "-"}
-// TIP: run all cells before playing the slideshow
+```javascript
+// run these 2 cells cell, and then 
+// click the created button
 tools = require('../js/tools');
 tools.use_style('../media/in-out.css');
+```
+
+```javascript
+tools.run_all_button();
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
