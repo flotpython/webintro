@@ -97,7 +97,8 @@ using a right click on the 'Hello' text
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-you can reach your browser's devel tools  (may need additional prep / install)  
+you can reach your browser's devel tools  
+(may need additional prep / install)  
 use Chrome in case it is not working as expected  
 ![](../media/inspect-element-elements.png) 
 <!-- #endregion -->
@@ -118,21 +119,20 @@ where you can interact with the browser (more on this later)
 * unambiguously maps to a tree structure - known as an Abstract Syntax Tree
 <!-- #endregion -->
 
-<!-- #region cell_style="split" -->
+```javascript cell_style="center" hide_input=true slideshow={"slide_type": "slide"}
+tree_html = `<html>
+  <head>
+    <title> top title </title>
+  </head>
+  <body>
+    <p> a paragraph </p>
+    <p> a paragraph </p>
+  </body>
+</html>`;
+tools.one_column(tree_html)
 ```
-<html>
-    <head>
-        <title> overall title </title>
-    </head>
-    <body>
-        <p> a paragraph </p>
-        <p> a paragraph </p>
-    </body>
-</html>
-```
-<!-- #endregion -->
 
-<!-- #region cell_style="split" -->
+<!-- #region cell_style="center" hide_input=true -->
 ![](../media/abstract-syntax.svg)
 <!-- #endregion -->
 
@@ -145,7 +145,7 @@ where you can interact with the browser (more on this later)
 * so make sure to **always** close your tags properly
 <!-- #endregion -->
 
-```javascript hide_input=true
+```javascript hide_input=true slideshow={"slide_type": "slide"}
 fragment_unclosed = `<p> do not
 <p> do this`;
 
