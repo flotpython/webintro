@@ -44,8 +44,7 @@ tools.use_style('../media/in-out.css');
 <!-- #endregion -->
 
 ```javascript hide_input=true
-headers_fragment = `
-<h1> toplevel title </h1>
+headers_fragment = `<h1> toplevel title </h1>
 <h2> first sublevel title </h2>
 <h3> and so on </h3>
 <h3> other subsublevel </h3>
