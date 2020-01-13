@@ -4,7 +4,7 @@ jupyter:
   jupytext:
     cell_metadata_filter: all
     formats: md
-    notebook_metadata_filter: all,-language_info,-jupytext.text_representation.jupytext_version
+    notebook_metadata_filter: all,-language_info
     text_representation:
       extension: .md
       format_name: markdown
