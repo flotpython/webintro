@@ -91,7 +91,7 @@ function html_css(html, css) {
 <div class="show-html-css-right show-html-cell">${right}</div>
 </div>    
 `;
-    return $$.html(injected_css() + whole);    
+    return $$.html(injected_css(show_html_css) + whole);    
 }
 
 

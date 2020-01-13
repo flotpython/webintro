@@ -87,10 +87,7 @@ tools.use_style('../media/in-out.css');
 link_html = `
 <a href="https://www.google.com" target="_">link to google</a>
 `;
-link_css = `
-/* alter ALL <a> elements
-a {
-    /* remove the underline */
+link_css = `a {
     text-decoration: none;
     color: red;
 }`;
