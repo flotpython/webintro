@@ -83,13 +83,16 @@ tools.use_style('../media/in-out.css');
 * we attach a CSS fragment to change its appearance
 * **warning** this changes **all the `<a>` elements** on that page
 
-```javascript hide_input=true
-link_html = `
-<a href="https://www.google.com" target="_">link to google</a>
+```javascript hide_input=true slideshow={"slide_type": "slide"}
+link_html = `<a href="https://www.google.com" target="_">
+link to google
+</a>
 `;
 link_css = `a {
-    text-decoration: none;
     color: red;
+    font-family: times;
+    font-size: large;
+    border: 1px solid green;
 }`;
 tools.html_css(link_html, link_css);
 ```

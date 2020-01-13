@@ -38,7 +38,7 @@ div.show-html-right, div.show-html-css-right {
 }
 span.lang {
     margin-top: 10px;
-    padding: 5px;
+    padding: 5px 30px;
     border-radius: 5px;
     font-size: larger;
 }
