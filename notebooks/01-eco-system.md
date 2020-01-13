@@ -30,6 +30,7 @@ jupyter:
 </div>
 
 ```javascript
+// TIP: run all cells before playing the slideshow
 tools = require('../js/tools');
 tools.use_style('../media/in-out.css');
 ```
