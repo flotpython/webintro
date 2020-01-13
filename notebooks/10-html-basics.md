@@ -110,3 +110,53 @@ where you can interact with the browser (more on this later)
 <!-- #region slideshow={"slide_type": ""} -->
 ![](../media/inspect-element-console.png) 
 <!-- #endregion -->
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+# Abstract Syntax Tree
+
+* the `<tag> ... </tag>` notation 
+* unambiguously maps to a tree structure - known as an Abstract Syntax Tree
+<!-- #endregion -->
+
+<!-- #region cell_style="split" -->
+```
+<html>
+    <head>
+        <title> overall title </title>
+    </head>
+    <body>
+        <p> a paragraph </p>
+        <p> a paragraph </p>
+    </body>
+</html>
+```
+<!-- #endregion -->
+
+<!-- #region cell_style="split" -->
+![](../media/abstract-syntax.svg)
+<!-- #endregion -->
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+# be rigourous
+
+* browsers tend to be as tolerant as possible
+* e.g. omitting a closing tag may well render fine
+* **however** there's only so much that can be guessed
+* so make sure to **always** close your tags properly
+<!-- #endregion -->
+
+```javascript hide_input=true
+fragment_unclosed = `<p> do not
+<p> do this`;
+
+tools.two_columns(fragment_unclosed)
+ 
+```
+
+```javascript hide_input=true
+fragment_closed = `<p> do this instead </p>
+<p> clean up behind yourself </p>`;
+
+tools.two_columns(fragment_closed)
+ 
+```

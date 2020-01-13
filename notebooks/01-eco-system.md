@@ -72,14 +72,27 @@ tools.use_style('../media/in-out.css');
 # backend and frontend 
 <!-- #endregion -->
 
-* a typical realcase Web-based application at work involves 2 sides
+* typical Web-based application at work involves 2 sides
   * Web server : runs on the application provider's side
   * Web browser : runs on your laptop
 * code running on the former is called ***backend*** 
 * code that runs on the latter is called ***frontend***
-  * even though it is provided by the backend, of course
+  * even though it is provided by the backend, of course  
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+![](../media/client-server.svg)
+<!-- #endregion -->
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+# you may have heard of
+
 * typical backend technologies
   * PHP, Python/django, Ruby/on rails, SQL databases
   * apache, nginx, load balancing
 * typical frontend technologies
   * HTML, CSS, JavaScript
+* in between
+  * TCP/IP : low-level protocol of the Internet
+  * HTTP : HyperText Transfer Protocol
+  * WebSocket : full-duplex communication channel over a single TCP connection 
+<!-- #endregion -->
