@@ -33,11 +33,20 @@ ENV PATH="/opt/conda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin
 ENV NODE_PATH="/opt/conda/lib/node_modules/"
 USER jovyan
 
-# jupyter
-RUN pip install jupytext rise
+# jupytext
+RUN pip install jupytext 
+# hopefully temporary 
+# patch jupytext for header
+RUN sed -i -e 's/^\INSERT_AND_CHECK_VERSION_NUMBER.*=.*/INSERT_AND_CHECK_VERSION_NUMBER = False # patch TP/' $(python -c 'import jupytext; print(jupytext.header.__file__);')
 
+# latest rise handles jupytext input better
+RUN pip install -U --pre rise
+
+# extensions
+# somehow this one was not enabled..
 RUN jupyter nbextension enable rise/main
 RUN jupyter nbextension enable hide_input/main
+RUN jupyter nbextension enable splitcell/splitcell
 
 # node - one can display html fragments using $$.html
 # that appears to ship with ijavascript
