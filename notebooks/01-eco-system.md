@@ -33,7 +33,7 @@ jupyter:
 # Introduction to web frontend
 
 ```javascript
-// run these 2 cells cell, and then 
+// run these 2 cells, and then 
 // click the created button
 tools = require('../js/tools');
 tools.use_style('../media/in-out.css');
@@ -48,7 +48,7 @@ tools.run_all_button();
 <!-- #endregion -->
 
 * crash course on how to write web pages  
-*just scratch the surface, a **whole lot** is not even mentioned  
+* just scratch the surface, a **whole lot** is not even mentioned  
 * focus on the core technological bricks
   * HTML (HyperText Markup Language)
   * CSS (Cascading Style Sheets)

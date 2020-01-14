@@ -34,7 +34,7 @@ jupyter:
 <!-- #endregion -->
 
 ```javascript
-// run these 2 cells cell, and then 
+// run these 2 cells, and then 
 // click the created button
 tools = require('../js/tools');
 tools.use_style('../media/in-out.css');
@@ -63,21 +63,22 @@ tools.run_all_button();
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-# text attributes
+# text properties
 
-* font-family : e.g. Times
-* font-size : e.g. 12px
-* font-weight : e.g. bold
-* text-decoration : e.g. underline
+* `font-family` : e.g. Times
+* `font-size` : e.g. 12px
+* `font-weight` : e.g. bold
+* `font-style` : e.g. italic
+* `text-decoration` : e.g. underline
 * … and a whole many more
 <!-- #endregion -->
 
 <!-- #region cell_style="center" slideshow={"slide_type": "slide"} -->
-![](../media/list-attributes-all.png)
+![](../media/list-properties-all.png)
 <!-- #endregion -->
 
 <!-- #region cell_style="center" slideshow={"slide_type": "slide"} trusted=true -->
-![](../media/list-attributes-filtered.png)
+![](../media/list-properties-filtered.png)
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "slide"} -->

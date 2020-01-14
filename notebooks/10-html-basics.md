@@ -34,7 +34,7 @@ jupyter:
 <!-- #endregion -->
 
 ```javascript
-// run these 2 cells cell, and then 
+// run these 2 cells, and then 
 // click the created button
 tools = require('../js/tools');
 tools.use_style('../media/in-out.css');
@@ -63,7 +63,6 @@ fragment1 = `<html>
 `;
 
 tools.one_column(fragment1)
-
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
@@ -85,7 +84,7 @@ tools.one_column(fragment1)
 <!-- #region slideshow={"slide_type": "slide"} -->
 ## practice
 
-* create a file named in `.html`
+* create a file named `hello.html`
 * copy the above template
 * open it in your web browser
 * you will see something like this

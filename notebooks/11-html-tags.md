@@ -34,7 +34,7 @@ jupyter:
 <!-- #endregion -->
 
 ```javascript
-// run these 2 cells cell, and then 
+// run these 2 cells, and then 
 // click the created button
 tools = require('../js/tools');
 tools.use_style('../media/in-out.css');
