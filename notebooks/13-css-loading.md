@@ -14,7 +14,7 @@ jupyter:
     display_name: Javascript (Node.js)
     language: javascript
     name: javascript
-  notebookname: css basics
+  notebookname: loading css
   rise:
     autolaunch: true
     slideNumber: c/t
