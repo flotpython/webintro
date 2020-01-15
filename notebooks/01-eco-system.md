@@ -86,7 +86,9 @@ tools.run_all_button();
 
 <!-- #region slideshow={"slide_type": "slide"} -->
 ##  focus on HTML - CSS - JavaScript
+<!-- #endregion -->
 
+<!-- #region slideshow={"slide_type": "slide"} -->
 * we will only focus on **grassroots level**
   * that will likely remain valid for a while
 * versions for our focus
@@ -110,7 +112,9 @@ tools.run_all_button();
 
 <!-- #region slideshow={"slide_type": "slide"} -->
 ## you may have heard of
+<!-- #endregion -->
 
+<!-- #region slideshow={"slide_type": "slide"} -->
 * typical backend technologies
   * PHP, Python/django, Ruby/on rails, SQL databases
   * apache, nginx, load balancing

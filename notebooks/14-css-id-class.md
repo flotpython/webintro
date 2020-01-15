@@ -21,6 +21,22 @@ jupyter:
     start_slideshow_at: selected
     theme: sky
     transition: cube
+  toc:
+    base_numbering: 1
+    nav_menu: {}
+    number_sections: true
+    sideBar: false
+    skip_h1_title: false
+    title_cell: Table of Contents
+    title_sidebar: Contents
+    toc_cell: false
+    toc_position:
+      height: 381px
+      left: 74px
+      top: 261px
+      width: 320.797px
+    toc_section_display: true
+    toc_window_display: true
   version: '1.0'
 ---
 
@@ -30,7 +46,7 @@ jupyter:
 </div>
 
 <!-- #region slideshow={"slide_type": ""} -->
-# HTML elements ids and classes
+# HTML ids and classes
 <!-- #endregion -->
 
 ```javascript
@@ -45,7 +61,7 @@ tools.run_all_button();
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-# reminder
+## need for rules scope
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": ""} cell_style="split" -->
@@ -68,8 +84,10 @@ we need **more selective** mechanisms
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-# `id=` : assign a unique identifier
+## `id=` : assign a unique identifier
+<!-- #endregion -->
 
+<!-- #region slideshow={"slide_type": ""} -->
 * an element that is unique in your document 
 * can be attached a unique identifier
 <!-- #endregion -->
@@ -109,8 +127,10 @@ tools.html_css(id2_html, id2_css)
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-# `class=` : styling elements by groups
+## `class=` : styling elements by groups
+<!-- #endregion -->
 
+<!-- #region slideshow={"slide_type": ""} -->
 * it is also possible to create groups of elements
 * so that they can be styled together
 * this is simply done by setting a `class` attribute 
@@ -134,8 +154,10 @@ tools.html_css(class_html, class_css)
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-# basic selectors
+## summary of basic selectors
+<!-- #endregion -->
 
+<!-- #region slideshow={"slide_type": ""} -->
 let's summarize 
 
 | selector | applies to elements |
@@ -148,8 +170,10 @@ let's summarize
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-# cascading and inheritance
+## cascading and inheritance
+<!-- #endregion -->
 
+<!-- #region slideshow={"slide_type": ""} -->
 * cascading : what happens if **several rules** define,  
   say, the 'color' property on one element ?
 * inheritance : what happens if **no rule** defines  
@@ -169,20 +193,23 @@ the **element's parent**
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-# cascading  & specificity
+## cascading  & specificity
+<!-- #endregion -->
 
+<!-- #region slideshow={"slide_type": ""} -->
 in a nushell, the intuition behind the actual rules is that
 * if you have maunally defined a property in a `style` attribute, i.e. at the exact same place as the node, it means you want this property to apply
 * otherwise if you have specified an `id` this means you expect this setting to be valid on that node
 * otherwise if you have specified a `class`, it should apply
 * otherwise if the rule is based on the element, it should apply
 * otherwise it is a wildcard rule (you can use `*` as the selector) 
-
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-# specificity
+## specificity
+<!-- #endregion -->
 
+<!-- #region slideshow={"slide_type": ""} -->
 selectors can be more convoluted than what we've seen so far,  
 (more on this later on) but the logic to compare
 specificity can be reasonably approximated as follows :
@@ -196,7 +223,7 @@ specificity can be reasonably approximated as follows :
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-# specificity example
+### specificity example
 <!-- #endregion -->
 
 ##### (1) embedded `style=` wins
@@ -249,7 +276,7 @@ tools.html_css(spec4_html, spec_css)
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-# inheritance
+## inheritance
 <!-- #endregion -->
 
 ```javascript cell_style="center" hide_input=false
@@ -267,8 +294,10 @@ tools.html_css(inherit_html, inherit_css)
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-# inheritance (ctd)
+### inheritance (ctd)
+<!-- #endregion -->
 
+<!-- #region slideshow={"slide_type": ""} -->
 the point is that
 * we **do not** style the `<p>` and `<li>` elements specifically
 * so in this case the properies are fetched 
@@ -278,7 +307,7 @@ the point is that
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-# references
+## references
 <!-- #endregion -->
 
 * list of properties and terms

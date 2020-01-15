@@ -99,7 +99,9 @@ tools.one_column(fragment1)
 
 <!-- #region slideshow={"slide_type": "slide"} -->
 ## practice
+<!-- #endregion -->
 
+<!-- #region slideshow={"slide_type": "slide"} -->
 * create a file named `hello.html`
 * copy the above template
 * open it in your web browser
@@ -139,7 +141,9 @@ where you can interact with the browser (more on this later)
 
 <!-- #region slideshow={"slide_type": "slide"} -->
 ## DOM = Document Object Model
+<!-- #endregion -->
 
+<!-- #region slideshow={"slide_type": "slide"} -->
 * the `<tag> ... </tag>` notation 
 * unambiguously maps to a tree structure - known as an Abstract Syntax Tree
 * referred to in all documentation as "*the DOM*"
@@ -164,10 +168,13 @@ tools.one_column(tree_html)
 
 <!-- #region slideshow={"slide_type": "slide"} -->
 ## be rigourous
+<!-- #endregion -->
 
+<!-- #region slideshow={"slide_type": "slide"} -->
 * browsers tend to be as tolerant as possible
 * e.g. omitting a closing tag may well render fine
 * **however** there's only so much that can be guessed
+* this may cause **huge headaches** down the road
 * so make sure to **always** close your tags properly
 <!-- #endregion -->
 

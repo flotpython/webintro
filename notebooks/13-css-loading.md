@@ -21,6 +21,22 @@ jupyter:
     start_slideshow_at: selected
     theme: sky
     transition: cube
+  toc:
+    base_numbering: 1
+    nav_menu: {}
+    number_sections: true
+    sideBar: false
+    skip_h1_title: false
+    title_cell: Table of Contents
+    title_sidebar: Contents
+    toc_cell: false
+    toc_position:
+      height: 267px
+      left: 97px
+      top: 180px
+      width: 330.797px
+    toc_section_display: true
+    toc_window_display: true
   version: '1.0'
 ---
 
@@ -45,16 +61,20 @@ tools.run_all_button();
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-# 3 ways to apply CSS
+## 3 ways to apply CSS
+<!-- #endregion -->
 
+<!-- #region slideshow={"slide_type": ""} -->
 * located in a separate CSS URL
 * embedded in html within a `<style>` html tag
 * hard-attached to an element itself with `style=`
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-# preferred method : a separate CSS
+## preferred method : a separate CSS
+<!-- #endregion -->
 
+<!-- #region slideshow={"slide_type": ""} -->
 * write you CSS in a separate file, e.g. `mystyle.css`
 * which, assuming it is in the same directory as your `hello.html`
 * can be kind-of included in `hello.html` 
@@ -77,14 +97,14 @@ tools.run_all_button();
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-### notes on URLS
+##### notes on URLS
 
 * `href` is a URL - remember the `<a>` tag
 * which means it can be fetched anywhere with http
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": ""} -->
-### notes on self-closing tags
+##### notes on self-closing tags
 
 * note also the terminating `/>` in the `<link ... />` element
 * which could remind you of `<br />`
@@ -93,7 +113,7 @@ tools.run_all_button();
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-# second method : inline in html
+## second method : inline in html
 <!-- #endregion -->
 
 * you can also insert a `<style>` tag in your html
@@ -116,8 +136,10 @@ tools.run_all_button();
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-# hardwired in the element with `style=`
+## hardwired in the element with `style=`
+<!-- #endregion -->
 
+<!-- #region slideshow={"slide_type": ""} -->
 * attach a `style=` attribute on a HTML tag
 * this method is by far **the worst**
 * and should be used in last resort
@@ -144,7 +166,7 @@ tools.two_columns(embedded_html)
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-# practice (1)
+## practice
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": ""} hide_input=true -->
@@ -157,7 +179,7 @@ tools.two_columns(embedded_html)
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-# practice (2)
+### practice (ctd)
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": ""} hide_input=true -->

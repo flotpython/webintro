@@ -21,6 +21,22 @@ jupyter:
     start_slideshow_at: selected
     theme: sky
     transition: cube
+  toc:
+    base_numbering: 1
+    nav_menu: {}
+    number_sections: true
+    sideBar: false
+    skip_h1_title: false
+    title_cell: Table of Contents
+    title_sidebar: Contents
+    toc_cell: false
+    toc_position:
+      height: 207px
+      left: 30px
+      top: 170px
+      width: 306.797px
+    toc_section_display: true
+    toc_window_display: true
   version: '1.0'
 ---
 
@@ -45,8 +61,10 @@ tools.run_all_button();
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-# purpose of style sheet
+## purpose of style sheet
+<!-- #endregion -->
 
+<!-- #region slideshow={"slide_type": ""} -->
 * keep contents and presentation separate
 * allow to adapt same contents 
   * to different media
@@ -56,15 +74,19 @@ tools.run_all_button();
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-# what can be styled ?
+## what can be styled ?
+<!-- #endregion -->
 
+<!-- #region slideshow={"slide_type": ""} -->
 * short answer : virtually everything
 * let's start with the obvious
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-# text properties
+## text properties
+<!-- #endregion -->
 
+<!-- #region slideshow={"slide_type": ""} -->
 * `font-family` : e.g. Times
 * `font-size` : e.g. 12px
 * `font-weight` : e.g. bold
@@ -82,7 +104,7 @@ tools.run_all_button();
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-# first example
+## first example
 <!-- #endregion -->
 
 * we create a hyperlink to google

@@ -21,6 +21,22 @@ jupyter:
     start_slideshow_at: selected
     theme: sky
     transition: cube
+  toc:
+    base_numbering: 1
+    nav_menu: {}
+    number_sections: true
+    sideBar: false
+    skip_h1_title: false
+    title_cell: Table of Contents
+    title_sidebar: Contents
+    toc_cell: false
+    toc_position:
+      height: 303px
+      left: 35px
+      top: 445px
+      width: 276.391px
+    toc_section_display: true
+    toc_window_display: true
   version: '1.0'
 ---
 
@@ -45,7 +61,7 @@ tools.run_all_button();
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-# header tags `<h1>` .. `<h5>`
+## header tags `<h1>` .. `<h5>`
 <!-- #endregion -->
 
 ```javascript hide_input=true
@@ -59,7 +75,7 @@ tools.two_columns(headers_fragment)
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-# text tags `<p>` and `<br/>` 
+## text tags `<p>` and `<br/>` 
 <!-- #endregion -->
 
 ```javascript hide_input=true
@@ -77,7 +93,7 @@ tools.two_columns(text_fragment)
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-# lists with `<ul>`  and `<li>`
+## lists with `<ul>`  and `<li>`
 <!-- #endregion -->
 
 ```javascript hide_input=true
@@ -103,7 +119,7 @@ tools.two_columns(bullet_fragment)
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-# anchor tag `<a>`
+## anchor tag `<a>`
 <!-- #endregion -->
 
 the anchor tag serves two purposes :
@@ -111,7 +127,7 @@ the anchor tag serves two purposes :
 * create a **name** locally so that this particular location can be the target of a hyperlink
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-## hyperlink `<a href="some-url">`
+### hyperlink `<a href="some-url">`
 <!-- #endregion -->
 
 typical **hyperlink** reads like this  
@@ -123,7 +139,7 @@ tools.two_columns(hyperlink_fragment)
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-## name anchor `<a name="some-name">`
+### name anchor `<a name="some-name">`
 <!-- #endregion -->
 
 if you need a hyperlink to point, not at the beginning of this page, but somewhere in the middle, then create an anchor at that location
@@ -134,7 +150,7 @@ tools.two_columns(anchor_fragment)
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-## URL to an anchor
+### URL to an anchor
 
 * you can then refer to that anchor from any other webpage using a URL that ends with `#the-anchor-name`
 * so if this page is published as `https://example.com/some/page.html`
@@ -144,7 +160,7 @@ tools.two_columns(anchor_fragment)
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-## local URL
+### local URL
 <!-- #endregion -->
 
 ```javascript hide_input=true
@@ -159,7 +175,7 @@ tools.two_columns(redirect_fragment);
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-# styling
+## styling tags
 
 * a handful of convenience tags for quick styling
   * like bold, italics, underline and similar
@@ -177,7 +193,7 @@ tools.two_columns(styling_fragment)
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-# code-like
+## code-like
 
 * `<pre>` stands for preformatted \
 * `<code>` is for a terminal-like font and style
