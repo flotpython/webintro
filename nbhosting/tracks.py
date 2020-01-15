@@ -9,7 +9,7 @@ from nbhosting.courses import (
 def tracks(coursedir):
     return [
         Track(coursedir,
-              name="html basics",
+              name="HTML &  CSS basics",
               sections=[
                 Section(name="the ecosystem",
                         coursedir=coursedir,
