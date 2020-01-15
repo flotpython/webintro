@@ -196,10 +196,63 @@ specificity can be reasonably approximated as follows :
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "slide"} -->
+# specificity example
+<!-- #endregion -->
+
+##### (1) embedded `style=` wins
+
+```javascript hide_input=true
+spec1_html = `<p class="myclass" id="myid" style="color: yellow">Lorem ipsum dolor sit amet.</p>`;
+spec_css = `p {
+  color: green;
+}
+
+.myclass {
+  color: red;
+}
+
+#myid {
+  color: blue;
+}`;
+tools.html_css(spec1_html, spec_css)
+
+```
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+##### (2) then `id=` wins
+<!-- #endregion -->
+
+```javascript slideshow={"slide_type": ""} hide_input=true
+spec2_html = `<p class="myclass" id="myid">Lorem ipsum dolor sit amet.</p>`;
+tools.html_css(spec2_html, spec_css)
+
+```
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+##### (3) then `class=` wins
+<!-- #endregion -->
+
+```javascript slideshow={"slide_type": ""} hide_input=false
+spec3_html = `<p class="myclass">Lorem ipsum dolor sit amet.</p>`;
+tools.html_css(spec3_html, spec_css)
+
+```
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+##### (2) then the element's tag wins
+<!-- #endregion -->
+
+```javascript slideshow={"slide_type": ""} hide_input=false
+spec4_html = `<p>Lorem ipsum dolor sit amet.</p>`;
+tools.html_css(spec4_html, spec_css)
+
+```
+
+<!-- #region slideshow={"slide_type": "slide"} -->
 # inheritance
 <!-- #endregion -->
 
-```javascript cell_style="center" hide_input=true
+```javascript cell_style="center" hide_input=false
 inherit_html = `<div class="inheritance">
 <p> You can use inheritance to avoid setting</p>
 <ul>
@@ -218,12 +271,11 @@ tools.html_css(inherit_html, inherit_css)
 
 the point is that
 * we **do not** style the `<p>` and `<li>` elements specifically
-* so in this case the properies ar fetched 
+* so in this case the properies are fetched 
   * from their parent (the `<div>` element) 
-  * that is styled 
+  * that **is targetted** by our CSS rule
+* note that not all properties behave that way though
 <!-- #endregion -->
-
-
 
 <!-- #region slideshow={"slide_type": "slide"} -->
 # references
@@ -236,5 +288,5 @@ the point is that
   * https://www.w3.org/TR/css-cascade-3/
 
 
-* more readable explanation on specificity :
-  * https://dev.to/sorskoot/how-is-css-applied-to-your-document-465a
+* more readable explanations on specificity :
+  * https://pawelgrzybek.com/css-specificity-explained/
