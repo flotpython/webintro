@@ -21,6 +21,22 @@ jupyter:
     start_slideshow_at: selected
     theme: sky
     transition: cube
+  toc:
+    base_numbering: 1
+    nav_menu: {}
+    number_sections: true
+    sideBar: true
+    skip_h1_title: false
+    title_cell: Table of Contents
+    title_sidebar: Contents
+    toc_cell: false
+    toc_position:
+      height: calc(100% - 180px)
+      left: 10px
+      top: 150px
+      width: 245.391px
+    toc_section_display: true
+    toc_window_display: true
   version: '1.0'
 ---
 
@@ -30,7 +46,7 @@ jupyter:
 </div>
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-# html basics
+# HTML basics
 <!-- #endregion -->
 
 ```javascript
@@ -45,7 +61,7 @@ tools.run_all_button();
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-# html document structure
+## html document structure
 <!-- #endregion -->
 
 the overall structure of a HTML document looks like this :
@@ -66,7 +82,7 @@ tools.one_column(fragment1)
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-# browser and server
+## browser and server
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": ""} cell_style="split" -->
@@ -96,7 +112,7 @@ tools.two_columns(fragment1)
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-# devel tools
+## devel tools
 <!-- #endregion -->
 
 using a right click on the 'Hello' text
@@ -122,10 +138,11 @@ where you can interact with the browser (more on this later)
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-# Abstract Syntax Tree
+## DOM = Document Object Model
 
 * the `<tag> ... </tag>` notation 
 * unambiguously maps to a tree structure - known as an Abstract Syntax Tree
+* referred to in all documentation as "*the DOM*"
 <!-- #endregion -->
 
 ```javascript cell_style="center" hide_input=true slideshow={"slide_type": "slide"}
@@ -146,7 +163,7 @@ tools.one_column(tree_html)
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-# be rigourous
+## be rigourous
 
 * browsers tend to be as tolerant as possible
 * e.g. omitting a closing tag may well render fine

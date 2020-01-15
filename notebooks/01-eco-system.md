@@ -21,6 +21,22 @@ jupyter:
     start_slideshow_at: selected
     theme: sky
     transition: cube
+  toc:
+    base_numbering: 1
+    nav_menu: {}
+    number_sections: false
+    sideBar: false
+    skip_h1_title: false
+    title_cell: Table of Contents
+    title_sidebar: Contents
+    toc_cell: false
+    toc_position:
+      height: 179px
+      left: 25px
+      top: 134px
+      width: 202.391px
+    toc_section_display: true
+    toc_window_display: true
   version: '1.0'
 ---
 
@@ -44,7 +60,7 @@ tools.run_all_button();
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-# Web ecosystem (frontend)
+## Web ecosystem (frontend)
 <!-- #endregion -->
 
 * crash course on how to write web pages  
@@ -55,7 +71,7 @@ tools.run_all_button();
   * JavaScript (a.k.a. ECMAScript)
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-# evolution speed
+## evolution speed
 <!-- #endregion -->
 
 * all this started in a very awkward way
@@ -69,7 +85,7 @@ tools.run_all_button();
 
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-#  focus
+##  focus on HTML - CSS - JavaScript
 
 * we will only focus on **grassroots level**
   * that will likely remain valid for a while
@@ -78,7 +94,7 @@ tools.run_all_button();
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-# backend and frontend 
+## backend and frontend 
 <!-- #endregion -->
 
 * typical Web-based application at work involves 2 sides
@@ -93,7 +109,7 @@ tools.run_all_button();
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-# you may have heard of
+## you may have heard of
 
 * typical backend technologies
   * PHP, Python/django, Ruby/on rails, SQL databases
