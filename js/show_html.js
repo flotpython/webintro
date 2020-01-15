@@ -53,7 +53,7 @@ div.show-html-top pre {
     border-width: 1px dashed red;
     border-radius: 10px;
     border-style: dashed;
-    border-color: #ccf;
+    border-color: #335;
 }
 `;
 
