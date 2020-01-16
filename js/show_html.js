@@ -1,4 +1,6 @@
-"use strict";
+-"use strict";
+
+let fs = require('fs');
 
 // helper
 function escape(string) {
@@ -8,54 +10,6 @@ function escape(string) {
         .replace(/"/g, '&quot;')
     ;
 }
-
-// css
-let show_html_css = `
-div.show-html-top {
-    font-size: 0.8em;
-    display: grid;
-    grid-template-columns: auto auto;
-}
-div.show-html-css-left {
-    display: grid:
-    grid-template-rows: auto auto;
-}
-div.show-html-css-top-left, 
-div.show-html-css-bottom-left {
-    display: grid;
-}
-div.show-html-cell {
-    border-radius: 10px;
-    padding: 10px;
-    border: 1px solid #00f;
-    background-color: #fafafa;
-}
-div.show-html-left {
-    margin-right: 25px;
-}
-div.show-html-right, div.show-html-css-right {
-    margin-left: 25px;
-}
-span.lang {
-    margin-top: 10px;
-    padding: 5px 30px;
-    border-radius: 5px;
-    font-size: larger;
-}
-span.lang.html {
-    background-color: #dcb313;
-}
-span.lang.css {
-    background-color: #0cba27;
-}
-div.show-html-top pre {
-    padding: 8px;
-    border-width: 1px dashed red;
-    border-radius: 10px;
-    border-style: dashed;
-    border-color: #335;
-}
-`;
 
 function injected_css(css) {
     return `<style>${css}</style>`;
@@ -75,14 +29,21 @@ function two_columns(html) {
 <div class="show-html-left">${left}</div>
 <div class="show-html-right show-html-cell">${right}</div>
 </div>`;
-    return $$.html(injected_css(show_html_css) + whole);
+    return $$.html(whole);
 }
 
 
-function html_css(html, css) {
+function _html_css(html, css, iframe_filename) {
     let top_left = `<span class="lang html">HTML</span><pre><code>${escape(html)}</code></pre>`;
     let bottom_left = `<span class="lang css">CSS</span><pre><code>${escape(css)}</code></pre>`;
-    let right = injected_css(css) + html;
+    let right = injected_css(css);
+    if (! iframe_filename) {
+        right += html;
+    } else {
+        let full_code = `<style>${css}</style>${html}`;
+        let iframe = _iframe_for_stored_html(iframe_filename, full_code);
+        right += iframe;
+    }
     let whole = `<div class="show-html-top">
 <div class="show-html-css-left">
 <div class="show-html-css-top-left">${top_left}</div>
@@ -91,11 +52,27 @@ function html_css(html, css) {
 <div class="show-html-css-right show-html-cell">${right}</div>
 </div>    
 `;
-    return $$.html(injected_css(show_html_css) + whole);    
+    return $$.html(whole);    
 }
 
+
+function _iframe_for_stored_html(filename, html) {
+    fs.writeFileSync(filename, html);
+    return `<iframe class="show-html" src="${filename}" />`;
+}
+
+
+function html_css(html, css) {
+    return _html_css(html, css, false);
+}
+
+function iframe_html_css(iframe, html, css) {
+    let filename = `./${iframe}.html`;
+    return _html_css(html, css, filename);
+}
 
 //////////
 exports.one_column = one_column;
 exports.two_columns = two_columns;
 exports.html_css = html_css;
+exports.iframe_html_css = iframe_html_css

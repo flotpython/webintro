@@ -50,14 +50,10 @@ jupyter:
 <!-- #endregion -->
 
 ```javascript
-// run these 2 cells, and then 
+// run this cell, and then 
 // click the created button
 tools = require('../js/tools');
-tools.use_style('../media/in-out.css');
-```
-
-```javascript
-tools.run_all_button();
+tools.init();
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
@@ -72,7 +68,7 @@ tools.run_all_button();
 ## text properties
 <!-- #endregion -->
 
-```javascript slideshow={"slide_type": ""} cell_style="split" hide_input=true
+```javascript slideshow={"slide_type": ""} cell_style="center" hide_input=true
 text_html = `<p class="text">a sample text</p>`;
 text_css = `.text {
     font-family: times;
@@ -82,7 +78,7 @@ text_css = `.text {
     text-decoration: underline;
 }
 `;
-tools.html_css(text_html, text_css)
+tools.iframe_html_css("text-properties", text_html, text_css)
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
@@ -103,23 +99,64 @@ each visible element can be styled according to the box model, as shown in the b
 of course padding and margin are blended (added) when no border is visible
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-## box example
+## atomic properties (1)
 <!-- #endregion -->
 
-```javascript
-box_html = `<div class="box1"><p> a box </p></div>`;
-box_css = `.box1 {
-    padding-top: 5px;
+each side (t, r, b, l) of the box has its own individual properties  
+here e.g. padding and border
+
+```javascript hide_input=false
+box1_html = `<p class="box1"> a box </p></div>`;
+box1_css = `p.box1 {
+    background-color: #ccc;
+
+    padding-top: 10px;
     padding-right: 20px;
-    padding-bottom: 2px;
-    paddign-left: 5px;
+    padding-bottom: 5px;
+    padding-left: 40px;
+
     border-bottom-width: 5px;
     border-bottom-color: black;
-    background-color: #bbb;
+    border-bottom-style: solid;
 }`;
-tools.html_css(box_html, box_css);
+tools.iframe_html_css("box1", box1_html, box1_css);
 ```
 
-```javascript
+<!-- #region slideshow={"slide_type": "slide"} -->
+## atomic properties (2)
+<!-- #endregion -->
 
+again with also margin and border-radius
+
+```javascript hide_input=false
+box2_html = `<p class="box2"> a second box </p>`;
+box2_css = `p.box2 {
+    background-color: #ccc;
+
+    padding-left: 40px;
+    padding-top: 10px;
+
+    margin-left: 20px;
+    margin-top: 30px;
+
+    border-top-width: 5px;
+    border-top-color: black;
+    border-top-style: solid;
+
+    border-left-width: 10px;
+    border-left-color: red;
+    border-left-style: solid;
+
+    border-top-left-radius: 5px;
+    
+}`;
+tools.iframe_html_css("box2", box2_html, box2_css);
 ```
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+## shorthand properties
+<!-- #endregion -->
+
+of course this can become quite tedious,  
+so there also are so-called *shorthand properties*  
+that allow to set several atomic properties in one line

@@ -11,7 +11,7 @@ span.run-all {
 <span class="run-all" onclick="Jupyter.notebook.execute_all_cells()">Click this button to run all cells</span>
 before running the slideshow</span>
 `;
-    $$.html(html);
+    return html;
 }
 
 exports.run_all_button = run_all_button;

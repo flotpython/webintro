@@ -50,14 +50,10 @@ jupyter:
 <!-- #endregion -->
 
 ```javascript
-// run these 2 cells, and then 
+// run this cell, and then 
 // click the created button
 tools = require('../js/tools');
-tools.use_style('../media/in-out.css');
-```
-
-```javascript
-tools.run_all_button();
+tools.init();
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->

@@ -50,14 +50,10 @@ jupyter:
 <!-- #endregion -->
 
 ```javascript
-// run these 2 cells, and then 
+// run this cell, and then 
 // click the created button
 tools = require('../js/tools');
-tools.use_style('../media/in-out.css');
-```
-
-```javascript
-tools.run_all_button();
+tools.init();
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
@@ -105,7 +101,7 @@ id_css = `/* will apply ONLY to
 p#only-me {
     background-color: red;
 }`;
-tools.html_css(id_html, id_css)
+tools.iframe_html_css("id1", id_html, id_css)
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} hide_input=true -->
@@ -123,7 +119,7 @@ id2_css = `/* applies to elements
     background-color: blue;
     color: white;
 }`;
-tools.html_css(id2_html, id2_css)
+tools.iframe_html_css("id2", id2_html, id2_css)
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
@@ -150,7 +146,7 @@ p.no {
     background-color: red;
 }
 `;
-tools.html_css(class_html, class_css)
+tools.class_html_css("class", class_html, class_css)
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
@@ -229,8 +225,8 @@ specificity can be reasonably approximated as follows :
 ##### (1) embedded `style=` wins
 
 ```javascript hide_input=true
-spec1_html = `<p class="myclass" id="myid" style="color: yellow">Lorem ipsum dolor sit amet.</p>`;
-spec_css = `p {
+specificity1_html = `<p class="myclass" id="myid" style="color: yellow">Lorem ipsum dolor sit amet.</p>`;
+specificity_css = `p {
   color: green;
 }
 
@@ -241,7 +237,7 @@ spec_css = `p {
 #myid {
   color: blue;
 }`;
-tools.html_css(spec1_html, spec_css)
+tools.iframe_html_css("specificity1", specificity1_html, specificity_css)
 
 ```
 
@@ -250,8 +246,8 @@ tools.html_css(spec1_html, spec_css)
 <!-- #endregion -->
 
 ```javascript slideshow={"slide_type": ""} hide_input=true
-spec2_html = `<p class="myclass" id="myid">Lorem ipsum dolor sit amet.</p>`;
-tools.html_css(spec2_html, spec_css)
+specificity2_html = `<p class="myclass" id="myid">Lorem ipsum dolor sit amet.</p>`;
+tools.html_css("specificity2", specificity2_html, specificity_css)
 
 ```
 
@@ -260,8 +256,8 @@ tools.html_css(spec2_html, spec_css)
 <!-- #endregion -->
 
 ```javascript slideshow={"slide_type": ""} hide_input=false
-spec3_html = `<p class="myclass">Lorem ipsum dolor sit amet.</p>`;
-tools.html_css(spec3_html, spec_css)
+specificity3_html = `<p class="myclass">Lorem ipsum dolor sit amet.</p>`;
+tools.html_css("specificity3", specificity3_html, specificity_css)
 
 ```
 
@@ -271,7 +267,7 @@ tools.html_css(spec3_html, spec_css)
 
 ```javascript slideshow={"slide_type": ""} hide_input=false
 spec4_html = `<p>Lorem ipsum dolor sit amet.</p>`;
-tools.html_css(spec4_html, spec_css)
+tools.html_css("specificity4", specificity4_html, specificity_css)
 
 ```
 
@@ -290,7 +286,7 @@ inherit_css = `.inheritance {
     color: green;
     font-family: times;
 }`;
-tools.html_css(inherit_html, inherit_css)
+tools.iframe_html_css("inheritance", inherit_html, inherit_css)
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
