@@ -3,7 +3,6 @@ var show_html = require('./show_html');
 
 exports.one_column = show_html.one_column;
 exports.two_columns = show_html.two_columns;
-exports.html_css = show_html.html_css;
 exports.iframe_html_css = show_html.iframe_html_css;
 
 //////////

@@ -247,5 +247,5 @@ tools.two_columns(group_html)
 there indeed is a `<table>` tag in html;  
 in the early ages of HTML, tables were present everywhere, for creating fancy layouts
 
-although , we strongly recommend that you stay away from that for the moment, especially if your goal is to create  grid-based layouts, that we will cover later on
+however, we strongly recommend that you stay away from that for the moment, especially if your goal is to create  grid-based layouts, that we will cover later on
 

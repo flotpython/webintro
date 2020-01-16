@@ -35,7 +35,7 @@ jupyter:
       left: 74px
       top: 261px
       width: 320.797px
-    toc_section_display: true
+    toc_section_display: false
     toc_window_display: true
   version: '1.0'
 ---
@@ -146,7 +146,7 @@ p.no {
     background-color: red;
 }
 `;
-tools.class_html_css("class", class_html, class_css)
+tools.iframe_html_css("class", class_html, class_css)
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
@@ -222,7 +222,9 @@ specificity can be reasonably approximated as follows :
 ### specificity example
 <!-- #endregion -->
 
+<!-- #region hide_input=true -->
 ##### (1) embedded `style=` wins
+<!-- #endregion -->
 
 ```javascript hide_input=true
 specificity1_html = `<p class="myclass" id="myid" style="color: yellow">Lorem ipsum dolor sit amet.</p>`;
@@ -241,41 +243,38 @@ tools.iframe_html_css("specificity1", specificity1_html, specificity_css)
 
 ```
 
-<!-- #region slideshow={"slide_type": "slide"} -->
+<!-- #region slideshow={"slide_type": "slide"} hide_input=true -->
 ##### (2) then `id=` wins
 <!-- #endregion -->
 
 ```javascript slideshow={"slide_type": ""} hide_input=true
 specificity2_html = `<p class="myclass" id="myid">Lorem ipsum dolor sit amet.</p>`;
-tools.html_css("specificity2", specificity2_html, specificity_css)
-
+tools.iframe_html_css("specificity2", specificity2_html, specificity_css);
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
 ##### (3) then `class=` wins
 <!-- #endregion -->
 
-```javascript slideshow={"slide_type": ""} hide_input=false
+```javascript slideshow={"slide_type": ""} hide_input=true
 specificity3_html = `<p class="myclass">Lorem ipsum dolor sit amet.</p>`;
-tools.html_css("specificity3", specificity3_html, specificity_css)
-
+tools.iframe_html_css("specificity3", specificity3_html, specificity_css);
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
 ##### (2) then the element's tag wins
 <!-- #endregion -->
 
-```javascript slideshow={"slide_type": ""} hide_input=false
-spec4_html = `<p>Lorem ipsum dolor sit amet.</p>`;
-tools.html_css("specificity4", specificity4_html, specificity_css)
-
+```javascript slideshow={"slide_type": ""} hide_input=true
+specificity4_html = `<p>Lorem ipsum dolor sit amet.</p>`;
+tools.iframe_html_css("specificity4", specificity4_html, specificity_css);
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
 ## inheritance
 <!-- #endregion -->
 
-```javascript cell_style="center" hide_input=false
+```javascript cell_style="center" hide_input=true
 inherit_html = `<div class="inheritance">
 <p> You can use inheritance to avoid setting</p>
 <ul>
