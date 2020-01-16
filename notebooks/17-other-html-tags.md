@@ -97,3 +97,21 @@ circle {
 }`;
 tools.iframe_html_css("svg", svg_html, svg_css)
 ```
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+# practice 
+<!-- #endregion -->
+
+* as a conclusion of this first basic course
+  * with all the knowledge you now have about HTML and CSS,
+* write your complete resume; you should have 2 files 
+  * `resume.html`
+  * `resume.css`
+* at this point, you may think of it as if it were a word document
+  * with a header that has your details and photo
+  * and the 3 well structured sections,
+  * again 'work experience', 'education' and 'other activities'
+* try to print it in a PDF file, so that it approximately fits within a A4 page
+* **NOTE** that next course will address overall layout in greater details, 
+  (i.e. the relative place of all pieces wrt one another)  
+  so do not spend too much time on trying to make best usage of space at this point
