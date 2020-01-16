@@ -25,16 +25,16 @@ jupyter:
     base_numbering: 1
     nav_menu: {}
     number_sections: true
-    sideBar: true
+    sideBar: false
     skip_h1_title: false
     title_cell: Table of Contents
     title_sidebar: Contents
     toc_cell: false
     toc_position:
-      height: calc(100% - 180px)
-      left: 10px
-      top: 150px
-      width: 245.391px
+      height: 218px
+      left: 22px
+      top: 101px
+      width: 309.391px
     toc_section_display: true
     toc_window_display: true
   version: '1.0'

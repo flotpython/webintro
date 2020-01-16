@@ -32,8 +32,8 @@ jupyter:
     toc_cell: false
     toc_position:
       height: 303px
-      left: 35px
-      top: 445px
+      left: 1254px
+      top: 37px
       width: 276.391px
     toc_section_display: true
     toc_window_display: true
@@ -209,4 +209,27 @@ plt.plot(X, Y)
 </p>
 `;
 tools.two_columns(code_fragment)
+```
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+## grouping contents
+<!-- #endregion -->
+
+* one **very common** tag is `<div>`
+ * it is used to group together elements inside a single tree
+ * `<div>` stands for *division*
+* there is also `<span>` that serves a similar purpose 
+ * except for the linebreaking behaviour
+* an essential tool in any page design
+
+```javascript slideshow={"slide_type": "slide"} hide_input=true
+group_html = `<p> a paragraph may contain <span style="background-color: #ddd;">with a piece inside</span> that we will want to keep together, for example for styling purposes, or moving contents about, for that use a &lt;span&gt; tag.</p>
+
+<div style="background-color: #ddd;">
+  <p> when you need to group pieces that contain with several paragraphs</p>
+  <p> then a &lt;div&gt; tag is more suitable</p>
+</div>
+
+<p>this first example uses styling, that we have not studeied yet, in order to illustrate how these notions can be used in practice</p>`;
+tools.two_columns(group_html)
 ```

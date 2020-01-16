@@ -31,11 +31,11 @@ jupyter:
     title_sidebar: Contents
     toc_cell: false
     toc_position:
-      height: 47px
+      height: 270px
       left: 31px
       top: 87px
-      width: 159.359px
-    toc_section_display: false
+      width: 232.344px
+    toc_section_display: true
     toc_window_display: true
   version: '1.0'
 ---
@@ -105,9 +105,10 @@ of course padding and margin are blended (added) when no border is visible
 each side (t, r, b, l) of the box has its own individual properties  
 here e.g. padding and border
 
-```javascript hide_input=false
+```javascript hide_input=true
 box1_html = `<p class="box1"> a box </p></div>`;
 box1_css = `p.box1 {
+    font-size: x-large;
     background-color: #ccc;
 
     padding-top: 10px;
@@ -123,14 +124,18 @@ tools.iframe_html_css("box1", box1_html, box1_css);
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-## atomic properties (2)
+### atomic properties (2)
 <!-- #endregion -->
 
+<!-- #region hide_input=true -->
 again with also margin and border-radius
+<!-- #endregion -->
 
-```javascript hide_input=false
+```javascript hide_input=true
 box2_html = `<p class="box2"> a second box </p>`;
 box2_css = `p.box2 {
+    font-size: x-large;
+
     background-color: #ccc;
 
     padding-left: 40px;
@@ -148,7 +153,6 @@ box2_css = `p.box2 {
     border-left-style: solid;
 
     border-top-left-radius: 5px;
-    
 }`;
 tools.iframe_html_css("box2", box2_html, box2_css);
 ```
@@ -159,4 +163,41 @@ tools.iframe_html_css("box2", box2_html, box2_css);
 
 of course this can become quite tedious,  
 so there also are so-called *shorthand properties*  
-that allow to set several atomic properties in one line
+for dealing with paddings, margins, borders and fonts, among others
+that allow to set several atomic properties in one line, e.g. :
+
+
+* `padding: 10px;` will set all 4 *padding* properties
+* `margin: 10px 20px` will set top and bottom to `10px`, and sides to `20px` 
+* `font: xxx`
+* `border: xxx`
+* for a more complete list, [see this page on MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties)
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+### shorthand example
+<!-- #endregion -->
+
+```javascript hide_input=true
+shorthand_html = `<p class="shorthand1">shorthand properties</p>
+<hr/>`;
+shorthand_css = `p.shorthand1 {
+    font: italic bold 20pt Arial, sans-serif;
+    margin: 40px;
+    padding: 30px 90px;
+    border: 2px solid green;
+    border-radius: 10px;
+}`;
+tools.iframe_html_css("shorthand", shorthand_html, shorthand_css);
+```
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+## unit lengths
+<!-- #endregion -->
+
+a great many deal of units are available to express lengths  
+[see more details on this page](https://css-tricks.com/the-lengths-of-css/) , e.g. :
+* `10px`
+* `1in`, `2.54cm`, `25mm`
+* `20pt` (1pt = 1/2 inch)
+* `2em`, `1ex`, `20ch`, relative to current font size
+* `80%` typically for width and height, relative to parent element
