@@ -201,3 +201,19 @@ a great many deal of units are available to express lengths
 * `20pt` (1pt = 1/2 inch)
 * `2em`, `1ex`, `20ch`, relative to current font size
 * `80%` typically for width and height, relative to parent element
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+## colors
+<!-- #endregion -->
+
+several formats are supported to describe a color :
+* common colors by name, like `red` ([see full list](https://www.w3schools.com/colors/colors_names.asp))
+* RGB components like `#8000ff` that means
+  * red = 0x80 = 128
+  * green = 0x00 = 0
+  * blue = 0xff = 255
+  * all three of course are in the [0-255] range
+* same in decimal: 
+  * `rgb(128, 0, 255)`
+* opacity (in the [0-1.] range can be given as a fourth argument
+  * `rgb(128, 0, 255, 0.2)` will be only 10% opaque, i.e. almost transparent

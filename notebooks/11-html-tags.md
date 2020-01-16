@@ -31,10 +31,10 @@ jupyter:
     title_sidebar: Contents
     toc_cell: false
     toc_position:
-      height: 303px
+      height: 392px
       left: 1254px
       top: 37px
-      width: 276.391px
+      width: 281.391px
     toc_section_display: true
     toc_window_display: true
   version: '1.0'
@@ -215,14 +215,20 @@ tools.two_columns(code_fragment)
 ## grouping contents
 <!-- #endregion -->
 
+<!-- #region hide_input=true -->
 * one **very common** tag is `<div>`
  * it is used to group together elements inside a single tree
  * `<div>` stands for *division*
 * there is also `<span>` that serves a similar purpose 
  * except for the linebreaking behaviour
 * an essential tool in any page design
+<!-- #endregion -->
 
-```javascript slideshow={"slide_type": "slide"} hide_input=true
+<!-- #region slideshow={"slide_type": "slide"} -->
+### `<div>` and `<span>` example
+<!-- #endregion -->
+
+```javascript slideshow={"slide_type": ""} hide_input=true
 group_html = `<p> a paragraph may contain <span style="background-color: #ddd;">with a piece inside</span> that we will want to keep together, for example for styling purposes, or moving contents about, for that use a &lt;span&gt; tag.</p>
 
 <div style="background-color: #ddd;">
@@ -233,3 +239,13 @@ group_html = `<p> a paragraph may contain <span style="background-color: #ddd;">
 <p>this first example uses styling, that we have not studeied yet, in order to illustrate how these notions can be used in practice</p>`;
 tools.two_columns(group_html)
 ```
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+## a word on tables
+<!-- #endregion -->
+
+there indeed is a `<table>` tag in html;  
+in the early ages of HTML, tables were present everywhere, for creating fancy layouts
+
+although , we strongly recommend that you stay away from that for the moment, especially if your goal is to create  grid-based layouts, that we will cover later on
+
