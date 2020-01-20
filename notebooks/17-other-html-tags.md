@@ -64,6 +64,8 @@ tools.init();
 * [`<audio>`](https://www.w3schools.com/html/html5_audio.asp)
 * [`<video>`](https://www.w3schools.com/html/html5_video.asp)
 
+find out more on these by yourselves
+
 <!-- #region slideshow={"slide_type": "slide"} -->
 ## graphics and `<svg>`
 <!-- #endregion -->

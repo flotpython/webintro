@@ -94,15 +94,15 @@ each visible element can be styled according to the box model, as shown in the b
 <!-- #region cell_style="split" slideshow={"slide_type": ""} -->
 * padding is **inside the border**
 * margin is **outside the border**
-<!-- #endregion -->
 
-of course padding and margin are blended (added) when no border is visible
+<!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "slide"} -->
 ## atomic properties (1)
 <!-- #endregion -->
 
-each side (t, r, b, l) of the box has its own individual properties  
+each side (top, right, bottom, left) of the box  
+has its own individual properties  
 here e.g. padding and border
 
 ```javascript hide_input=true
@@ -217,3 +217,96 @@ several formats are supported to describe a color :
   * `rgb(128, 0, 255)`
 * opacity (in the [0-1.] range can be given as a fourth argument
   * `rgb(128, 0, 255, 0.2)` will be only 10% opaque, i.e. almost transparent
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+## `box-sizing`
+<!-- #endregion -->
+
+the `box-sizing` property affects the way `width` and `height` properties are computed :
+
+* `box-sizing: content-box` : only take content into account
+* `box-sizing: padding-box` : account for content + padding
+* `box-sizing: border-box` : content + padding + border
+
+margins are **always excluded** 
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+## `box-sizing` (ctd)
+<!-- #endregion -->
+
+typical use case is 
+
+* you want a given component to take 500px **in total**
+* so the borders and paddings *push content inside*
+* then use `border-padding`
+
+see also https://css-tricks.com/box-sizing/ 
+that has a live demo
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+## `background`
+<!-- #endregion -->
+
+there are 8 elementary properties that make an element's background
+* `background-image`
+* `background-position`
+* `background-size`
+* `background-repeat`
+* `background-attachment`
+* `background-origin`
+* `background-clip`
+* `background-color`
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+## `background` (ctd)
+<!-- #endregion -->
+
+most often this is set through a unique shorthand property `background`
+
+https://css-tricks.com/almanac/properties/b/background/
+
+
+also note that background 
+* does cover the **padding area**
+* but **not** the margin area
+* that is thus essentially transparent
+* and styled by parent
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+## `background` (demo)
+<!-- #endregion -->
+
+```javascript hide_input=true
+background_html = `<div>
+  <section>
+      <h1> a title </h1>
+      <p> paragraph </p>
+   </section>
+</div>
+`;
+background_css = `* {
+    border: 1px solid black;
+}
+div {
+    background: #d45d79; 
+    margin: 100px;
+}
+section {
+    margin: 20px;
+    padding: 30px;
+    background: #ea9085; 
+}
+h1, p {
+    padding: 8px;
+    /* or simply */
+    background-color: #e9e2d0; 
+}
+`;
+tools.iframe_html_css("background", background_html, background_css)
+```
+
+<!-- #region hide_input=true -->
+observe how the margin space has its space filled by the parent  
+use the inspector to see how the space between  
+the two inner borders (h1 and p) is actully the *max* of their margins.
+<!-- #endregion -->
