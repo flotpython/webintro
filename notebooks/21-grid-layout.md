@@ -70,7 +70,7 @@ next slide demontrates :
     to some columns (or rows, for that matter)
   * and split the rest proportionally
 
-```javascript hide_input=false slideshow={"slide_type": "slide"}
+```javascript hide_input=true slideshow={"slide_type": "slide"}
 grid1_html = `<div class="container">
 <div class="item-a">the header</div>
 <div class="item-b">main area</div>
@@ -123,7 +123,7 @@ mostly the same, but :
   
 <!-- #endregion -->
 
-```javascript hide_input=false slideshow={"slide_type": "slide"}
+```javascript hide_input=true slideshow={"slide_type": "slide"}
 grid1_html = `<div class="container">
 <div class="item-a">the header</div>
 <div class="item-b">main area</div>
