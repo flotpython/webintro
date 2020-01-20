@@ -118,7 +118,7 @@ we will study these 2 policies in separate notebooks
 * in that case the element is present in the DOM
 * but it does not show up at all in the rendered page
 
-```javascript
+```javascript hide_input=true
 display_none_html = `<p> an element can easily be 'hidden' from the output </p>
 <p id="do-not-show"> let us hide this part altogether </p>
 <p> in that case it won't show up at all, as if it were not in the DOM at all - 
