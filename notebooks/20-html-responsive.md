@@ -100,7 +100,7 @@ narrow viewport
   * well illustrated [on this page on css-tricks.com](https://css-tricks.com/almanac/properties/d/display/)
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-## the `display` property - other values
+## `display` - more modern alternatives
 <!-- #endregion -->
 
 more modern values include :
