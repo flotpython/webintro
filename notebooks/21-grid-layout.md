@@ -115,7 +115,7 @@ mostly the same, but :
   * `grid-template-rows: 50px 1fr 100px`
   
 
-```javascript hide_input=false slideshow={"slide_type": "slide"}
+```javascript hide_input=true slideshow={"slide_type": "slide"}
 grid2_html = `<div class="container">
 <div class="item-a">header</div>
 <div class="item-b">main</div>
