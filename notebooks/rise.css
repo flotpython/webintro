@@ -48,3 +48,7 @@ div.plan-container {
     display: grid;
     grid-template-columns: 50% 50%;
 }
+
+div.cell.text_cell .prompt.input_prompt {
+    display: none;
+}
