@@ -18,5 +18,16 @@ def tracks(coursedir):
                         coursedir=coursedir,
                         notebooks=notebooks_by_pattern(coursedir,"notebooks/1*.md")),
                 ],
-              description="Intro aux outils Web frontend"),
+              description="Web frontend introduction"),
+        Track(coursedir,
+              name="CSS layout and intro to JS",
+              sections=[
+                Section(name="advanced layout",
+                        coursedir=coursedir,
+                        notebooks=notebooks_by_pattern(coursedir,"notebooks/2*.md")),
+                Section(name="intro to JS",
+                        coursedir=coursedir,
+                        notebooks=notebooks_by_pattern(coursedir,"notebooks/3*.md")),
+                ],
+              description="CSS layout - JS intro"),
         ]
