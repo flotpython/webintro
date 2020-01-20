@@ -1,7 +1,7 @@
 div.show-html-top {
     font-size: 0.8em;
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: minmax(20px, max-content) 1fr;
 }
 div.show-html-css-left {
     display: grid:
