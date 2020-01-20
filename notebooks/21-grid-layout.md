@@ -64,6 +64,11 @@ next slide demontrates :
 * a proportional grid 3 rows * 4 columns
 * with 4 areas defined, based on that tiling
 * and 4 `<div>`s that are mapped on these areas
+* note the usage of a grid-specific length unit
+  * `fr` stands for 'free space'
+  * so we can allocate fixed or proportional space  
+    to some columns (or rows, for that matter)
+  * and split the rest proportionally
 
 ```javascript hide_input=true slideshow={"slide_type": "slide"}
 grid1_html = `<div class="container">
