@@ -27,7 +27,7 @@ function two_columns(html) {
     let right = html;
     let whole = `<div class="show-html-top">
 <div class="show-html-left">${left}</div>
-<div class="show-html-right show-html-cell">${right}</div>
+<div class="show-html-right show-html-no-iframe">${right}</div>
 </div>`;
     return $$.html(whole);
 }
@@ -43,7 +43,7 @@ function _html_css(html, css, iframe_filename) {
 <div class="show-html-css-top-left">${top_left}</div>
 <div class="show-html-css-bottom-left">${bottom_left}</div>
 </div>
-<div class="show-html-css-right show-html-cell">${right}</div>
+<div class="show-html-css-right">${right}</div>
 </div>    
 `;
     return $$.html(whole);    

@@ -1,10 +1,13 @@
 function run_all_button() {
     let html = `<style>
 span.run-all {
+    display: inline-block;
+    padding: 6px 20px;
+    margin: 5px 10px;
     border: 1px solid black;
     background-color: #50d97b;
-    padding: 6px 20px;
     border-radius: 8px;
+    
 }
 </style>
 <span>Tip&nbsp;:
