@@ -70,16 +70,17 @@ next slide demontrates :
     to some columns (or rows, for that matter)
   * and split the rest proportionally
 
-```javascript hide_input=true slideshow={"slide_type": "slide"}
+```javascript hide_input=false slideshow={"slide_type": "slide"}
 grid1_html = `<div class="container">
-<div class="item-a">header</div>
-<div class="item-b">main</div>
-<div class="item-c">sidebar</div>
-<div class="item-d">footer</div>
+<div class="item-a">the header</div>
+<div class="item-b">main area</div>
+<div class="item-c">side bar</div>
+<div class="item-d">a footer</div>
 </div>`;
 grid1_css = `.container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 
+    1fr 1fr 1fr 1fr;
   grid-template-rows: auto;
   grid-template-areas: 
     "header header header header"
@@ -91,19 +92,19 @@ grid1_css = `.container {
 
 .item-a {
     grid-area: header;
-    background-color: orange;
+    background-color: #ffba5a;
 }
 .item-b {
     grid-area: main;
-    background-color: blue;
+    background-color: #3282b8;
 }
 .item-c {
     grid-area: sidebar;
-    background-color: red;
+    background-color: #db3056;
 }
 .item-d {
     grid-area: footer;
-    background-color: green;
+    background-color: #7fa998;
 }
 `;
 tools.iframe_html_css("display-grid-1", grid1_html, grid1_css, true)
@@ -113,19 +114,21 @@ tools.iframe_html_css("display-grid-1", grid1_html, grid1_css, true)
 ## example (2)
 <!-- #endregion -->
 
+<!-- #region hide_input=true -->
 mostly the same, but :
 * header and footers have a fixed size
 * only change is to replace
-  * `grid-template-rows: auto;` with
+  * `grid-template-rows: auto` with
   * `grid-template-rows: 50px 1fr 100px`
   
+<!-- #endregion -->
 
-```javascript hide_input=true slideshow={"slide_type": "slide"}
-grid2_html = `<div class="container">
-<div class="item-a">header</div>
-<div class="item-b">main</div>
-<div class="item-c">sidebar</div>
-<div class="item-d">footer</div>
+```javascript hide_input=false slideshow={"slide_type": "slide"}
+grid1_html = `<div class="container">
+<div class="item-a">the header</div>
+<div class="item-b">main area</div>
+<div class="item-c">side bar</div>
+<div class="item-d">a footer</div>
 </div>`;
 grid2_css = `.container {
   display: grid;
@@ -141,19 +144,19 @@ grid2_css = `.container {
 
 .item-a {
     grid-area: header;
-    background-color: orange;
+    background-color: #ffba5a;
 }
 .item-b {
     grid-area: main;
-    background-color: blue;
+    background-color: #3282b8;
 }
 .item-c {
     grid-area: sidebar;
-    background-color: red;
+    background-color: #db3056;
 }
 .item-d {
     grid-area: footer;
-    background-color: green;
+    background-color: #7fa998;
 }
 `;
 tools.iframe_html_css("display-grid-2", grid2_html, grid2_css, true)
@@ -163,8 +166,13 @@ tools.iframe_html_css("display-grid-2", grid2_html, grid2_css, true)
 ## and much more…
 <!-- #endregion -->
 
-* a very good introduction to Grids [can be found on css-tricks.com](https://css-tricks.com/snippets/css/complete-guide-grid/)
+* a very good introduction to Grids  
+  [can be found on css-tricks.com](https://css-tricks.com/snippets/css/complete-guide-grid/)
 * with many illustrations and examples
+
+
+### assignment
+
 * **strongly recommended** to read thoroughly
 * then [complete this game ](https://cssgridgarden.com/)
 

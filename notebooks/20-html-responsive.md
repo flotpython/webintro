@@ -61,16 +61,18 @@ tools.init();
 <!-- #endregion -->
 
 * as opposed to a Word document - designed for a fixed page size
-  * a web page get displayed on many different devices (computer, phone, tablet)
-  * on the computer, can be displayed with many different sizes
+  * a web page gets displayed  
+    on many different devices (computer, phone, tablet)
+  * even on the computer, windows can be can  
+    resized arbitrarily
 * a responsive page adapts its layout to the device size
   * technically the visible area is called the **viewport**
-* this means for example : a three-section document
-  * 2-column layout on a wide viewport with  
-    each column on a constant fraction of the viewport width
-  * becomes a sequence of three rows instead on a phone  
 
-<!-- #region cell_style="split" slideshow={"slide_type": "slide"} -->
+<!-- #region slideshow={"slide_type": "slide"} -->
+this means for example :
+<!-- #endregion -->
+
+<!-- #region cell_style="split" slideshow={"slide_type": ""} -->
 wide viewport
 
 ![](../media/responsive-wide.svg)
@@ -86,17 +88,22 @@ narrow viewport
 ## default layout policy
 <!-- #endregion -->
 
-* very well summarized in [this document on MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow); (MDN stands for Mozilla Developer Network)
-* mostly fits a written document flow (think, a Word document)
+* very well summarized in [this document on MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow)  
+  (MDN stands for Mozilla Developer Network)
+* mostly fits a written document flow  
+  (think, a Word document)
 * not at all suited for a responsive design
 
 <!-- #region slideshow={"slide_type": "slide"} -->
 ## the `display` property - basic policies
 <!-- #endregion -->
 
-* layout policy is primarily materialized in the `display` property
-* values `inline`, `block` and `inline-block` account for these "document-oriented" policies
-  * have been supported from the very beginning of the Web 
+* layout policy is primarily materialized  
+  in the `display` property
+* values `inline`, `block` and `inline-block`  
+  account for these "document-oriented" policies
+  * have been supported from the very  
+    beginning of the Web 
   * well illustrated [on this page on css-tricks.com](https://css-tricks.com/almanac/properties/d/display/)
 
 <!-- #region slideshow={"slide_type": "slide"} -->
@@ -114,15 +121,20 @@ we will study these 2 policies in separate notebooks
 ## `display: none`
 <!-- #endregion -->
 
+* as an aside :
 * one specific value for the `display` property is `none`
 * in that case the element is present in the DOM
 * but it does not show up at all in the rendered page
 
 ```javascript hide_input=true
 display_none_html = `<p> an element can easily be 'hidden' from the output </p>
+
 <p id="do-not-show"> let us hide this part altogether </p>
-<p> in that case it won't show up at all, as if it were not in the DOM at all - 
-although it is present, can be easily retrieved and turned back on, using e.g. JavaScript</p>`;
+
+<p> in that case it won't show up at all, as if
+it were not in the DOM at all - although it is present,
+can be easily retrieved and turned back on,
+using e.g. JavaScript</p>`;
 display_none_css = `#do-not-show {
     display: none;
 }`;
