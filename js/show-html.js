@@ -33,17 +33,30 @@ function two_columns(html) {
 }
 
 
-function _html_css(html, css, iframe_filename) {
+function _html_css(html, css, iframe_filename, external) {
     let top_left = `<span class="lang html">HTML</span><pre><code>${escape(html)}</code></pre>`;
     let bottom_left = `<span class="lang css">CSS</span><pre><code>${escape(css)}</code></pre>`;
-    let full_code = `<style>${css}</style>${html}`;
+    let full_code = `<style>${css}</style>
+${html}`;
     let right = _iframe_for_stored_html(iframe_filename, full_code);
+    let external_button = ``;
+    let external_class = ``;
+    if (external) {
+        external_class = `external`;
+        external_button = `<a class="external"
+onclick="window.open('${iframe_filename}', '${iframe_filename}', 'width=500,height=250'); return false;"
+>
+<div style="display: flex; flex-direction: column; align-items: center;">
+<span>open in a separate window</span>
+<span>(beware of ad blockers)</span>
+</div></a>`;
+    }
     let whole = `<div class="show-html-top">
 <div class="show-html-css-left">
 <div class="show-html-css-top-left">${top_left}</div>
 <div class="show-html-css-bottom-left">${bottom_left}</div>
 </div>
-<div class="show-html-css-right">${right}</div>
+<div class="show-html-css-right ${external_class}">${right}${external_button}</div>
 </div>    
 `;
     return $$.html(whole);    
@@ -56,9 +69,9 @@ function _iframe_for_stored_html(filename, html) {
 }
 
 
-function iframe_html_css(iframe, html, css) {
+function iframe_html_css(iframe, html, css, external) {
     let filename = `./${iframe}.html`;
-    return _html_css(html, css, filename);
+    return _html_css(html, css, filename, external);
 }
 
 //////////

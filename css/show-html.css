@@ -24,7 +24,6 @@ div.show-html-right, div.show-html-css-right {
     margin-left: 25px;
 }
 span.lang {
-    margin-top: 10px;
     padding: 5px 30px;
     border-radius: 5px;
     font-size: larger;
@@ -33,6 +32,7 @@ span.lang.html {
     background-color: #dcb313;
 }
 span.lang.css {
+    margin-top: 10px;
     background-color: #0cba27;
 }
 div.show-html-top pre {
@@ -47,4 +47,14 @@ iframe.show-html {
     height: 100%;
     border: 2px solid blue;
     border-radius: 5px;
+    background-color: white;
+}
+div.external {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+a.external {
+    margin-top: 12px;
+    font-size: 150%;
 }

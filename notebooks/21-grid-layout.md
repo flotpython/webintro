@@ -1,0 +1,227 @@
+---
+jupyter:
+  celltoolbar: Slideshow
+  jupytext:
+    cell_metadata_filter: all
+    formats: md
+    notebook_metadata_filter: all,-language_info
+    text_representation:
+      extension: .md
+      format_name: markdown
+      format_version: '1.2'
+      jupytext_version: 1.3.2
+  kernelspec:
+    display_name: Javascript (Node.js)
+    language: javascript
+    name: javascript
+  notebookname: grid layout
+  rise:
+    autolaunch: true
+    slideNumber: c/t
+    start_slideshow_at: selected
+    theme: sky
+    transition: cube
+  toc:
+    base_numbering: 1
+    nav_menu: {}
+    number_sections: true
+    sideBar: false
+    skip_h1_title: false
+    title_cell: Table of Contents
+    title_sidebar: Contents
+    toc_cell: false
+    toc_position:
+      height: 47.7431px
+      left: 91.9861px
+      top: 25.9618px
+      width: 159.497px
+    toc_section_display: false
+    toc_window_display: true
+  version: '1.0'
+---
+
+<div class="licence">
+<span>Licence CC BY-NC-ND</span>
+<span>Thierry Parmentelat</span>
+</div>
+
+<!-- #region slideshow={"slide_type": ""} -->
+# `display: grid;`
+<!-- #endregion -->
+
+```javascript
+// run this cell, and then 
+// click the created button
+tools = require('../js/tools');
+tools.init();
+```
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+## example (1)
+<!-- #endregion -->
+
+next slide demontrates :
+* a proportional grid 3 rows * 4 columns
+* with 4 areas defined, based on that tiling
+* and 4 `<div>`s that are mapped on these areas
+
+```javascript hide_input=true slideshow={"slide_type": "slide"}
+grid1_html = `<div class="container">
+<div class="item-a">header</div>
+<div class="item-b">main</div>
+<div class="item-c">sidebar</div>
+<div class="item-d">footer</div>
+</div>`;
+grid1_css = `.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "header header header header"
+    "main main . sidebar"
+    "footer footer footer footer";
+  height: 100%;
+  width: 100%;
+}
+
+.item-a {
+    grid-area: header;
+    background-color: orange;
+}
+.item-b {
+    grid-area: main;
+    background-color: blue;
+}
+.item-c {
+    grid-area: sidebar;
+    background-color: red;
+}
+.item-d {
+    grid-area: footer;
+    background-color: green;
+}
+`;
+tools.iframe_html_css("display-grid-1", grid1_html, grid1_css, true)
+```
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+## example (2)
+<!-- #endregion -->
+
+mostly the same, but :
+* header and footers have a fixed size
+* only change is to replace
+  * `grid-template-rows: auto;` with
+  * `grid-template-rows: 50px 1fr 100px`
+  
+
+```javascript hide_input=false slideshow={"slide_type": "slide"}
+grid2_html = `<div class="container">
+<div class="item-a">header</div>
+<div class="item-b">main</div>
+<div class="item-c">sidebar</div>
+<div class="item-d">footer</div>
+</div>`;
+grid2_css = `.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 50px 1fr 100px;
+  grid-template-areas: 
+    "header header header header"
+    "main main . sidebar"
+    "footer footer footer footer";
+  height: 100%;
+  width: 100%;
+}
+
+.item-a {
+    grid-area: header;
+    background-color: orange;
+}
+.item-b {
+    grid-area: main;
+    background-color: blue;
+}
+.item-c {
+    grid-area: sidebar;
+    background-color: red;
+}
+.item-d {
+    grid-area: footer;
+    background-color: green;
+}
+`;
+tools.iframe_html_css("display-grid-2", grid2_html, grid2_css, true)
+```
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+## and much more…
+<!-- #endregion -->
+
+* a very good introduction to Grids [can be found on css-tricks.com](https://css-tricks.com/snippets/css/complete-guide-grid/)
+* with many illustrations and examples
+* **strongly recommended** to read thoroughly
+* then [complete this game ](https://cssgridgarden.com/)
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+## auto-sizing
+<!-- #endregion -->
+
+* a nice feature of grid display
+* is its ability to auto-organize the grid
+* using an idiom based on
+  * `repeat`, 
+  * `auto-fit` 
+  * `minmax`
+* that we illustrate in the next example  
+* see also [this blogpost on css-tricks.com](https://css-tricks.com/auto-sizing-columns-css-grid-auto-fill-vs-auto-fit/)
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+## auto-sizing example
+<!-- #endregion -->
+
+```javascript hide_input=true
+autosize_html = `<div class="container">
+  <section> 
+    <h1>Section 1</h1>
+    <p> Lorem ipsum dolor sit amet, 
+consectetur adipisicing elit, sed do
+eiusmod tempor incididunt ut labore
+et dolore magna aliqua</p> 
+  </section>
+  <section>
+    <h1>Section 2</h1>
+  </section>
+  <section>
+    <h1>Section 3</h1>
+  </section>
+</div>`;
+autosize_css = `section {
+  border: 1px solid blue;
+  border-radius: 5px;
+  margin: 2px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 
+    repeat(auto-fit, minmax(250px, 1fr));
+}`;
+tools.iframe_html_css("autosize", autosize_html, autosize_css, true)
+```
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+## devel tools and multi-device
+<!-- #endregion -->
+
+* the devel tools - on chrome at least 
+* allow to simulate other devices
+* like popular phones and tablets  
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+![](../media/devel-tools-devices.png)
+<!-- #endregion -->
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+![](../media/devel-tools-phone.png)
+<!-- #endregion -->
