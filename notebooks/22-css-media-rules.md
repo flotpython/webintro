@@ -81,7 +81,9 @@ media_width_html = `<body>Click below to open
 in a separate window, turn on
 devel tools to see the window size, and resize
 the window so the width becomes smaller 
-or larger than ${threshold}</body>`;
+or larger than ${threshold}
+<br/><b>NOTE</b> make sure your zoom factor is 100% 
+</body>`;
 media_width_css = `/* beware that this rule MUST COME FIRST */
 body {
     background-color: #fae3d9; /* light pink */

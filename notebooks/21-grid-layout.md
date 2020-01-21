@@ -184,7 +184,7 @@ tools.iframe_html_css("display-grid-2", grid2_html, grid2_css, true)
 * a nice feature of grid display
 * is its ability to auto-organize the grid
 * using an idiom based on
-  * `repeat`, 
+  * `repeat`
   * `auto-fit` 
   * `minmax`
 * that we illustrate in the next example  
