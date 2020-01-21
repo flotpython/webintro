@@ -124,7 +124,7 @@ mostly the same, but :
 <!-- #endregion -->
 
 ```javascript hide_input=true slideshow={"slide_type": "slide"}
-grid1_html = `<div class="container">
+grid2_html = `<div class="container">
 <div class="item-a">the header</div>
 <div class="item-b">main area</div>
 <div class="item-c">side bar</div>
