@@ -101,6 +101,18 @@ tools.iframe_html_css("svg", svg_html, svg_css)
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
+## miscell others
+<!-- #endregion -->
+
+```javascript
+in a jumble :
+
+* `<br />` to insert a linebreak
+* `<hr />` to insert a horizontal line
+* `<iframe>` to insert another web page
+```
+
+<!-- #region slideshow={"slide_type": "slide"} -->
 # practice 
 <!-- #endregion -->
 

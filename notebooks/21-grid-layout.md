@@ -173,6 +173,7 @@ tools.iframe_html_css("display-grid-2", grid2_html, grid2_css, true)
 
 ### assignment
 
+
 * **strongly recommended** to read thoroughly
 * then [complete this game ](https://cssgridgarden.com/)
 

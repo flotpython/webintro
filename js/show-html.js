@@ -12,7 +12,9 @@ function escape(string) {
 }
 
 function injected_css(css) {
-    return `<style>${css}</style>`;
+    return `<style>
+${css}
+</style>`;
 }
 
 
@@ -36,7 +38,7 @@ function two_columns(html) {
 function _html_css(html, css, iframe_filename, external) {
     let top_left = `<span class="lang html">HTML</span><pre><code>${escape(html)}</code></pre>`;
     let bottom_left = `<span class="lang css">CSS</span><pre><code>${escape(css)}</code></pre>`;
-    let full_code = `<style>${css}</style>
+    let full_code = `${injected_css(css)}
 ${html}`;
     let right = _iframe_for_stored_html(iframe_filename, full_code);
     let external_button = ``;
