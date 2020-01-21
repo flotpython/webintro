@@ -75,7 +75,7 @@ as per [this article on w3schools](https://www.w3schools.com/cssref/css3_pr_medi
 ## example - width
 <!-- #endregion -->
 
-```javascript hide_input=false
+```javascript hide_input=true
 threshold = '500px';
 media_width_html = `<body>Click below to open
 in a separate window, turn on
@@ -149,14 +149,18 @@ tools.iframe_html_css("media-rule-print", media_print_html, media_print_css, tru
 
 another way to use media rules is from `<head>`  
 (remember that `<html>` is `<head>` and then `<body>`) :
-```
+
+<!-- #region -->
+```html
 <link rel="stylesheet" 
+    <!-- NOTE the new media attribute here -->
     media="screen and (min-width: 900px)"
     href="widescreen.css">
 <link rel="stylesheet"
     media="screen and (max-width: 600px)"    
     href="smallscreen.css">
 ```
+<!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "slide"} -->
 ## see also
