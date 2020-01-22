@@ -82,10 +82,11 @@ examples, as per [this article on MDN](https://developer.mozilla.org/en-US/docs/
 
 ```javascript hide_input=true
 flex1_html = `<div class="container">
-<div class="item left"> lorem ipsum </div>
-<div class="item middle"> Dolor neque non </div>
-<div class="item middle"> amet numquam </div>
-<div class="item right"> quiquia ut. </div>
+<div class="item"> Dolor quiquia </div>
+<div class="item"> aliquam </div>
+<div class="item"> sed numquam </div>
+<div class="item"> voluptatem </div>
+<div class="item"> quisquam modi. </div>
 </div>`;
 flex1_css = `/* outline borders */
 body { border: none; }
@@ -97,7 +98,7 @@ body { border: none; }
     justify-content: space-evenly;
 }
 .item {
-    font-size: 40px;
+    font-size: 30px;
 }
 `;
 tools.iframe_html_css("flex1", flex1_html, flex1_css, true)
@@ -111,10 +112,11 @@ identical except for `flex-wrap: wrap`
 
 ```javascript hide_input=true slideshow={"slide_type": "slide"}
 flex2_html = `<div class="container">
-<div class="item left"> lorem ipsum </div>
-<div class="item middle"> Dolor neque non </div>
-<div class="item middle"> amet numquam </div>
-<div class="item right"> quiquia ut. </div>
+<div class="item"> Dolor quiquia </div>
+<div class="item"> aliquam </div>
+<div class="item"> sed numquam </div>
+<div class="item"> voluptatem </div>
+<div class="item"> quisquam modi. </div>
 </div>`;
 flex2_css = `/* outline borders */
 body { border: none; }
