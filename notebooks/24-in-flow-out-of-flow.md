@@ -87,7 +87,7 @@ scroll up</div>
 </div>
 <div style="height: 400px; width: 100%; 
             background-color: #c0ffb3">
-the header sticks</div>`;
+the header sticks at the top</div>`;
 fixed1_css = `div.header {
     /* this is hard-wired */
     height: 50px;

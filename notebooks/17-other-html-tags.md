@@ -104,13 +104,14 @@ tools.iframe_html_css("svg", svg_html, svg_css)
 ## miscell others
 <!-- #endregion -->
 
-```javascript
 in a jumble :
 
 * `<br />` to insert a linebreak
 * `<hr />` to insert a horizontal line
 * `<iframe>` to insert another web page
-```
+* `<form>` to group user-provided input  
+  out of scope for this course though,  
+  as it involves a backend
 
 <!-- #region slideshow={"slide_type": "slide"} -->
 # practice 
