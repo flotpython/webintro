@@ -63,7 +63,8 @@ tools.init();
 <!-- #region slideshow={"slide_type": ""} -->
 * `flex` is a modern layout engine  
 * that tries to solve or at least alleviate  
-* the obvious deficiencies of the old-school `block` model and related tools
+* the obvious deficiencies of the old-school  
+ `block` model and related tools
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "slide"} -->
@@ -109,13 +110,13 @@ identical except for `flex-wrap: wrap`
 <!-- #endregion -->
 
 ```javascript hide_input=false slideshow={"slide_type": "slide"}
-flex1_html = `<div class="container">
+flex2_html = `<div class="container">
 <div class="item left"> lorem ipsum </div>
 <div class="item middle"> Dolor neque non </div>
 <div class="item middle"> amet numquam </div>
 <div class="item right"> quiquia ut. </div>
 </div>`;
-flex1_css = `/* outline borders */
+flex2_css = `/* outline borders */
 body { border: none; }
 * { border: 1px solid red;
     padding: 4px; border-radius: 4px;}
@@ -129,7 +130,7 @@ body { border: none; }
     font-size: 40px;
 }
 `;
-tools.iframe_html_css("flex1", flex1_html, flex1_css, true)
+tools.iframe_html_css("flex2", flex2_html, flex2_css, true)
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
