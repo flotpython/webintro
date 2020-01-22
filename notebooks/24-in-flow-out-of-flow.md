@@ -69,11 +69,11 @@ most of the elements we have seen so far are said to be *in-flow* 
 <!-- #endregion -->
 
 * there are ways to create elements out-of-flow 
-* a common practical example is a fixed header 
-  or navigation bar, illustrated below  
+* a common practical example is a pinned header 
+  (or navigation bar), illustrated below  
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-## `fixed` example : a static header
+## `fixed` example : a pinned header
 <!-- #endregion -->
 
 ```javascript hide_input=true
@@ -121,6 +121,16 @@ tools.iframe_html_css("fixed1", fixed1_html, fixed1_css, true)
   beginners should probably not try to use this at first
 * as mix-and-match of `display` and `position` settings  
   can quickly become rather confusing
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+## assignment
+<!-- #endregion -->
+
+* as a conclusion of this overview on CSS, 
+* review your resume so that it becomes responsive
+* it should display properly on a phone, tablet, and laptop
+* hint : each section of course remains untouched no matter the device
+* but the arrangement of the sections on the page changes
 
 ```javascript hide_input=true
 
