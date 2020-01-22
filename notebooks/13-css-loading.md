@@ -185,3 +185,30 @@ tools.two_columns(embedded_html)
   * load `mycv.html` in a browser
   * change the CSS and reload the browser page to see the effect
 <!-- #endregion -->
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+## the browser cache
+<!-- #endregion -->
+
+for performance reasons primarily :
+* fetching a file may be slow in poor network conditions
+* once a file has been loaded
+  * it may be **cached inside** the browser
+  * so that future references do not fetch it again
+
+**beware of that** during development
+* reloading the html file
+* may **not reload** the css because it is cached
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+## the browser cache (ctd)
+<!-- #endregion -->
+
+a couple hints and workarounds
+* reload with the 'Shift' modifier pressed  
+  either with a mouse-click, or keyboard shortcut  
+  double-check that with the browser you actually use
+* devel tools have a *Sources* tab that let you check  
+  the content of each individual loaded file
+* often browsers have more advanced tools to manage cache  
+  e.g. Chrome : `⠸` menu → *More Tools* → *Clear Browsing Data*

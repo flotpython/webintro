@@ -46,7 +46,7 @@ jupyter:
 </div>
 
 <!-- #region slideshow={"slide_type": ""} -->
-# `display: grid;`
+# `display: grid`
 <!-- #endregion -->
 
 ```javascript

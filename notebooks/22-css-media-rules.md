@@ -104,10 +104,10 @@ tools.iframe_html_css("media-rule-width", media_width_html, media_width_css, tru
 ## common pitfall
 <!-- #endregion -->
 
-* in our first example (adapting to page width)
-  * we have outlined that the default `body` rule **MUST COME FIRST**
+* in this first example
+  * note that the default `body` rule **MUST COME FIRST**
 * the reason is that when the `@media` rule applies
-  * the browser sees **TWO RULES** with the same specificity 
+  * the browser sees **TWO RULES** with the **same specificity**
   * as both selectors simply read `body`
   * in that case the last one wins
 * so **order is important**
@@ -167,5 +167,6 @@ another way to use media rules is from `<head>`
 <!-- #region slideshow={"slide_type": "slide"} -->
 ## see also
 
-* [this w3schools page](https://www.w3schools.com/cssref/css3_pr_mediaquery.asp) has more details on the admissible syntax for media rules
+* [this w3schools page](https://www.w3schools.com/cssref/css3_pr_mediaquery.asp) has more details  
+  on the admissible **syntax for media rules**
 <!-- #endregion -->

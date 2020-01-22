@@ -175,8 +175,10 @@ tools.one_column(tree_html)
 <!-- #endregion -->
 
 ```javascript hide_input=true slideshow={"slide_type": "slide"}
-fragment_unclosed = `<p> do not
-<p> do this`;
+fragment_unclosed = `<p> do not do this
+<ul>
+<li> unclosed tags <b>look like</b> they work
+<li> but they will hurt eventually`;
 
 tools.two_columns(fragment_unclosed)
  
@@ -184,7 +186,10 @@ tools.two_columns(fragment_unclosed)
 
 ```javascript hide_input=true
 fragment_closed = `<p> do this instead </p>
-<p> clean up behind yourself </p>`;
+<ul>
+<li> always close your tags </li>
+<li> clean up behind yourself </li>
+</ul>`;
 
 tools.two_columns(fragment_closed)
  
