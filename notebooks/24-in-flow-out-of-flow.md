@@ -14,7 +14,7 @@ jupyter:
     display_name: Javascript (Node.js)
     language: javascript
     name: javascript
-  notebookname: flex layout
+  notebookname: in / out-of flow
   rise:
     autolaunch: true
     slideNumber: c/t
