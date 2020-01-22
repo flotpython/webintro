@@ -57,11 +57,22 @@ tools.init();
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
+## purpose
+<!-- #endregion -->
+
+* create grid-based layouts, obviously
+* historically a challenging task
+  * the `<table>` tag has long been overused  
+    to address that sort of needs
+  * **do not use** `<table>`'s for that in 2020 !
+* now available in [all popular modern browsers](https://caniuse.com/#feat=css-grid)
+
+<!-- #region slideshow={"slide_type": "slide"} -->
 ## example (1)
 <!-- #endregion -->
 
 next slide demontrates :
-* a proportional grid 3 rows * 4 columns
+* a proportional grid of [3 rows ⨉ 4 columns]
 * with 4 areas defined, based on that tiling
 * and 4 `<div>`s that are mapped on these areas
 * note the usage of a grid-specific length unit
@@ -116,7 +127,7 @@ tools.iframe_html_css("display-grid-1", grid1_html, grid1_css, true)
 
 <!-- #region hide_input=true -->
 mostly the same, but :
-* header and footers have a fixed size
+* header and footer have a fixed size
 * only change is to replace
   * `grid-template-rows: auto` with
   * `grid-template-rows: 50px 1fr 100px`
