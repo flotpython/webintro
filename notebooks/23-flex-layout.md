@@ -109,7 +109,7 @@ tools.iframe_html_css("flex1", flex1_html, flex1_css, true)
 identical except for `flex-wrap: wrap`
 <!-- #endregion -->
 
-```javascript hide_input=false slideshow={"slide_type": "slide"}
+```javascript hide_input=true slideshow={"slide_type": "slide"}
 flex2_html = `<div class="container">
 <div class="item left"> lorem ipsum </div>
 <div class="item middle"> Dolor neque non </div>
