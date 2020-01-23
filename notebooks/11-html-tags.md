@@ -140,7 +140,7 @@ tools.two_columns(hyperlink_fragment)
 
 if you need a hyperlink to point, not at the beginning of this page, but somewhere in the middle, then create an anchor at that location
 
-```javascript hide_input=false
+```javascript hide_input=true
 anchor_fragment = `<a name="the-anchor-name">the magic location</a>`;
 tools.two_columns(anchor_fragment)
 ```
@@ -206,8 +206,7 @@ X = np.linspace(-2*np.pi, 2*np.pi)
 Y = np.sin(X)
 plt.plot(X, Y)
 </pre></code>
-</p>
-`;
+</p>`;
 tools.two_columns(code_fragment)
 ```
 

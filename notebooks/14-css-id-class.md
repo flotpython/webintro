@@ -31,10 +31,10 @@ jupyter:
     title_sidebar: Contents
     toc_cell: false
     toc_position:
-      height: 381px
-      left: 74px
-      top: 261px
-      width: 320.797px
+      height: 268px
+      left: 440px
+      top: 0px
+      width: 305.344px
     toc_section_display: false
     toc_window_display: true
   version: '1.0'
@@ -132,6 +132,11 @@ tools.iframe_html_css("id2", id2_html, id2_css)
 * this is simply done by setting a `class` attribute 
 <!-- #endregion -->
 
+<!-- #region slideshow={"slide_type": ""} -->
+* an element can - and often has - several classes
+* e.g. `class="one-class another-class"`
+<!-- #endregion -->
+
 ```javascript hide_input=true
 class_html = `<p class="yes">yes 1</p>
 <p class="no">no 1</p>
@@ -194,7 +199,7 @@ the **element's parent**
 
 <!-- #region slideshow={"slide_type": ""} -->
 in a nushell, the intuition behind the actual rules is that
-* if you have maunally defined a property in a `style` attribute, i.e. at the exact same place as the node, it means you want this property to apply
+* if you have manually defined a property in a `style` attribute, i.e. at the exact same place as the node, it means you want this property to apply
 * otherwise if you have specified an `id` this means you expect this setting to be valid on that node
 * otherwise if you have specified a `class`, it should apply
 * otherwise if the rule is based on the element, it should apply

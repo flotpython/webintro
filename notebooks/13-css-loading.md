@@ -31,11 +31,11 @@ jupyter:
     title_sidebar: Contents
     toc_cell: false
     toc_position:
-      height: 267px
-      left: 97px
-      top: 180px
-      width: 330.797px
-    toc_section_display: true
+      height: 47px
+      left: 430px
+      top: 0px
+      width: 159.359px
+    toc_section_display: false
     toc_window_display: true
   version: '1.0'
 ---
@@ -96,7 +96,8 @@ tools.init();
 ##### notes on URLS
 
 * `href` is a URL - remember the `<a>` tag
-* which means it can be fetched anywhere with http
+* which means it can be fetched from  
+  anywhere, typically over http(s)
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": ""} -->
@@ -115,7 +116,7 @@ tools.init();
 * you can also insert a `<style>` tag in your html
 * and mention the CSS code there directly
 * it is **less recommended** as it kind of ruins
-* desired separation between contents and presentation
+* desired **separation** between **contents** and **presentation**
 
 <!-- #region slideshow={"slide_type": "slide"} hide_input=false -->
 ```html
