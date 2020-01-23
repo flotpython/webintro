@@ -1,4 +1,4 @@
-div.show-html-top {
+div.show-html-2columns {
     font-size: 0.8em;
     display: grid;
     grid-template-columns: minmax(20px, max-content) 1fr;
@@ -23,19 +23,7 @@ div.show-html-left {
 div.show-html-right, div.show-html-css-right {
     margin-left: 25px;
 }
-span.lang {
-    padding: 5px 30px;
-    border-radius: 5px;
-    font-size: larger;
-}
-span.lang.html {
-    background-color: #dcb313;
-}
-span.lang.css {
-    margin-top: 10px;
-    background-color: #0cba27;
-}
-div.show-html-top pre {
+div.show-html-2columns pre {
     padding: 8px;
     border-width: 1px dashed red;
     border-radius: 10px;
@@ -49,6 +37,9 @@ iframe.show-html {
     border-radius: 5px;
     background-color: white;
 }
+
+
+
 div.external {
     display: flex;
     flex-direction: column;
@@ -57,4 +48,31 @@ div.external {
 a.external {
     margin-top: 12px;
     font-size: 150%;
+}
+
+span.lang {
+    padding: 5px 30px;
+    border-radius: 5px;
+    font-size: larger;
+    display: inline-block;
+}
+
+span.lang.html::before {
+    content: 'HTML';
+}
+span.lang.html {
+    background-color: #c9b6e4;
+}
+span.lang.css::before {
+    content: 'CSS';
+}
+span.lang.css {
+    margin-top: 10px;
+    background-color: #bbded6;
+}
+span.lang.js::before {
+    content: 'JavaScript';
+}
+span.lang.js {
+    background-color: #fddb3a;
 }

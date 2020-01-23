@@ -11,7 +11,7 @@ function _escape(string) {
     ;
 }
 
-function _verbatim_html(html) {
+function _verbatim(html) {
     return `<pre><code>${_escape(html)}</code></pre>`;
 }
 
@@ -24,6 +24,10 @@ function _injected_js(css) {
     return `<script>
 ${css}
 </script>`;
+}
+
+function _label(cls) {
+    return `<span class="lang ${cls}"></span>`;
 }
 
 
@@ -49,9 +53,9 @@ function one_column(html) {
 }
 
 function two_columns(html) {
-    let left = `<pre><code>${_escape(html)}</code></pre>`;
+    let left = _verbatim(html);
     let right = html;
-    let whole = `<div class="show-html-top">
+    let whole = `<div class="show-html-2columns">
 <div class="show-html-left">${left}</div>
 <div class="show-html-right show-html-no-iframe">${right}</div>
 </div>`;
@@ -61,8 +65,8 @@ function two_columns(html) {
 
 function iframe_html_css(iframe, html, css, external) {
     let filename = `./${iframe}.html`;
-    let top_left = `<span class="lang html">HTML</span><pre><code>${_escape(html)}</code></pre>`;
-    let bottom_left = `<span class="lang css">CSS</span><pre><code>${_escape(css)}</code></pre>`;
+    let top_left = _verbatim(html);
+    let bottom_left = _verbatim(css);
     let full_code = `${_injected_css(css)}
 ${html}`;
     let right = _iframe_for_stored_html(filename, full_code);
@@ -72,12 +76,12 @@ ${html}`;
         external_class = `external`;
         external_button = _external_iframe_button(filename);
     }
-    let whole = `<div class="show-html-top">
+    let whole = `<div class="show-html-2columns">
 <div class="show-html-css-left">
-<div class="show-html-css-top-left">${top_left}</div>
-<div class="show-html-css-bottom-left">${bottom_left}</div>
+  <div class="show-html-css-top-left">${_label("html")}${top_left}</div>
+  <div class="show-html-css-bottom-left">${_label("css")}${bottom_left}</div>
 </div>
-<div class="show-html-css-right ${external_class}">${right}${external_button}</div>
+  <div class="show-html-css-right ${external_class}">${right}${external_button}</div>
 </div>    
 `;
     return $$.html(whole);    
@@ -90,9 +94,9 @@ ${_injected_css(css)}
 ${_injected_js(js)}
 `;
     /* produce html file */
-    let html_area = _verbatim_html(html);
-    let css_area = _verbatim_html(css);
-    let js_area = _verbatim_html(js);
+    let html_area = _verbatim(html);
+    let css_area = _verbatim(css);
+    let js_area = _verbatim(js);
     let iframe_area = _iframe_for_stored_html(filename, full_code);
     let [external_class, external_button] = ['', ''];
     if (external) {
@@ -102,11 +106,15 @@ ${_injected_js(js)}
     let result_area = `<div class="${external_class}">
 ${iframe_area}${external_button}
 </div>`;
-    let whole = `<div class="show-html-css-js-container">
-<div class="show-html-css-js-html">${html_area}</div>
-<div class="show-html-css-js-css">${css_area}</div>
-<div class="show-html-css-js-js">${js_area}</div>
-<div class="show-html-css-js-result">${result_area}</div>
+    let whole = `<div class="show-html-2columns">
+    <div class="show-html-left">
+      <div class="show-html-css-js-html">${_label("html")}${html_area}</div>
+      <div class="show-html-css-js-css">${_label("css")}${css_area}</div>
+    </div>
+    <div class="show-html-right">
+      <div class="show-html-css-js-js">${_label("js")}${js_area}</div>
+      <div class="show-html-css-js-result">${result_area}</div>
+    </div>
 </div>
     `;
     return $$.html(whole);
