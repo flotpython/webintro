@@ -68,11 +68,11 @@ span.lang.css::before {
 }
 span.lang.css {
     margin-top: 10px;
-    background-color: #bbded6;
+    background-color: #bbe1fa;
 }
 span.lang.js::before {
     content: 'JavaScript';
 }
 span.lang.js {
-    background-color: #fddb3a;
+    background-color: #ede59a;
 }
