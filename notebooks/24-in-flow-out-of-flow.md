@@ -117,10 +117,14 @@ tools.iframe_html_css("fixed1", fixed1_html, fixed1_css, true)
 <!-- #endregion -->
 
 * this topic is described [at greater length in this MDN article](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flow_Layout/In_Flow_and_Out_of_Flow)
+* css-tricks also has [a blog post dedicated to floats](https://css-tricks.com/all-about-floats/)
 * **WARNING** : advised for advanced users only  
-  beginners should probably not try to use this at first
-* as mix-and-match of `display` and `position` settings  
-  can quickly become rather confusing
+  * beginners should probably not try to use this at first
+  * as mix-and-match of `display` and `position` settings  
+    can quickly become rather confusing  
+    not to mention the `float` property
+  * see these as **last resort**,  
+    only if grid/flex really won't work for you
 
 <!-- #region slideshow={"slide_type": "slide"} -->
 ## assignment
@@ -132,6 +136,17 @@ tools.iframe_html_css("fixed1", fixed1_html, fixed1_css, true)
 * hint : each section of course remains untouched no matter the device
 * but the arrangement of the sections on the page changes
 
-```javascript hide_input=true
+<!-- #region slideshow={"slide_type": "slide"} -->
+## extras
+<!-- #endregion -->
 
-```
+optional topics :
+
+* to add some elements before or after all elements matching a selector  
+  see `::before` and `::after`
+* to style a `<a>` link depending on its status  
+  see e.g. `:hover` or `:visited` or similar pseudo-classes
+  
+* **experts** : if you believe you have a full understanding  
+  of how CSS layouts work, you should [give this test a shot](https://css-tricks.com/how-well-do-you-know-css-layout/)  
+  (you will feel more humble afterwards ;-)

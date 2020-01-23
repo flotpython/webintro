@@ -71,7 +71,9 @@ find out more on these by yourselves
 <!-- #endregion -->
 
 * SVG is a complete subsystem to deal with vector graphics
-* [learn more about SVG](https://www.w3schools.com/graphics/svg_intro.asp)
+* [learn more about SVG at w3schools](https://www.w3schools.com/graphics/svg_intro.asp) (basic)
+* [and much more on css-tricks](https://css-tricks.com/svg-properties-and-css/)  
+  (very advanced, including animations)
 
 <!-- #region slideshow={"slide_type": "slide"} -->
 ### svg example
