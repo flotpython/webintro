@@ -79,8 +79,63 @@ JavaScript
   * in response to user-triggered events
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-## example
+## example 1
 <!-- #endregion -->
+
+in this example we will :
+* create two `<div>` elements
+* one acts as a button, that can make  
+  the other one visible or not
+* for that we create a JavaScript  
+  **function** named `toggle()`
+* that is bound to the `onclick` event   
+  of the button `<div>` element
+
+```javascript hide_input=true slideshow={"slide_type": "slide"}
+all3_html = `<!-- binding a JS function 
+     to user-triggered event -->
+<div id="button"
+     onclick="toggle()">
+  click me to hide or show next item
+</div>
+<div id="area">
+    This area will come and go
+    <br/> Check console output 
+    in the devel tools area
+</div>`;
+all3_css = `#button {
+  padding: 20px;
+  border: 1px solid blue;
+  border-radius: 5px;
+  background-color: #ffb6b9;
+}
+#area {
+  padding: 10px;
+  background-color: #f5f0e3;
+}`;
+all3_js = `function toggle() {
+  // locate the element that we want to toggle
+  let to_toggle = document.getElementById("area");
+  // find its current status
+  let current = to_toggle.style.display;
+  // apply the opposite status
+  if (current == "none") {
+    to_toggle.style.display = "block";
+  } else {
+    to_toggle.style.display = "none";    
+  }
+  // show a message in the JS console
+  console.log(\`display \${current} →\`
+              \`\${to_toggle.style.display}\`);
+}`;
+tools.iframe_html_css_js("foo-all3", all3_html, all3_css, all3_js, true)
+```
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+## example 2
+<!-- #endregion -->
+
+
 
 ```javascript
 
