@@ -96,7 +96,7 @@ all3_html = `<!-- binding a JS function
      to user-triggered event -->
 <div id="button"
      onclick="toggle()">
-  click me to hide or show next item
+  click to hide or show next item
 </div>
 <div id="area">
     This area will come and go
@@ -131,11 +131,100 @@ all3_js = `function toggle() {
 tools.iframe_html_css_js("foo-all3", all3_html, all3_css, all3_js, true)
 ```
 
-<!-- #region slideshow={"slide_type": "slide"} -->
+<!-- #region slideshow={"slide_type": "slide"} hide_input=true -->
 ## example 2
 <!-- #endregion -->
+in this further example :
+* we create a button, a graphic area (`<svg>`)  
+  both inside a container
+* the page runs a cyclic task 
+* which, when active, adds a random point  
+  to the graphic area
 
+```javascript hide_input=true slideshow={"slide_type": "slide"}
+turtle_html = `<div class="top">
+<span 
+  id="button"
+  onclick="start_stop()">
+Pause / Stop
+</span>
 
+<svg width="400" height="100">
+</svg>
+</div>`;
+turtle_css = `.top {
+  display: flex;
+  align-items: center;
+}
+#button {
+  border: 1px solid blue;
+  border-radius: 6px;
+  padding: 10px;
+}
+svg {
+  margin-top: 20px;
+  border: 5px solid #75b79e;
+}
+circle {
+  stroke: #6e5773; 
+  fill: none;
+  stroke-width: 2;
+}
+`;
+turtle_js = `svgNS = "http://www.w3.org/2000/svg";
+
+// a JavScript object looks like this
+the_turtle = {
+  w: 400, h: 100, 
+  x: 100, y: 50,
+  r: 4,
+  angle: 180,
+}
+
+// messing with the DOM: adds a circle inside <svg>
+function draw(turtle) {
+  let canvas = document.querySelector("svg");
+  console.log(canvas);
+  let circle = document.createElementNS(svgNS, 'circle');
+  circle.setAttribute('cx', turtle.x);
+  circle.setAttribute('cy', turtle.y);
+  circle.setAttribute('r', turtle.r);
+  canvas.append(circle);
+}
+
+// compute next random position
+function move(turtle) {
+  let [rx, ry] = [Math.random(), Math.random()];
+  turtle.x = rx * turtle.w;
+  turtle.y = ry * turtle.h;
+}
+
+// start disabled
+active = false;
+
+function start_stop() {
+  active = ! active;
+}
+
+// heartbeat
+function run() {
+  if (active) {
+    draw(the_turtle);
+    move(the_turtle);
+    console.log(the_turtle);
+  }
+  // this will cause run() to be called again in 400 ms
+  // that's what makes it run forever
+  window.setTimeout(run, 400);
+}
+
+// calling run once will run it forever
+// because run() installs itself through a timeout 
+run()
+
+`;
+tools.iframe_html_css_js("turtle", turtle_html, turtle_css, turtle_js, true)
+```
 
 ```javascript
 
