@@ -11,10 +11,6 @@ function _escape(string) {
     ;
 }
 
-function _verbatim(html) {
-    return `<pre><code>${_escape(html)}</code></pre>`;
-}
-
 function _injected_css(css) {
     return `<style>
 ${css}
@@ -26,10 +22,22 @@ ${css}
 </script>`;
 }
 
-function _label(cls) {
-    return `<span class="lang ${cls}"></span>`;
+function _verbatim(html) {
+    return `<pre class="labeled">${_escape(html)}</pre>`;
 }
 
+function _label(cls) {
+    return `<span class="float-label lang ${cls}"></span>`;
+}
+
+function _labeled_area(code, code_class, label_class) {
+    return `<div class="${code_class}">
+    <div class="labeled">
+    ${_label(label_class)}
+    ${_verbatim(code)}
+    </div>
+</div>`;
+}
 
 function _iframe_for_stored_html(filename, html) {
     fs.writeFileSync(filename, html);
@@ -65,8 +73,8 @@ function two_columns(html) {
 
 function iframe_html_css(iframe, html, css, external) {
     let filename = `./${iframe}.html`;
-    let top_left = _verbatim(html);
-    let bottom_left = _verbatim(css);
+    let top_left = _labeled_area(html, "show-html-css-top-left", "html");
+    let bottom_left = _labeled_area(css, "show-html-css-bottom-left", "css");
     let full_code = `${_injected_css(css)}
 ${html}`;
     let right = _iframe_for_stored_html(filename, full_code);
@@ -78,8 +86,7 @@ ${html}`;
     }
     let whole = `<div class="show-html-2columns">
 <div class="show-html-css-left">
-  <div class="show-html-css-top-left">${_label("html")}${top_left}</div>
-  <div class="show-html-css-bottom-left">${_label("css")}${bottom_left}</div>
+  ${top_left}${bottom_left}
 </div>
   <div class="show-html-css-right ${external_class}">${right}${external_button}</div>
 </div>    
@@ -94,9 +101,9 @@ ${_injected_css(css)}
 ${_injected_js(js)}
 `;
     /* produce html file */
-    let html_area = _verbatim(html);
-    let css_area = _verbatim(css);
-    let js_area = _verbatim(js);
+    let html_area = _labeled_area(html, "show-html-css-js-html", "html");
+    let css_area = _labeled_area(css, "show-html-css-js-css", "css");
+    let js_area = _labeled_area(js, "show-html-css-js-js", "js");
     let iframe_area = _iframe_for_stored_html(filename, full_code);
     let [external_class, external_button] = ['', ''];
     if (external) {
@@ -107,12 +114,9 @@ ${_injected_js(js)}
 ${iframe_area}${external_button}
 </div>`;
     let whole = `<div class="show-html-2columns">
-    <div class="show-html-left">
-      <div class="show-html-css-js-html">${_label("html")}${html_area}</div>
-      <div class="show-html-css-js-css">${_label("css")}${css_area}</div>
+    <div class="show-html-left">${html_area}${css_area}
     </div>
-    <div class="show-html-right">
-      <div class="show-html-css-js-js">${_label("js")}${js_area}</div>
+    <div class="show-html-right">${js_area}
       <div class="show-html-css-js-result">${result_area}</div>
     </div>
 </div>
