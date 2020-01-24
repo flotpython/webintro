@@ -114,6 +114,8 @@ in a jumble :
 * `<form>` to group user-provided input  
   out of scope for this course though,  
   as it involves a backend
+* `<canvas>` is a more recent alternative to SVG for graphics,  
+  [see more on css-tricks](https://css-tricks.com/learn-canvas-snake-game/)
 
 <!-- #region slideshow={"slide_type": "slide"} -->
 # practice 
