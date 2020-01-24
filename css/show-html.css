@@ -29,7 +29,7 @@ div.show-html-2columns pre {
     border-radius: 6px;
     border-style: dashed;
     border-color: #335;
-    overflow: initial !important;
+    overflow: scroll !important;
     width: 100%;
 }
 iframe.show-html {
@@ -87,6 +87,8 @@ pre.labeled {
     margin-top: 0px;
     margin-bottom: 0px;
     white-space: pre;
+    line-height: 1.2;
+    max-height: 20em;
 }
 div.labeled {
     display: block;
