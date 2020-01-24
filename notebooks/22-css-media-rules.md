@@ -82,7 +82,7 @@ in a separate window, turn on
 devel tools to see the window size, and resize
 the window so the width becomes smaller 
 or larger than ${threshold}
-<br/><b>NOTE</b> make sure your zoom factor is 100% 
+<br><b>NOTE</b> make sure your zoom factor is 100% 
 </body>`;
 media_width_css = `/* beware that this rule MUST COME FIRST */
 body {
@@ -124,7 +124,7 @@ tools.iframe_html_css("media-rule-width", media_width_html, media_width_css, tru
 media_print_html = `<body class="media">
 It is often very useful to tweak the print
 layout, in terms of margins and the like.
-<hr />
+<hr>
 Click below to open in a separate window,
 and pretend to print so you get a preview;
 </body>`;

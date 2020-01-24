@@ -179,7 +179,7 @@ that allow to set several atomic properties in one line, e.g. :
 
 ```javascript hide_input=true
 shorthand_html = `<p class="shorthand1">shorthand properties</p>
-<hr/>`;
+<hr>`;
 shorthand_css = `p.shorthand1 {
     font: italic bold 20pt Arial, sans-serif;
     margin: 40px;

@@ -108,7 +108,7 @@ hover_html = `<div id="part1">
 
 <div class="part2">
   <a href="https://nbhosting.inria.fr" target="_">hover mouse here</a>
-  <br/>
+  <br>
   <a name="nbhosting">this is an anchor tag, it should not react to mouse</a>
 </div>
 
@@ -136,7 +136,7 @@ hover_html = `<div id="part1">
 
 <div class="part2">
   <a href="https://nbhosting.inria.fr" target="_">hover mouse here</a>
-  <br/>
+  <br>
   <a name="nbhosting">this is an anchor tag, it should not react to mouse</a>
 </div>
 

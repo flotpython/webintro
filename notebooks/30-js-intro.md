@@ -100,7 +100,7 @@ all3_html = `<!-- binding a JS function
 </div>
 <div id="area">
     This area will come and go
-    <br/> Check console output 
+    <br> Check console output 
     in the devel tools area
 </div>`;
 all3_css = `#button {

@@ -71,7 +71,7 @@ tools.two_columns(headers_fragment)
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-## text tags `<p>` and `<br/>` 
+## text tags `<p>` and `<br>` 
 <!-- #endregion -->
 
 ```javascript hide_input=true
@@ -81,8 +81,8 @@ that stands for paragraph, and that of course gets justified
 when the text is too wide to fit within the available space.</p>
 
 <p>Sometimes the separation between paragraphs is too much, 
-<br/> and in this case you can insert a simple linebreak 
-instead using the &lt;br/&gt; tag
+<br> and in this case you can insert a simple linebreak 
+instead using the &lt;br&gt; tag
 </p>
 `
 tools.two_columns(text_fragment)
@@ -163,7 +163,7 @@ tools.two_columns(anchor_fragment)
 redirect_fragment = `<p>it is easy to craft a local URL;
 here this hyperlink 
 <a href="#the-anchor-name">will go backwards</a>
-<br/>
+<br>
 (although in slideshow mode this does not exactly behave well)
 </p>
 `;

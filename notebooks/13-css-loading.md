@@ -83,7 +83,7 @@ tools.init();
 <html>
   <head>
     <!-- this is the line that matters -->
-    <link rel="stylesheet" href="mystyle.css" />  
+    <link rel="stylesheet" href="mystyle.css">  
   </head>
   <body>
      Hello
@@ -103,10 +103,10 @@ tools.init();
 <!-- #region slideshow={"slide_type": ""} -->
 ##### notes on self-closing tags
 
-* note also the terminating `/>` in the `<link ... />` element
-* which could remind you of `<br />`
-* it applies to elements that have no contents
-* so the tag is closed immediately - no matching `</tag>` is searched
+* note also the absence of a `</link>`, 
+* which may remind you of `<br>`
+* such elements are called **void** or **empty** elements
+* among others : `<br>`, `<hr>`, `<link>`, `<img>`,...
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "slide"} -->
