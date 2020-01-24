@@ -79,7 +79,9 @@ span.lang.js {
     background-color: #ede59a;
 }
 .float-label {
-    float: right;
+    position: absolute;
+    top: 2px;
+    right: 2px;
 }
 pre.labeled {
     margin-top: 0px;
@@ -88,4 +90,5 @@ pre.labeled {
 }
 div.labeled {
     display: block;
+    position: relative;
 }
