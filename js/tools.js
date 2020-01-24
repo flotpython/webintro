@@ -19,3 +19,15 @@ function init() {
     $$.html(css + button);
 }
 exports.init = init;
+
+function autoreload(module) {
+    require("fs").watchFile(
+        require("path").resolve(module),
+        () => {
+            console.log(`unloading ${module}`)
+            delete require.cache[require.resolve(module)]})}
+
+exports.autoreload = autoreload
+
+////
+//console.log("tools loaded")
