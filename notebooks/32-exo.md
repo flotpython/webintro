@@ -14,7 +14,7 @@ jupyter:
     display_name: Javascript (Node.js)
     language: javascript
     name: javascript
-  notebookname: JS practice
+  notebookname: practice & devel tools
   rise:
     autolaunch: true
     slideNumber: c/t

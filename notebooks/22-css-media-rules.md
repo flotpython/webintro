@@ -14,7 +14,7 @@ jupyter:
     display_name: Javascript (Node.js)
     language: javascript
     name: javascript
-  notebookname: CSS @media rules
+  notebookname: css @media rules
   rise:
     autolaunch: true
     slideNumber: c/t
