@@ -74,27 +74,26 @@ JavaScript
 
 * runs **inside the browser**
 * has direct **access to the DOM**
-* that it can freely manipulate
-  * to dynamically change properties 
-  * in response to user-triggered events
+* that it can freely manipulate to  
+  add / remove / modify content  
+  dynamically change properties
+* in response to user-triggered events
 
 <!-- #region slideshow={"slide_type": "slide"} -->
 ## example 1
 <!-- #endregion -->
 
-in this example we will :
-* create two `<div>` elements
+in this example :
+* HTML has two elements
 * one acts as a button, that can make  
   the other one visible or not
 * for that we create a JavaScript  
   **function** named `toggle()`
 * that is bound to the `onclick` event   
-  of the button `<div>` element
+  of the button element
 
 ```javascript hide_input=true slideshow={"slide_type": "slide"}
-all3_html = `<!-- binding a JS function 
-     to user-triggered event -->
-<div id="button"
+all3_html = `<div id="button"
      onclick="toggle()">
   click to hide or show next item
 </div>
@@ -108,6 +107,7 @@ all3_css = `#button {
   border: 1px solid blue;
   border-radius: 5px;
   background-color: #ffb6b9;
+  width: fit-content;
 }
 #area {
   padding: 10px;
@@ -131,30 +131,43 @@ all3_js = `function toggle() {
 tools.iframe_html_css_js("foo-all3", all3_html, all3_css, all3_js, true)
 ```
 
+<!-- #region slideshow={"slide_type": "slide"} -->
+#### things to note about example #1  
+
+visibility of symbols (variable and function names) :
+
+* `onclick` property on `button`  
+  is a JavaScript fragment  
+  that refers to global `toggle` function
+* local variables inside `toggle`  
+  are declared with `let`
+<!-- #endregion -->
+
 <!-- #region slideshow={"slide_type": "slide"} hide_input=true -->
 ## example 2
 <!-- #endregion -->
 in this further example :
-* we create a button, a graphic area (`<svg>`)  
-  both inside a container
-* the page runs a cyclic task 
-* which, when active, adds a random point  
-  to the graphic area
+* we create two visible elements   
+  a button, and a graphic area `<svg>`
+* the page runs a cyclic task  
+  that adds a random point 
+* button to start / suspend
 
 ```javascript hide_input=true slideshow={"slide_type": "slide"}
-turtle_html = `<div class="top">
+randomdots_html = `<div class="top">
 <span 
   id="button"
   onclick="start_stop()">
-Pause / Stop
+start / suspend
 </span>
 
-<svg width="400" height="100">
-</svg>
+<svg> </svg>
 </div>`;
-turtle_css = `.top {
+randomdots_css = `.top {
   display: flex;
   align-items: center;
+  justify-content: space-evenly;
+  height: 100%;
 }
 #button {
   border: 1px solid blue;
@@ -162,70 +175,90 @@ turtle_css = `.top {
   padding: 10px;
 }
 svg {
-  margin-top: 20px;
   border: 5px solid #75b79e;
 }
 circle {
   stroke: #6e5773; 
   fill: none;
   stroke-width: 2;
-}
-`;
-turtle_js = `svgNS = "http://www.w3.org/2000/svg";
+}`;
+randomdots_js = `let svgNS = "http://www.w3.org/2000/svg";
 
-// a JavScript object looks like this
-the_turtle = {
+// a JavaScript object looks like this
+let the_walker = {
   w: 400, h: 100, 
   x: 100, y: 50,
   r: 4,
-  angle: 180,
 }
 
 // messing with the DOM: adds a circle inside <svg>
-function draw(turtle) {
-  let canvas = document.querySelector("svg");
-  console.log(canvas);
+function draw(walker) {
+  let svg = document.querySelector("svg");
+  console.log(svg);
   let circle = document.createElementNS(svgNS, 'circle');
-  circle.setAttribute('cx', turtle.x);
-  circle.setAttribute('cy', turtle.y);
-  circle.setAttribute('r', turtle.r);
-  canvas.append(circle);
+  circle.setAttribute('cx', walker.x);
+  circle.setAttribute('cy', walker.y);
+  circle.setAttribute('r', walker.r);
+  svg.append(circle);
 }
 
 // compute next random position
-function move(turtle) {
+function move(walker) {
   let [rx, ry] = [Math.random(), Math.random()];
-  turtle.x = rx * turtle.w;
-  turtle.y = ry * turtle.h;
+  walker.x = rx * walker.w;
+  walker.y = ry * walker.h;
 }
 
 // start disabled
-active = false;
+let active = false;
 
 function start_stop() {
   active = ! active;
 }
 
 // heartbeat
+// calling run() once will run it forever
+// because run() installs itself through a timeout 
 function run() {
   if (active) {
-    draw(the_turtle);
-    move(the_turtle);
-    console.log(the_turtle);
+    draw(the_walker);
+    move(the_walker);
   }
   // this will cause run() to be called again in 400 ms
   // that's what makes it run forever
   window.setTimeout(run, 400);
 }
 
-// calling run once will run it forever
-// because run() installs itself through a timeout 
-run()
-
-`;
-tools.iframe_html_css_js("turtle", turtle_html, turtle_css, turtle_js, true)
+// start the loop, but only once the page is loaded
+window.onload = function () { 
+  let svg = document.querySelector("svg");
+  svg.setAttribute('width', the_walker.w);
+  svg.setAttribute('height', the_walker.h);
+  run();
+}`;
+tools.iframe_html_css_js("randomdots", randomdots_html, randomdots_css, randomdots_js, true)
 ```
 
-```javascript
+<!-- #region slideshow={"slide_type": "slide"} -->
+#### things to note about example #2 :
 
-```
+* adding to the DOM to create new content
+* `the_walker` is a JavaScript *object*,  
+  i.e. composite data keyed on `w`, `h`, etc…  
+  more on this later
+<!-- #endregion -->
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+#### still on example #2 :
+
+and also, about asynchronicity :
+
+* initialization code messes with the `<svg>`'s attributes 
+* so that element must have been created beforehand
+* **but** 
+  * a page is made of html + css + js 
+  * we have no control on the order in which
+    things happen in the browser
+* how to ensure that init code is executed  
+  **after** html elements are created ?
+<!-- #endregion -->
