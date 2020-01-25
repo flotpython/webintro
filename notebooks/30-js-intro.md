@@ -141,6 +141,8 @@ visibility of symbols (variable and function names) :
   that refers to global `toggle` function
 * local variables inside `toggle`  
   are declared with `let`
+* global variables `document` and `console`
+  allow to access browser components
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "slide"} hide_input=true -->
@@ -254,11 +256,58 @@ tools.iframe_html_css_js("randomdots", randomdots_html, randomdots_css, randomdo
 and also, about asynchronicity :
 
 * initialization code messes with the `<svg>`'s attributes 
-* so that element must have been created beforehand
+  * so that element must have been created **beforehand**
 * **but** 
   * a page is made of html + css + js 
-  * we have no control on the order in which
-    things happen in the browser
+  * we have no control on the order  
+    in which things happen in the browser
 * how to ensure that init code is executed  
   **after** html elements are created ?
+  * the purpose of `document.onload`
 <!-- #endregion -->
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+## event-driven
+<!-- #endregion -->
+
+* as opposed to more traditional languages,  
+  (think `main()` in C++ or Java,  
+   or the entry module in Python)  
+* browser-hosted code has  
+  **little control** on overall **order**  
+* plus, apps need to react to   
+  * user-, network-, and time-triggered events  
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+## callbacks
+<!-- #endregion -->
+
+* one very pervasive programming pattern in JavaScript 
+* is the notion of a **callback** 
+* which is a **function**
+* attached to some sort of event
+* function gets fired when event occurs
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+## callbacks - ctd
+<!-- #endregion -->
+
+in our 2 examples, we have seen 3 callbacks already
+
+* ex.1 : `onclick="toggle()"`  
+* ex.2 : `window.setTimeout(run, 400);` 
+* ex.2 : `window.onload = function () { ` 
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+## take home message
+<!-- #endregion -->
+
+as far as Web frontend, JavaScript :
+
+* runs **in the browser**  <span style="font-size: small">(FYI can also be used as a regular prog. lang)</span>
+* **full-fledged** modern language,  
+  with objects, modules
+* aware of browser objects through globals  
+  e.g. `document`, `window`, `console`
+* highly influenced by asynchronicity
+  
