@@ -128,8 +128,8 @@ in a jumble :
   * `resume.css`
 * at this point, you may think of it as if it were a word document
   * with a header that has your details and photo
-  * and the 3 well structured sections,
-  * again 'work experience', 'education' and 'other activities'
+  * and the 4 well structured sections,
+  * again 'experience', 'education', 'skills' and 'languages'
 * try to print it in a PDF file, to evaluate how it fits with respect to an A4 page
 * **NOTE** that next course will address overall layout in greater details, 
   (i.e. the relative place of all pieces wrt one another)  
