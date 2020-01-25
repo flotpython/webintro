@@ -155,3 +155,17 @@ occasionnally useful to browse the code actually loaded
 **Remember**
 * to use Shift-load, or other cache-cleaning tool  
 * if changes in a file do not seem to kick in
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+## more on devel tools
+<!-- #endregion -->
+
+<!-- #region slideshow={"slide_type": ""} -->
+* there are standard keyboard shortcuts to invoke devel tools,  
+* e.g. for [google chrome](https://developers.google.com/web/tools/chrome-devtools/shortcuts)  
+  * macOS `⌘ ⌥ J` (console) or `⌘ ⌥ I` (your last tab)
+  * others `⌃ ⇧ J` (console) or `⌃ ⇧ I` (your last tab)
+* a bit early for now, but be aware that  
+  they come with a complete debugger
+* do not hesitate to search for some hands-on / video tuto
+<!-- #endregion -->
