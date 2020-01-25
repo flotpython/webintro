@@ -60,7 +60,7 @@ tools.init();
 ## open topic
 <!-- #endregion -->
 
-* loading JavaScript is IMHO **still an open topic** 
+* loading JavaScript is **still an open topic** 
 * because in the general sense it is about  
   **smooth dependencies**
 * typical use case  
@@ -72,9 +72,9 @@ tools.init();
 <!-- #endregion -->
 
 * restricting ourselves to the simplest case
-* where a single HTML page needs to load one JS fragment
-* there are 1 simple way
-  * the `<script>` tag
+* where a single HTML page  
+  needs to load one JS fragment
+* there is one simple way : the `<script>` tag
   * that comes in 2 flavours,
   * whether code is inline or in a separate location
 
@@ -91,65 +91,40 @@ tools.init();
 <!-- #region cell_style="center" hide_input=false slideshow={"slide_type": ""} -->
 ```html
 <script>
+    
   function hello() {
     console.log("Hello world");
   }
+
   hello()
+    
 </script>
 ```
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-## `<script src="">` to load from a URL
+## `<script src="...">` : load a URL
 <!-- #endregion -->
 
-* most often though, code is stored in separate location
+* most often though, code is stored in a separate location
   * either as a companion to the HTML page
   * or in a remote location
 * for that, use `<script src="some-url"></script>` 
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-### `<script src="">` - examples
+### `<script src="...">` - exemples
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": ""} -->
-* `<script src="foo.js"></script>`  
+* **local file**  
+  `<script src="foo.js"></script>`  
   loads `foo.js` from the same  
   directory as the current page 
 
-* and <span style="font-size:0.4em"><code>&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js&quot;&gt; &lt;/script&gt;</code></span>  
+* **remote file**  
+  <span style="font-size:0.4em"><code>&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js&quot;&gt; &lt;/script&gt;</code></span>  
   loads jQuery (more on that later)  
     from a publicly available CDN
   
   
 <!-- #endregion -->
-
-<!-- #region slideshow={"slide_type": "slide"} -->
-## practice
-<!-- #endregion -->
-
-* create a HTML document
-* as a collection of 3 files, 
-* say : `resume.html`, `resume.css`, `resume.js`
-* make sure the html header loads the css and js companions
-
-
-then 
-
-* edit the JavaScript code
-* so that your resume background
-* alternates every 1 second
-* between 2 different colours
-* see example 2 for inspiration
-
-<!-- #region slideshow={"slide_type": "slide"} -->
-## the browser cache (yet again)
-<!-- #endregion -->
-
-* the browser cache thing (see CSS loading)
-* applies exactly the same  
-* in the case of JavaScript code
-
-**Remember**
-* to use Shift-load, or other cache-cleaning tool  
-* if changes in a file do not seem to kick in
