@@ -97,7 +97,7 @@ all3_html = `<div id="button"
      onclick="toggle()">
   click to hide or show next item
 </div>
-<div id="area">
+<div id="area" style="display:none">
     This area will come and go
     <br> Check console output 
     in the devel tools area
@@ -114,19 +114,20 @@ all3_css = `#button {
   background-color: #f5f0e3;
 }`;
 all3_js = `function toggle() {
+  // from the 'document' global variable
   // locate the element that we want to toggle
   let to_toggle = document.getElementById("area");
   // find its current status
   let current = to_toggle.style.display;
   // apply the opposite status
-  if (current == "none") {
-    to_toggle.style.display = "block";
+  if (current == "block") {
+    to_toggle.style.display = "none";
   } else {
-    to_toggle.style.display = "none";    
+    to_toggle.style.display = "block";    
   }
   // show a message in the JS console
-  console.log(\`display \${current} →\`
-              \`\${to_toggle.style.display}\`);
+  console.log(current);
+  console.log(current, " → ", to_toggle.style.display);
 }`;
 tools.iframe_html_css_js("foo-all3", all3_html, all3_css, all3_js, true)
 ```
