@@ -82,13 +82,13 @@ tools.init();
 ## `<script>` with inline code
 <!-- #endregion -->
 
-<!-- #region cell_style="split" -->
+<!-- #region cell_style="center" -->
 * quite simply, you can inject some JS code 
 * right into your HTML document 
 * through a `<script>` tag
 <!-- #endregion -->
 
-<!-- #region cell_style="split" hide_input=false slideshow={"slide_type": ""} -->
+<!-- #region cell_style="center" hide_input=false slideshow={"slide_type": ""} -->
 ```html
 <script>
   function hello() {
