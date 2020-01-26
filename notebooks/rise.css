@@ -52,3 +52,9 @@ div.plan-container {
 div.cell.text_cell .prompt.input_prompt {
     display: none;
 }
+
+.footnote {
+    font-size: medium;
+    line-height: 1;
+    margin: 0px;
+}
