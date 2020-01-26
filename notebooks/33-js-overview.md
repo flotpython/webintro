@@ -114,6 +114,27 @@ a = 10;
 <span class="footnote"> **NOTE** as we will see below, real code should **always** declare variables, so this would read `let a = 10;` instead, but let us keep it simple for now </span>
 
 <!-- #region slideshow={"slide_type": "slide"} -->
+### tests and loops
+<!-- #endregion -->
+
+* `if` and `while` statements are straightforward
+* `for` are a little more awkward - more on iterations as we go
+
+```javascript cell_style="split"
+// conditional if 
+if (a == 10) {
+    console.log("YES");
+}
+```
+
+```javascript cell_style="split"
+while (a >= 5) {
+    console.log(a);
+    a -= 3;
+}
+```
+
+<!-- #region slideshow={"slide_type": "slide"} -->
 ## variables ([link in tuto](https://javascript.info/variables))
 <!-- #endregion -->
 

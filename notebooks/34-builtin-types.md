@@ -32,8 +32,8 @@ jupyter:
     toc_cell: false
     toc_position:
       height: 247.719px
-      left: 1130.52px
-      top: 141px
+      left: 1274.52px
+      top: 29px
       width: 253.469px
     toc_section_display: true
     toc_window_display: true
@@ -120,10 +120,35 @@ console.log(object.z)
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
+### boolean operators
+<!-- #endregion -->
+
+the syntax for boolean operators is here again inherited from C / C++ / Java
+
+```javascript cell_style="split"
+if (true && true) {
+    console.log(
+        "logical and is &&")
+}
+```
+
+```javascript cell_style="split"
+if (true || false) {
+    console.log(
+        "logical or is ||")
+}
+```
+
+```javascript
+if ( ! false) console.log("not is ! ")
+```
+
+<!-- #region slideshow={"slide_type": "slide"} -->
 ### see also
 
 * [on numbers](https://javascript.info/number)
 * [on strings](https://javascript.info/string)
+* [operators on booleans](https://javascript.info/logical-operators)
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "slide"} -->
@@ -179,4 +204,94 @@ for (let x of array) {
 for (let i in array) {
     console.log(i);
 }
+```
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+## hash-based data types
+<!-- #endregion -->
+
+* `Map` and `Set` are JavaScript builtin types
+  * that match Python's `dict` and `set` respectively
+* they exhibit the same constant-time lookup nice property
+* [read the full story](https://javascript.info/map-set)
+
+```javascript cell_style="split"
+let map = new Map();
+
+map.set('key1', 'value1');
+map.set(1000, 'value1000');
+
+map.get(1000)
+
+```
+
+```javascript cell_style="split"
+// iterating over map
+
+for (let k of map.keys()) {
+    console.log(`key=${k}, value=${map.get(k)}`)
+}
+```
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+## objects
+<!-- #endregion -->
+
+* as the name suggests, objects are the building block for inheritance
+* they are similar to Python's class instances
+  * in that they can hold attributes (Python vocabulary)
+  * that in JavaScript are called key-value pairs
+
+```javascript cell_style="split"
+let bond = {
+    first_name: "James",
+    last_name: "Bond"
+}
+
+console.log(`my name is ${bond.last_name}`);
+```
+
+```javascript cell_style="split"
+// check for a key
+'first_name' in bond
+```
+
+<!-- #region trusted=true -->
+<p class="footnote"> 
+    the syntax for JavaScript objects, as well as the <i>key/value</i> vocabulary <br>
+    make them **look like** Python dictionaries
+    **do not get confused though**, JavaScript objects are much more like Python class instances.
+</p>
+<!-- #endregion -->
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+### iterating over an object's keys
+<!-- #endregion -->
+
+* one can access an object's key/attribute with 2 syntaxes
+  * `object.first_name` takes the key name litterally
+  * `object[var]` **evaluates** `var`, that should give a key name
+
+```javascript
+// so we can use this to iterate over an object's contents
+for (key in bond) {
+    console.log(key, ':', bond[key])
+}
+```
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+## class instances are objects
+<!-- #endregion -->
+
+```javascript
+class Person {
+    constructor(first, last) {
+        this.first_name = first;
+        this.last_name = last;
+    }
+}
+
+let person = new Person("John", "Doe")
+
+typeof(person)
 ```
