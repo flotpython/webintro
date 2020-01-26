@@ -71,7 +71,7 @@ if however you plan on reading this course locally on your computer, there are a
 
 
 * slideshow :
-  * `pip install rise`  
+  * `pip install --pre rise`  
 * to read notebooks stored as markdown :  
   * `pip install jupytext`
 * jupyter's `hide_input` extension :  
