@@ -35,7 +35,7 @@ jupyter:
       left: 440px
       top: 0px
       width: 305.344px
-    toc_section_display: false
+    toc_section_display: true
     toc_window_display: true
   version: '1.0'
 ---
@@ -232,9 +232,19 @@ specificity can be reasonably approximated as follows :
 <!-- #endregion -->
 
 ```javascript hide_input=true
-specificity1_html = `<p class="myclass" id="myid" style="color: yellow">Lorem ipsum dolor sit amet.</p>`;
+specificity1_html = `<!-- the style 
+     attribute trumps all -->
+
+<p class="myclass"
+   id="myid" 
+   style="color: purple">
+
+Lorem ipsum dolor sit amet.
+</p>`;
 specificity_css = `p {
   color: green;
+  font-weight: bold;
+  font-size: 30px;
 }
 
 .myclass {
@@ -253,7 +263,14 @@ tools.iframe_html_css("specificity1", specificity1_html, specificity_css)
 <!-- #endregion -->
 
 ```javascript slideshow={"slide_type": ""} hide_input=true
-specificity2_html = `<p class="myclass" id="myid">Lorem ipsum dolor sit amet.</p>`;
+specificity2_html = `<!-- then id wins -->
+
+<p class="myclass"
+   id="myid">
+
+Lorem ipsum dolor sit amet.
+</p>
+`;
 tools.iframe_html_css("specificity2", specificity2_html, specificity_css);
 ```
 
@@ -262,7 +279,14 @@ tools.iframe_html_css("specificity2", specificity2_html, specificity_css);
 <!-- #endregion -->
 
 ```javascript slideshow={"slide_type": ""} hide_input=true
-specificity3_html = `<p class="myclass">Lorem ipsum dolor sit amet.</p>`;
+specificity3_html = `<!-- then class wins
+  -->
+
+<p class="myclass">
+
+Lorem ipsum dolor sit amet.
+</p>
+`;
 tools.iframe_html_css("specificity3", specificity3_html, specificity_css);
 ```
 
@@ -271,7 +295,11 @@ tools.iframe_html_css("specificity3", specificity3_html, specificity_css);
 <!-- #endregion -->
 
 ```javascript slideshow={"slide_type": ""} hide_input=true
-specificity4_html = `<p>Lorem ipsum dolor sit amet.</p>`;
+specificity4_html = `<p>
+
+Lorem ipsum dolor sit amet.
+</p>
+`;
 tools.iframe_html_css("specificity4", specificity4_html, specificity_css);
 ```
 

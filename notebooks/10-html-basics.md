@@ -32,8 +32,8 @@ jupyter:
     toc_cell: false
     toc_position:
       height: 218px
-      left: 22px
-      top: 101px
+      left: 1060.61px
+      top: 653px
       width: 309.391px
     toc_section_display: true
     toc_window_display: true
@@ -100,7 +100,7 @@ tools.one_column(fragment1)
 <!-- #region slideshow={"slide_type": ""} -->
 * create a file named `hello.html`
 * copy the above template
-* open it in your web browser
+* open it in your web browser (preferably Chrome)
 * you will see something like this
 <!-- #endregion -->
 
@@ -113,17 +113,35 @@ tools.two_columns(fragment1)
 ## devel tools
 <!-- #endregion -->
 
-using a right click on the 'Hello' text
+* all browsers come with development tools for debugging
+* as a first contact with these,  
+  let us inspect the content of our HTML document
+* for that the simplest way is to right click on the 'Hello' text
+* and choose 'Inspect'
 
 <!-- #region slideshow={"slide_type": ""} -->
 ![](../media/inspect-element-menu.png)
 <!-- #endregion -->
 
+<!-- #region slideshow={"slide_type": ""} -->
+<p class="rise-footnote"> 
+  this should open your browser's devel tools, which depending on your browser
+    <br> may require additional preparation or  installation steps
+    <br> we recommend using Chrome in case it is not working as expected 
+</p>
+<!-- #endregion -->
+
 <!-- #region slideshow={"slide_type": "slide"} -->
-you can reach your browser's devel tools  
-(may need additional prep / install)  
-use Chrome in case it is not working as expected  
+## *Elements* navigator
+<!-- #endregion -->
+
+<!-- #region slideshow={"slide_type": ""} -->
 ![](../media/inspect-element-elements.png) 
+<!-- #endregion -->
+
+<!-- #region slideshow={"slide_type": ""} -->
+<p class="rise-footnote"> 
+    from that view you can navigate the elements tree, although in this case it is very simple with just 3 nodes</p>
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "slide"} -->
@@ -145,7 +163,7 @@ where you can interact with the browser (more on this later)
 * referred to in all documentation as "*the DOM*"
 <!-- #endregion -->
 
-```javascript cell_style="center" hide_input=true slideshow={"slide_type": "slide"}
+```javascript cell_style="split" hide_input=true slideshow={"slide_type": "slide"}
 tree_html = `<html>
   <head>
     <title> top title </title>
@@ -158,8 +176,14 @@ tree_html = `<html>
 tools.one_column(tree_html)
 ```
 
-<!-- #region cell_style="center" hide_input=true -->
+<!-- #region cell_style="split" hide_input=true -->
 ![](../media/abstract-syntax.svg)
+<!-- #endregion -->
+
+<!-- #region cell_style="center" -->
+nodes in this tree are called **Elements**  
+it is the basis for navigating the document  
+in the *Elements* devel tools tab
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "slide"} -->
