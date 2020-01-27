@@ -88,7 +88,7 @@ let s2 = "ab" + "cdef";
 s1 == s2
 ```
 
-<p class="footnote">
+<p class="rise-footnote">
     be aware that <code>number</code> is similar to Python's </code>float</code> -- so with imprecision !  
     <br>
     google for <code>bigint</code> for error-free calculus on integers - like Python's <code>int</code>
@@ -257,7 +257,7 @@ console.log(`my name is ${bond.last_name}`);
 ```
 
 <!-- #region trusted=true -->
-<p class="footnote"> 
+<p class="rise-footnote"> 
     the syntax for JavaScript objects, as well as the <i>key/value</i> vocabulary <br>
     make them **look like** Python dictionaries
     **do not get confused though**, JavaScript objects are much more like Python class instances.

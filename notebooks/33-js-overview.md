@@ -111,7 +111,7 @@ a = 10;
    is ignored until matching */
 ```
 
-<span class="footnote"> **NOTE** as we will see below, real code should **always** declare variables, so this would read `let a = 10;` instead, but let us keep it simple for now </span>
+<span class="rise-footnote"> **NOTE** as we will see below, real code should **always** declare variables, so this would read `let a = 10;` instead, but let us keep it simple for now </span>
 
 <!-- #region slideshow={"slide_type": "slide"} -->
 ### tests and loops
@@ -154,6 +154,8 @@ s = "hello world";
 typeof(s)
 ```
 
+<p class="rise-footnote"> use <code>const</code> instead of <code>let</code> when declaring a constant variable</p>
+
 <!-- #region slideshow={"slide_type": "slide"} -->
 ## variable scope 
 <!-- #endregion -->
@@ -195,7 +197,7 @@ foo()
 * for new code, just **always** use `let`
 
 
-<p class="footnote"> 
+<p class="rise-footnote"> 
     when declaring a variable with <code>let</code>,
     it cannot be declared a second time within the same block; 
 <br>
@@ -237,7 +239,7 @@ console.log("level 0", y);
 * may depend on the runtime  
 
 
-<p class="footnote"> surprising as it may be, the notebook's JavaScript engine is an instance of <code>node</code>, and so is <b>not browser-related</b> <br> so we could not inspect the <code>document</code> or <code>window</code> variables in this context; of course you can do so from the browser's console though</p>
+<p class="rise-footnote"> surprising as it may be, the notebook's JavaScript engine is an instance of <code>node</code>, and so is <b>not browser-related</b> <br> so we could not inspect the <code>document</code> or <code>window</code> variables in this context; of course you can do so from the browser's console though</p>
 
 <!-- #region slideshow={"slide_type": "slide"} -->
 ## functions
@@ -329,7 +331,7 @@ let v = new Vector(10, 20)
 v.display()
 ```
 
-<p class="footnote"> here again, running this cell twice will cause an error; this is because, like with <code>let</code>, 
+<p class="rise-footnote"> here again, running this cell twice will cause an error; this is because, like with <code>let</code>, 
     <br>
     the language won't let you define the same <code>Vector</code> variable 
     twice in the same scope</p>
@@ -348,7 +350,7 @@ v.display()
   * not just plain Python-style `Vector()` 
 
 
-<p class="footnote"> 
+<p class="rise-footnote"> 
     also notice the string-formatting syntax 
     <code>`text ${variable}`</code>
     similar to Python's f-strings,
