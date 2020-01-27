@@ -158,18 +158,62 @@ if ( ! false) console.log("not is ! ")
 * similar to Python's `list`s
 
 ```javascript cell_style="split"
-let array = ["some", "words"]
-let array2 = new Array()
+// create non-empty
+let array1 = [1, "two"]
 
+// you can also create an
+// empty instance explicitly
+let array2 = new Array()
+```
+
+```javascript cell_style="split"
 // insert at the end
-array2.push("some")
-array2.push("words")
+array2.push(3)
+array2.push("four")
+array2.push(5)
 console.log(array2)
 ```
 
 ```javascript cell_style="split"
+// and get it back
+array2.pop()
+```
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+### common operations on arrays
+<!-- #endregion -->
+
+```javascript cell_style="split"
+// NOTICE, addition does NOT work like in Python
+array1 + array2
+```
+
+```javascript cell_style="split"
+// instead use the concat method
+let array = array1.concat(array2)
+array
+```
+
+```javascript cell_style="split"
+// indexing starts at 0 
+array[2]
+```
+
+```javascript cell_style="split"
+array.length 
+```
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+### searching
+<!-- #endregion -->
+
+* like with Python lists, searching in an array is **linear** in its length
+* so like in Python if you need fast access, use a *Map* instead  
+  (more on this right away)
+
+```javascript cell_style="split"
 // searching; >=0 means it is found
-console.log(array.indexOf("words"))
+console.log(array.indexOf(3))
 ```
 
 ```javascript cell_style="split"
@@ -178,15 +222,18 @@ console.log(array.indexOf("absent"))
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-### iterating over a list
+### iterating over an array
 <!-- #endregion -->
 
+<!-- #region cell_style="center" -->
 **common pitfall**
 * Python programmers tend to do `for (x in array)`
-* that is **not** the way to go
+* that is **not** right, use <code>for (x <b><i>of</i></b> array)</code>
+
 * also notice how to use `let` to define  
-  a variable local to the `for` loop
+  a variable **local** to the `for` loop
 * see also [more on arrays](https://javascript.info/array)
+<!-- #endregion -->
 
 ```javascript cell_style="split"
 // the equivalent of Python's
@@ -207,12 +254,26 @@ for (let i in array) {
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
+### more on arrays
+<!-- #endregion -->
+
+* as you expect there are many more methods available, like  
+  `.join()`, `.slice()`, `.splice()`, `.shift()`, `.unshift()`   
+
+* for more details see on *javascript.info*
+  * [this article on Arrays](https://javascript.info/array)
+  * and [this one on related methods](https://javascript.info/array-methods)
+     
+
+<!-- #region slideshow={"slide_type": "slide"} -->
 ## hash-based data types
 <!-- #endregion -->
 
 * `Map` and `Set` are JavaScript builtin types
   * that match Python's `dict` and `set` respectively
 * they exhibit the same constant-time lookup nice property
+* like in Python, **make sure to use them**   
+  whenever you need fast searching and indexing
 * [read the full story](https://javascript.info/map-set)
 
 ```javascript cell_style="split"
