@@ -187,14 +187,15 @@ array2.pop()
 <!-- #endregion -->
 
 ```javascript cell_style="split"
-// NOTICE, addition does NOT work like in Python
-array1 + array2
+// use the concat method
+let array = array1.concat(array2)
+array
 ```
 
 ```javascript cell_style="split"
-// instead use the concat method
-let array = array1.concat(array2)
-array
+// and NOT addition, 
+// it does NOT work like in Python
+array1 + array2
 ```
 
 ```javascript cell_style="split"
