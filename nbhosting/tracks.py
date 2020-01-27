@@ -11,7 +11,7 @@ def tracks(coursedir):
         Track(coursedir,
               name="D1 : HTML - CSS basics",
               sections=[
-                Section(name="the ecosystem",
+                Section(name="introduction",
                         coursedir=coursedir,
                         notebooks=notebooks_by_pattern(coursedir,"notebooks/0*.md")),
                 Section(name="HTML basics",
