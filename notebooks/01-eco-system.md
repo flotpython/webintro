@@ -14,7 +14,7 @@ jupyter:
     display_name: Javascript (Node.js)
     language: javascript
     name: javascript
-  notebookname: web ecosystem (frontend)
+  notebookname: motivation
   rise:
     autolaunch: true
     slideNumber: c/t
@@ -46,7 +46,7 @@ jupyter:
 </div>
 
 
-# Introduction to web frontend
+# objectives of this course
 
 ```javascript
 // run this cell, and then 
@@ -56,68 +56,85 @@ tools.init();
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-## Web ecosystem (frontend)
+## why a course on web frontend ?
 <!-- #endregion -->
 
-* crash course on how to write web pages  
-* just scratch the surface, a **whole lot** is not even mentioned  
-* focus on the core technological bricks
-  * HTML (HyperText Markup Language)
-  * CSS (Cascading Style Sheets)
-  * JavaScript (a.k.a. ECMAScript)
+* traditional languages like Python, C++, and Java
+  lack a decent environment for User Interfaces
+* but how much time do you spend on  
+  facebook, twitter, what'sapp, … ?
+* as of 2020, **everything** runs on the Web
+* so this simply **cannot be ignored**
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-## evolution speed
+## vocabulary
 <!-- #endregion -->
 
-* all this started in a very awkward way
-  * early versions were always quick and dirty
-  * for example, the first JavaScript version [was written in 10 days](https://thenewstack.io/brendan-eich-on-creating-javascript-in-10-days-and-what-hed-do-differently-today/)
-* evolving very rapidly
-* most notably
-  * in the way all the pieces are integrating together
-  * as well as with over-layers that try to improve / mitigate some flaws
-  * like less for css, TypeScript for JavaScript, and many many more
+* web technologies are heavily client-server based
+* server-side (think, cloud operators) is often called ***backend***  
+* client-side (think, browser) is called ***frontend***
 
+
+for instance
+* `facebook.com` hosts an enormous *backend* architecture  
+  * whose purpose is to serve network requests
+* issued by traditional browsers (Chrome, Firefox, Edge, Safari, …)
+  * and mobile apps running on phones and tablets
+  * that are all *frontends* 
+  * in the sense that they face the end user
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-##  focus on HTML - CSS - JavaScript
+## scope
+<!-- #endregion -->
+
+* due to time constraints
+* we will restrict ourselves to the ***frontend*** side
+* objective is to give you some grip 
+* on the core technologies supported in a browser  
+  namely HTML, CSS and JavaScript
+* ignoring the fast-moving over-layers  
+  too numerous to list at this point
+* so that you can assess their enormous potential
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+## excluded
+<!-- #endregion -->
+
+this means that we will **not** address :
+* backend technologies per se  
+  like e.g. apache, nginx, django, REST apis, …
+* nor the network protocols involved  
+  like http(s), websockets, and similar
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+## why is it so cool ?
+<!-- #endregion -->
+
+* so-called *GUI*-oriented tools (Graphical User Interfaces)
+  * like X11/MOTIF, .net, Java Swing, Qt, …
+* shared a mental model based on widgets and menus
+  * that is very limiting
+  * remember 1990's apps
+* web techniques allow for much cooler interaction modes
+* plus, thanks to a clear separation between content and styling
+  * they allow designers to fruitfully collaborate with engineers
+* as a bonus, they offer much wider portability
+  * across the whole range of computers and mobile devices
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+## wider than just the browser
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": ""} -->
-* we will only focus on **grassroots level**
-  * that will likely remain valid for a while
-* versions for our focus
-  * HTML-5, CSS-3, ECMAScript-6
-<!-- #endregion -->
-
-<!-- #region slideshow={"slide_type": "slide"} -->
-## backend and frontend 
-<!-- #endregion -->
-
-* typical Web-based application at work involves 2 sides
-  * Web server : runs on the application provider's side
-  * Web browser : runs on your laptop
-* code running on the former is called ***backend*** 
-* code that runs on the latter is called ***frontend***
-  * even though it is provided by the backend, of course  
-
-<!-- #region slideshow={"slide_type": "slide"} -->
-![](../media/client-server.svg)
-<!-- #endregion -->
-
-<!-- #region slideshow={"slide_type": "slide"} -->
-## you may have heard of
-<!-- #endregion -->
-
-<!-- #region slideshow={"slide_type": ""} -->
-* typical backend technologies
-  * PHP, Python/django, Ruby/on rails, SQL databases
-  * apache, nginx, load balancing
-* typical frontend technologies
-  * HTML, CSS, JavaScript
-* in between
-  * TCP/IP : low-level protocol of the Internet
-  * HTTP : HyperText Transfer Protocol
-  * WebSocket : full-duplex communication channel over a single TCP connection 
+* keep in mind that web frontend techologies
+  * go way beyond the browsers per se 
+* as there are many options to build a standalone app
+  * leveraging the same core technos (again, HTML, CSS and JavaScript)
+* also be aware that JavaScript
+  * that is primarily famous for powering frontends
+  * is becoming more and more popular  
+    as a traditional programming tool (see node.js)
+  * so it can be, and is more and more used  
+    for writing backends as well
+  * and even for traditional computing
 <!-- #endregion -->
