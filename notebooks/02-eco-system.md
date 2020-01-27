@@ -32,8 +32,8 @@ jupyter:
     toc_cell: false
     toc_position:
       height: 179px
-      left: 25px
-      top: 134px
+      left: 143px
+      top: 28px
       width: 202.391px
     toc_section_display: true
     toc_window_display: true
@@ -46,7 +46,7 @@ jupyter:
 </div>
 
 
-# Introduction to web frontend
+# introduction to web frontend
 
 ```javascript
 // run this cell, and then 
@@ -73,12 +73,12 @@ tools.init();
 * all this started in a very awkward way
   * early versions were always quick and dirty
   * for example, the first JavaScript version [was written in 10 days](https://thenewstack.io/brendan-eich-on-creating-javascript-in-10-days-and-what-hed-do-differently-today/)
-* evolving very rapidly
-* most notably
-  * in the way all the pieces are integrating together
-  * as well as with over-layers that try to improve / mitigate some flaws
-  * like less for css, TypeScript for JavaScript, and many many more
-
+* evolving **very quickly**, most notably
+  * in the way all the pieces are integrated together  
+    (e.g. JS loaders and transpilers and bundlers…)
+* many over-layers that improve / mitigate some flaws
+  * like ***less*** or ***sass*** above CSS,  
+  * ***TypeScript*** or ***CoffeeScript*** above JavaScript, …
 
 <!-- #region slideshow={"slide_type": "slide"} -->
 ##  focus on HTML - CSS - JavaScript
@@ -95,14 +95,19 @@ tools.init();
 ## backend and frontend 
 <!-- #endregion -->
 
-* typical Web-based application at work involves 2 sides
-  * Web server : runs on the application provider's side
-  * Web browser : runs on your laptop
-* code running on the former is called ***backend*** 
-* code that runs on the latter is called ***frontend***
-  * even though it is provided by the backend, of course  
+<!-- #region slideshow={"slide_type": ""} cell_style="split" -->
+* Web server :  
+  * operated by application provider
+  * runs **backend** code
+* Web browser :   
+  * runs on your laptop
+  * runs **frontend** code  
+    (even though that code  
+    is fetched at the backend)
 
-<!-- #region slideshow={"slide_type": "slide"} -->
+<!-- #endregion -->
+
+<!-- #region slideshow={"slide_type": ""} cell_style="split" -->
 ![](../media/client-server.svg)
 <!-- #endregion -->
 
@@ -115,9 +120,14 @@ tools.init();
   * PHP, Python/django, Ruby/on rails, SQL databases
   * apache, nginx, load balancing
 * typical frontend technologies
-  * HTML, CSS, JavaScript
+  * **HTML, CSS, JavaScript**
+  * react, angular, vue
 * in between
   * TCP/IP : low-level protocol of the Internet
   * HTTP : HyperText Transfer Protocol
-  * WebSocket : full-duplex communication channel over a single TCP connection 
+  * WebSocket : full-duplex communication channel  
+    over a single TCP connection 
+
+you can see our focus is 
+a small fraction of the whole spectrum
 <!-- #endregion -->
