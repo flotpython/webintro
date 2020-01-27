@@ -36,7 +36,7 @@ jupyter:
       top: 110px
       width: 343.469px
     toc_section_display: true
-    toc_window_display: false
+    toc_window_display: true
   version: '1.0'
 ---
 
@@ -190,6 +190,19 @@ typeof(s)
 ```
 
 <p class="rise-footnote"> use <code>const</code> instead of <code>let</code> when declaring a constant variable</p>
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+### Python-style assignment
+<!-- #endregion -->
+
+```javascript
+// there is a form of parallel assignment 
+// similar to what Python offers
+
+let [py, thon] = [10, 20];
+
+py + thon
+```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
 ## variable scope 

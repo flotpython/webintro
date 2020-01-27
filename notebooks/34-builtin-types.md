@@ -78,13 +78,16 @@ tools.init();
 <!-- #endregion -->
 
 ```javascript cell_style="split"
-// usual operators, here modulo
+// usual operators, here
+// ** is power and 
+// % is modulo
 (100 ** 9) % 11
 ```
 
 ```javascript cell_style="split"
-let s1 = "abc" + "def";
-let s2 = "ab" + "cdef";
+// strings with ' or "
+let s1 = "abc" + 'def';
+let s2 = 'ab' + "cdef";
 s1 == s2
 ```
 
@@ -258,12 +261,46 @@ for (let i in array) {
 <!-- #endregion -->
 
 * as you expect there are many more methods available, like  
-  `.join()`, `.slice()`, `.splice()`, `.shift()`, `.unshift()`   
+  `.sort()`, `.reverse()`  
+  `.join()`, `.slice()`, `.splice()`,  
+  `.shift()`, `.unshift()` 
 
 * for more details see on *javascript.info*
   * [this article on Arrays](https://javascript.info/array)
   * and [this one on related methods](https://javascript.info/array-methods)
      
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+### shared references
+<!-- #endregion -->
+
+* exactly like in Python, objects can be access from several references  
+* so you need to shallow- or deep-copy depending on your needs
+
+```javascript cell_style="split"
+ref1 = [["shared", "data"], "unshared"];
+ref1 
+```
+
+```javascript cell_style="split"
+// slice() works like Python's [:]
+// so it's a shallow copy
+ref2 = ref1.slice();
+ref2
+```
+
+```javascript cell_style="split"
+// changing data from ref2 
+ref2[0][0] = "from ref2"
+ref2[1] = "from ref2"
+ref2
+```
+
+```javascript cell_style="split"
+// impacts ref1 but not on first level
+// because it is a shallow copy
+ref1
+```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
 ## hash-based data types
