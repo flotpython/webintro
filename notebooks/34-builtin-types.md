@@ -321,7 +321,6 @@ map.set('key1', 'value1');
 map.set(1000, 'value1000');
 
 map.get(1000)
-
 ```
 
 ```javascript cell_style="split"
@@ -336,7 +335,7 @@ for (let k of map.keys()) {
 ## objects
 <!-- #endregion -->
 
-* as the name suggests, objects are the building block for inheritance
+* as the name suggests, objects are the building block for OOP
 * they are similar to Python's class instances
   * in that they can hold attributes (Python vocabulary)
   * that in JavaScript are called key-value pairs
@@ -358,7 +357,7 @@ console.log(`my name is ${bond.last_name}`);
 <!-- #region trusted=true -->
 <p class="rise-footnote"> 
     the syntax for JavaScript objects, as well as the <i>key/value</i> vocabulary <br>
-    make them **look like** Python dictionaries
+    make them **look like** Python dictionaries, <br>
     **do not get confused though**, JavaScript objects are much more like Python class instances.
 </p>
 <!-- #endregion -->
