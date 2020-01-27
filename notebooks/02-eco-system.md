@@ -14,7 +14,7 @@ jupyter:
     display_name: Javascript (Node.js)
     language: javascript
     name: javascript
-  notebookname: web ecosystem (frontend)
+  notebookname: web frontend ecosystem
   rise:
     autolaunch: true
     slideNumber: c/t
