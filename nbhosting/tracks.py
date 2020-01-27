@@ -9,20 +9,20 @@ from nbhosting.courses import (
 def tracks(coursedir):
     return [
         Track(coursedir,
-              name="D1 : HTML and CSS basics",
+              name="D1 : HTML - CSS basics",
               sections=[
-                Section(name="the ecosystem",
+                Section(name="the ecosystem",
                         coursedir=coursedir,
                         notebooks=notebooks_by_pattern(coursedir,"notebooks/0*.md")),
-                Section(name="html basics",
+                Section(name="HTML basics",
                         coursedir=coursedir,
                         notebooks=notebooks_by_pattern(coursedir,"notebooks/1*.md")),
                 ],
               description="n/a"),
         Track(coursedir,
-              name="D2 : CSS layout and intro to JS",
+              name="D2 : CSS layout - JS intro",
               sections=[
-                Section(name="advanced layout",
+                Section(name="advanced layout",
                         coursedir=coursedir,
                         notebooks=notebooks_by_pattern(coursedir,"notebooks/2*.md")),
                 Section(name="intro to JS",
