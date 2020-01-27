@@ -135,6 +135,37 @@ while (a >= 5) {
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
+###   switch
+<!-- #endregion -->
+
+<!-- #region cell_style="split" -->
+the switch statement in JavaScript
+is similar to the ones in C++ and Java
+it will branch your control flow into a
+location that depends on the subject's value
+
+**do not forget** the `break` statements !
+<!-- #endregion -->
+
+```javascript cell_style="split"
+switch (a) {
+    case 0:
+        console.log("ZERO");
+        break;
+    case 10:
+        console.log("TEN");
+        break;
+    case 20:
+        console.log("TWENTY");
+        break;
+    default:
+        console.log("NONE");        
+}
+```
+
+<p class="rise-footnote"> if the switch statement is new to you, please refer to this <a href="https://javascript.info/switch">full article on javascript.info</a></p>
+
+<!-- #region slideshow={"slide_type": "slide"} -->
 ## variables ([link in tuto](https://javascript.info/variables))
 <!-- #endregion -->
 
