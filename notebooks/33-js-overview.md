@@ -123,7 +123,11 @@ a = 10;
 ```javascript cell_style="split"
 // conditional if 
 if (a == 10) {
-    console.log("YES");
+    console.log("YES 10");
+} else if (a == 12) {
+    // 
+} else {
+    //
 }
 ```
 
