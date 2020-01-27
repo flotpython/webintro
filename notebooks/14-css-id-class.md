@@ -291,7 +291,7 @@ tools.iframe_html_css("specificity3", specificity3_html, specificity_css);
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-##### (2) then the element's tag wins
+##### (4) then the element's tag wins
 <!-- #endregion -->
 
 ```javascript slideshow={"slide_type": ""} hide_input=true
