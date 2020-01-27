@@ -180,12 +180,12 @@ switch (a) {
 <!-- #endregion -->
 
 ```javascript cell_style="split"
-n = 10;
+let n = 10;
 typeof(n)
 ```
 
 ```javascript cell_style="split"
-s = "hello world";
+let s = "hello world";
 typeof(s)
 ```
 
@@ -208,7 +208,7 @@ typeof(s)
 
 ```javascript slideshow={"slide_type": ""} tags=["raises-exception"]
 // this is a global variable
-a = "global";
+let a = "global";
 
 function foo() {
     // this local declaration 
