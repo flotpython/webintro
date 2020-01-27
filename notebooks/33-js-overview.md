@@ -32,9 +32,9 @@ jupyter:
     toc_cell: false
     toc_position:
       height: 453.719px
-      left: 1059px
+      left: 1297.53px
       top: 110px
-      width: 343.469px
+      width: 274.469px
     toc_section_display: true
     toc_window_display: true
   version: '1.0'
@@ -375,8 +375,8 @@ class Vector {
     }
 }
 
-let v = new Vector(10, 20)
-v.display()
+let vector = new Vector(10, 20)
+vector.display()
 ```
 
 <p class="rise-footnote"> here again, running this cell twice will cause an error; this is because, like with <code>let</code>, 
@@ -415,6 +415,45 @@ v.display()
 * typically involving a `prototype` thingy
 * here again for new code you should stick to the new idiom
 * except in case of constraints, like support for older browsers
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+## `console.log`
+<!-- #endregion -->
+
+* a function to show output
+* very similar to Python's `print()` function
+  * of course from a browser it ends up in the devel tools area
+  * but under `node` it will just print
+* accepts any number of arguments
+
+```javascript
+console.log(1, "two", [3, "four"])
+```
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+### `console.log` and objects
+<!-- #endregion -->
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+**TIP** about debugging JS objects :
+<!-- #endregion -->
+
+```javascript slideshow={"slide_type": ""} cell_style="split"
+// it may be tempting to write
+console.log(`vector = ${vector}`)
+```
+
+```javascript slideshow={"slide_type": ""} cell_style="split"
+// but it is better like this
+console.log("vector = ", vector)
+```
+
+<p class="rise-footnote">
+    Try it out within the browser's console
+    <br> try to run <code>log.console(document)</code> or any other JS object, 
+    and see that you can navigate the inner structure of the object, 
+    rather a flat representation that traditional languages have used us to.
+</p>
 
 <!-- #region slideshow={"slide_type": "slide"} -->
 ## exceptions

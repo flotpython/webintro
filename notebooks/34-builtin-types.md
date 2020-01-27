@@ -31,10 +31,10 @@ jupyter:
     title_sidebar: Contents
     toc_cell: false
     toc_position:
-      height: 247.719px
+      height: 371.719px
       left: 1274.52px
       top: 29px
-      width: 253.469px
+      width: 265.469px
     toc_section_display: true
     toc_window_display: true
   version: '1.0'
@@ -392,4 +392,35 @@ class Person {
 let person = new Person("John", "Doe")
 
 typeof(person)
+```
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+## arguments are passed by reference
+<!-- #endregion -->
+
+* like in Python, when passing a composite object  
+  (array, map, object, …) to a function
+* you pass a **reference** (not a copy),  
+  so the function can alter its parameter
+
+```javascript cell_style="split"
+// on an array
+function side_effect(arg) {
+    arg[1] *= 1000;
+}
+
+let list = [0, 1, 2];
+side_effect(list);
+list
+```
+
+```javascript cell_style="split"
+// same with objects
+function change_object(obj) {
+    obj.first_name = 'BOOM';
+}
+
+let person2 = new Person('John Doe')
+change_object(person2)
+person2
 ```
