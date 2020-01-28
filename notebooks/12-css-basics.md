@@ -4,12 +4,11 @@ jupyter:
   jupytext:
     cell_metadata_filter: all
     formats: md
-    notebook_metadata_filter: all,-language_info
+    notebook_metadata_filter: all,-language_info,-jupytext.text_representation.jupytext_version
     text_representation:
       extension: .md
       format_name: markdown
       format_version: '1.2'
-      jupytext_version: 1.3.2
   kernelspec:
     display_name: Javascript (Node.js)
     language: javascript
