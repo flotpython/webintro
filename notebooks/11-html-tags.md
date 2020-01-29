@@ -190,7 +190,7 @@ tools.two_columns(styling_fragment)
 <!-- #region slideshow={"slide_type": "slide"} -->
 ## code-like
 
-* `<pre>` stands for preformatted \
+* `<pre>` stands for preformatted
 * `<code>` is for a terminal-like font and style
 <!-- #endregion -->
 
