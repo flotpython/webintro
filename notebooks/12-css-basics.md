@@ -64,7 +64,8 @@ tools.init();
 * allow to adapt same contents 
   * to different media
   * to differents tastes (themes)
-* generally written by people with different background and sensibility
+* generally written by people with  
+  different background and sensibility
   * engineers *vs* designers
 <!-- #endregion -->
 
@@ -103,21 +104,44 @@ tools.init();
 <!-- #endregion -->
 
 * we create a hyperlink to google
-* we use `target='_'` to tell the browser to open the link in another tab/window
 * we attach a CSS fragment to change its appearance
 * **warning** this changes **all the `<a>` elements** on that page
 
+
+<p class="rise-footnote"> here we also use `target='_'`
+to tell the browser to open the link in another tab/window<br>
+    this is a small detail, so that unintentionally clicking on the link will keep you on this page
+</p>
+
+
 ```javascript hide_input=true slideshow={"slide_type": "slide"}
-link_html = `<a href="https://www.google.com" target="_">
+link_html = `<a 
+  href="https://www.google.com" 
+  target="_">
 link to google
 </a>
 `;
-link_css = `a {
+link_css = `/* change these properties
+   on all <a> elements in the page */
+a {
     color: red;
     font-family: times;
     font-size: large;
+    padding: 10px;
     border: 1px solid green;
+    border-radius: 8px;
     text-decoration: none;
 }`;
 tools.iframe_html_css("link", link_html, link_css);
 ```
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+## vocabulary
+<!-- #endregion -->
+
+* the names that appear on the left hand side of the `:` colon   
+  like `color`, `font-family`, …
+* are called **properties** 
+* they are listed in the `Elements` pane of the devel tools
+* [several hundreds of them](https://css-tricks.com/how-many-css-properties-are-there/)
+* note that not all properties affect all elements
