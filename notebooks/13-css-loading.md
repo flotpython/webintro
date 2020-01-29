@@ -70,7 +70,7 @@ tools.init();
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": ""} -->
-* write you CSS in a separate file, e.g. `mystyle.css`
+* write your CSS in a separate file, e.g. `mystyle.css`
 * which, assuming it is in the same directory as your `hello.html`
 * can be kind-of included in `hello.html` 
 * by inserting the following <link> line
