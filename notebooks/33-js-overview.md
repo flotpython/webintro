@@ -169,6 +169,21 @@ switch (a) {
 <p class="rise-footnote"> if the switch statement is new to you, please refer to this <a href="https://javascript.info/switch">full article on javascript.info</a></p>
 
 <!-- #region slideshow={"slide_type": "slide"} -->
+### C-style `for` loop
+<!-- #endregion -->
+
+* C- or Java-like iteration loops are supported
+* although seldom needed 
+* more on that about container types (arrays, …)
+
+
+```javascript
+for (let i=0; i<3; i++) {
+    console.log(i);
+}
+```
+
+<!-- #region slideshow={"slide_type": "slide"} -->
 ## variables ([link in tuto](https://javascript.info/variables))
 <!-- #endregion -->
 
