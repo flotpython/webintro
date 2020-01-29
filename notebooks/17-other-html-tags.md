@@ -82,8 +82,8 @@ find out more on these by yourselves
 svg_html=`<h1>my first SVG</h1>
 
 <svg width="200" height="200">
-  <circle cx="50" cy="50" r="20">
-  <rect x="50" y="20" width="150" height="150">
+  <circle cx="50" cy="50" r="20" />
+  <rect x="50" y="20" width="150" height="150" />
 </svg>`;
 svg_css = `rect {
   fill: blue;
