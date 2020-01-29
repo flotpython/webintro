@@ -68,7 +68,8 @@ tools.init();
 <!-- #endregion -->
 
 ```javascript slideshow={"slide_type": ""} cell_style="center" hide_input=true
-text_html = `<p class="text">a sample text</p>`;
+text_html = `<p class="text">
+a sample text</p>`;
 text_css = `.text {
     font-family: times;
     font-size: 30px;
@@ -105,7 +106,8 @@ has its own individual properties
 here e.g. padding and border
 
 ```javascript hide_input=true
-box1_html = `<p class="box1"> a box </p></div>`;
+box1_html = `<p class="box1">
+a box </p></div>`;
 box1_css = `p.box1 {
     font-size: x-large;
     background-color: #ccc;
@@ -131,7 +133,8 @@ again with also margin and border-radius
 <!-- #endregion -->
 
 ```javascript hide_input=true
-box2_html = `<p class="box2"> a second box </p>`;
+box2_html = `<p class="box2">
+a second box </p>`;
 box2_css = `p.box2 {
     font-size: x-large;
 
@@ -177,7 +180,8 @@ that allow to set several atomic properties in one line, e.g. :
 <!-- #endregion -->
 
 ```javascript hide_input=true
-shorthand_html = `<p class="shorthand1">shorthand properties</p>
+shorthand_html = `<p class="shorthand1">
+shorthand properties</p>
 <hr>`;
 shorthand_css = `p.shorthand1 {
     font: italic bold 20pt Arial, sans-serif;
@@ -305,7 +309,9 @@ tools.iframe_html_css("background", background_html, background_css)
 ```
 
 <!-- #region hide_input=true -->
-observe how the margin space has its space filled by the parent  
-use the inspector to see how the space between  
+<p class="rise-footnote"> 
+    observe how the margin space has its space filled by the parent     <br>
+    use the inspector to see how the space between  
 the two inner borders (h1 and p) is actully the *max* of their margins.
+</p>
 <!-- #endregion -->
