@@ -90,10 +90,11 @@ for instance
 * we will restrict ourselves to the ***frontend*** side
 * objective is to give you some grip 
 * on the core technologies supported in a browser  
-  namely HTML, CSS and JavaScript
+  namely **HTML**, **CSS** and **JavaScript**
+* so that you can assess their enormous potential
 * ignoring the fast-moving over-layers  
   too numerous to list at this point
-* so that you can assess their enormous potential
+
 
 <!-- #region slideshow={"slide_type": "slide"} -->
 ## excluded
@@ -106,7 +107,7 @@ this means that we will **not** address :
   like http(s), websockets, and similar
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-## why is it so cool ?
+## why are web technos so cool ?
 <!-- #endregion -->
 
 * so-called *GUI*-oriented tools (Graphical User Interfaces)
@@ -114,11 +115,11 @@ this means that we will **not** address :
 * shared a mental model based on widgets and menus
   * that is very limiting
   * remember 1990's apps
-* web techniques allow for much cooler interaction modes
-* plus, thanks to a clear separation between content and styling
+* web allows for much cooler and more flexible interaction 
+* plus, thanks to a clear **separation** between **content** and **styling**
   * they allow designers to fruitfully collaborate with engineers
-* as a bonus, they offer much wider portability
-  * across the whole range of computers and mobile devices
+* as a bonus, super-portable with **zero installation**
+  * across the whole range of **computers** and **mobile devices**
 
 <!-- #region slideshow={"slide_type": "slide"} -->
 ## wider than just the browser
@@ -127,13 +128,26 @@ this means that we will **not** address :
 <!-- #region slideshow={"slide_type": ""} -->
 * keep in mind that web frontend techologies
   * go way beyond the browsers per se 
-* as there are many options to build a standalone app
-  * leveraging the same core technos (again, HTML, CSS and JavaScript)
+* there are many options to build a **standalone** app  
+  (that runs **outside of the browser**)  
+  * leveraging the same core technos  
+    (again, HTML, CSS and JavaScript)
+  * as a native mobile app (IOS or Android)
+  * and/or on traditional computers  
+    i.e. build a native MacOS or Windows  
+    traditional application, powered by e.g. [WebKit](https://webkit.org/)
+<!-- #endregion -->
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+## even wider than just the frontend 
+<!-- #endregion -->
+
+<!-- #region slideshow={"slide_type": ""} -->
 * also be aware that JavaScript
   * that is primarily famous for powering frontends
   * is becoming more and more popular  
     as a traditional programming tool (see node.js)
-  * so it can be, and is more and more used  
-    for writing backends as well
+  * so it can be, and actually is, more and more  
+    used for writing backends as well
   * and even for traditional computing
 <!-- #endregion -->

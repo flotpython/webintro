@@ -139,9 +139,11 @@ tools.iframe_html_css("link", link_html, link_css);
 ## vocabulary
 <!-- #endregion -->
 
-* the names that appear on the left hand side of the `:` colon   
+* the names that appear  
+  on the left hand side of the `:` colon   
   like `color`, `font-family`, …
 * are called **properties** 
-* they are listed in the `Elements` pane of the devel tools
+* listed in the `Elements` pane of the devel tools  
+  in the `Computed` tab
 * [several hundreds of them](https://css-tricks.com/how-many-css-properties-are-there/)
 * note that not all properties affect all elements
