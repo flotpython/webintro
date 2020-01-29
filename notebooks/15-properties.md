@@ -287,18 +287,18 @@ background_css = `* {
     border: 1px solid black;
 }
 div {
-    background: #d45d79; 
+    background: red; 
     margin: 100px;
 }
 section {
     margin: 20px;
     padding: 30px;
-    background: #ea9085; 
+    background: orange; 
 }
 h1, p {
     padding: 8px;
     /* or simply */
-    background-color: #e9e2d0; 
+    background-color: yellow; 
 }
 `;
 tools.iframe_html_css("background", background_html, background_css)
