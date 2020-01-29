@@ -167,7 +167,7 @@ tools.two_columns(embedded_html)
 
 <!-- #region slideshow={"slide_type": ""} hide_input=true -->
 * copy `hello.html` into `mycv.html`
-* create a more realistic skeleton for a resume
+* create a more realistic skeleton for a résumé
   * with 4 sections 'experience', 'education', 'skills' and 'languages'
   * keep it simple for now, nothing too elaborate
   * make sure all the text gets attached to adapted tags like `<p>` or `<li>` 
