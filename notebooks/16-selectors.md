@@ -125,7 +125,7 @@ hover1_css = `.part2 a:hover {
     background-color: red;
     text-decoration: none;
 }`;
-tools.iframe_html_css("hover", hover1_html, hover1_css);
+tools.iframe_html_css("hover1", hover1_html, hover1_css);
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
@@ -158,7 +158,7 @@ hover2_css = `/* <a> elements under a .class2
     background-color: red;
     text-decoration: none;
 }`;
-tools.iframe_html_css("hover", hover2_html, hover2_css);
+tools.iframe_html_css("hover2", hover2_html, hover2_css);
 ```
 
 <p class="rise-footnote"> 
