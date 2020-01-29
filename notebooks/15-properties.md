@@ -221,7 +221,7 @@ several formats are supported to describe a color :
 ## `box-sizing`
 <!-- #endregion -->
 
-the `box-sizing` property affects the way `width` and `height` properties are computed :
+the `box-sizing` property affects the way `width` and `height` properties are computed:
 
 * `box-sizing: content-box` : only take content into account
 * `box-sizing: padding-box` : account for content + padding
