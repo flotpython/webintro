@@ -9,6 +9,7 @@ jupyter:
       extension: .md
       format_name: markdown
       format_version: '1.2'
+      jupytext_version: 1.3.2
   kernelspec:
     display_name: Javascript (Node.js)
     language: javascript
@@ -34,7 +35,7 @@ jupyter:
       left: 1254px
       top: 37px
       width: 281.391px
-    toc_section_display: true
+    toc_section_display: false
     toc_window_display: true
   version: '1.0'
 ---
@@ -92,7 +93,9 @@ tools.two_columns(text_fragment)
 <!-- #endregion -->
 
 ```javascript hide_input=true
-bullet_fragment = `<p> a typical bullet list with &lt;ul&gt;;  ul stands for "unordered list"
+bullet_fragment = `<p> a typical bullet list with a <b>ul</b> tag
+<br>  ul stands for "unordered list"
+<br> li stands for "list item"
 <ul>
 <li> the first bullet </li>
 <li> the second bullet </li>
@@ -103,7 +106,8 @@ tools.two_columns(bullet_fragment)
 ```
 
 ```javascript hide_input=true
-bullet_fragment = `<p> the same with &lt;ol&gt;; instead;  ol stands for "ordered list"
+bullet_fragment = `<p> the same with a <b>ol</b> tag instead
+<br> ol stands for "ordered list"
 <ol>
 <li> the first bullet </li>
 <li> the second bullet </li>
@@ -180,7 +184,8 @@ tools.two_columns(redirect_fragment);
 
 ```javascript hide_input=true
 styling_fragment = `<p>
-tags for <b>bold</b> or <i>italics</i> or <u>underline</u> or <s>strike-through</s>
+tags for <b>bold</b> or <i>italics</i> 
+or <u>underline</u> or <s>strike-through</s>
 </br>
 that of course <u><b><i>can be combined</i></b></u>
 </p>`;
@@ -227,15 +232,45 @@ tools.two_columns(code_fragment)
 <!-- #endregion -->
 
 ```javascript slideshow={"slide_type": ""} hide_input=true
-group_html = `<p> a paragraph may contain <span style="background-color: #ddd;">with a piece inside</span> that we will want to keep together, for example for styling purposes, or moving contents about, for that use a &lt;span&gt; tag.</p>
+group_html = `<p> a paragraph may  
+<span style="background-color: #ddd;">
+      contain a fragment</span>
+that we want to keep together,
+typically for styling purposes, 
+or moving contents about, 
+for that use a &lt;span&gt; tag.</p>
 
 <div style="background-color: #ddd;">
-  <p> when you need to group pieces that contain with several paragraphs</p>
+  <p> when you need to create a group that 
+      contain several paragraphs</p>
   <p> then a &lt;div&gt; tag is more suitable</p>
+</div>`;
+tools.two_columns(group_html)
+```
+
+<p class="rise-footnote">this first example uses styling, 
+    that we have not studied yet,
+    to outline the &lt;span&gt; and &lt;div&gt; 
+    elements by changing their background color</p>
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+### second example of `<div>`
+<!-- #endregion -->
+
+```javascript slideshow={"slide_type": ""} hide_input=false
+group2_html = `<div> 
+&lt;div&gt; it is an essential unit brick for creating a page layout
 </div>
 
-<p>this first example uses styling, that we have not studeied yet, in order to illustrate how these notions can be used in practice</p>`;
-tools.two_columns(group_html)
+<div style="position: absolute;
+            bottom: 20px; right: 20px;
+            background-color: aquamarine;"> 
+<p>if you inspect a real page, you will see </p>
+<p>that &lt;div&gt; elements are
+   typically all over the place</p>
+</div>
+`;
+tools.two_columns(group2_html)
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
