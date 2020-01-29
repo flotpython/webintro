@@ -225,7 +225,7 @@ several formats are supported to describe a color :
 ## `box-sizing`
 <!-- #endregion -->
 
-the `box-sizing` property affects the way `width` and `height` properties are computed :
+the `box-sizing` property affects the way `width` and `height` properties are computed:
 
 * `box-sizing: content-box` : only take content into account
 * `box-sizing: padding-box` : account for content + padding
@@ -291,18 +291,18 @@ background_css = `* {
     border: 1px solid black;
 }
 div {
-    background: #d45d79; 
+    background: red; 
     margin: 100px;
 }
 section {
     margin: 20px;
     padding: 30px;
-    background: #ea9085; 
+    background: orange; 
 }
 h1, p {
     padding: 8px;
     /* or simply */
-    background-color: #e9e2d0; 
+    background-color: yellow; 
 }
 `;
 tools.iframe_html_css("background", background_html, background_css)
