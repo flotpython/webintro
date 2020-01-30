@@ -122,7 +122,7 @@ tools.init();
   * **HTML, CSS, JavaScript**
   * react, angular, vue
 * in between
-  * TCP/IP : low-level protocol of the Internet
+  * TCP/IP : low-level communication protocol of the Internet
   * HTTP : HyperText Transfer Protocol
   * WebSocket : full-duplex communication channel  
     over a single TCP connection 

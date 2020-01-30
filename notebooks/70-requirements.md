@@ -57,6 +57,22 @@ if however you plan on reading this course locally on your computer, there are a
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "slide"} -->
+## install as user as far as possible
+<!-- #endregion -->
+
+the commands below should be as far as possible run as a regular user  
+if however, depending on your setup, they fail to complete because  
+of a lack of permissions, you may need to invoke them as super-user  
+by prepending them `sudo`; like in 
+```
+sudo npm install -g ijavascript
+``` 
+instead of just
+```
+npm install -g ijavascript
+```
+
+<!-- #region slideshow={"slide_type": "slide"} -->
 ## Jupyter JavaScript kernel 
 <!-- #endregion -->
 
@@ -68,7 +84,14 @@ if however you plan on reading this course locally on your computer, there are a
 <!-- #region slideshow={"slide_type": "slide"} -->
 ## Jupyter extensions
 
+this slideshow takes advantage of a few Jupyter extensions;  
+most notably, `hide_input` is massively used to **hide** 
+the code that in turn produces code layout, so this one is rather critical
 
+that being said, without any extension it is still possible to read the notebooks in regular - as opposed to slideshow - mode
+<!-- #endregion -->
+
+<!-- #region slideshow={"slide_type": "slide"} -->
 * slideshow :
   * `pip install --pre rise`  
 * to read notebooks stored as markdown :  

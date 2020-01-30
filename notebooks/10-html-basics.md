@@ -56,10 +56,26 @@ tools.init();
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-## html document structure
+## HTML is based on tags
 <!-- #endregion -->
 
-the overall structure of a HTML document looks like this :
+the HTML language structures the content of a web page
+in terms of sections, headers, paragraphs, lists of items, images ...
+
+the language is based on tags written between < and >  
+(for example &lt;head&gt; or &lt;/head&gt;)
+
+an element (a section, a header) is composed by
+* an opening tag e.g. <code>&lt;head&gt;</code>
+* a content that can be empty
+* a closing tag e.g. <code>&lt;/head&gt;</code>
+
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+## HTML document structure
+<!-- #endregion -->
+
+the overall structure of a HTML document is composed of two parts, a **header** and a **body**, like this:
 
 ```javascript hide_input=true
 fragment1 = `<html>
@@ -83,11 +99,15 @@ tools.one_column(fragment1)
 <!-- #region slideshow={"slide_type": ""} cell_style="split" -->
 ### regular setup
 
+files are on the Internet
+
 ![](../media/client-server.svg)
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": ""} cell_style="split" -->
 ### our setup today
+
+files are local on your laptop
 
 ![](../media/local-file.svg)
 <!-- #endregion -->
@@ -97,7 +117,8 @@ tools.one_column(fragment1)
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": ""} -->
-* create a file named `hello.html`
+* create a file named `hello.html`  
+  with your editor of choise, like VScode
 * copy the above template
 * open it in your web browser (preferably Chrome)
 * you will see something like this
@@ -108,21 +129,26 @@ tools.two_columns(fragment1)
 
 ```
 
+<p class="rise-footnote">also observe the URL that the browser has used to fetch your file <br>
+    it should look like <code>file:///the/path/to/your/current/directory/hello.html</code> </p>
+
 <!-- #region slideshow={"slide_type": "slide"} -->
-## devel tools
+## accessing your browser's devel tools
 <!-- #endregion -->
 
+<!-- #region cell_style="split" -->
 * all browsers come with development tools for debugging
 * as a first contact with these,  
   let us inspect the content of our HTML document
 * for that the simplest way is to right click on the 'Hello' text
 * and choose 'Inspect'
+<!-- #endregion -->
 
-<!-- #region slideshow={"slide_type": ""} -->
+<!-- #region slideshow={"slide_type": ""} cell_style="split" -->
 ![](../media/inspect-element-menu.png)
 <!-- #endregion -->
 
-<!-- #region slideshow={"slide_type": ""} -->
+<!-- #region slideshow={"slide_type": ""} cell_style="split" -->
 <p class="rise-footnote"> 
   this should open your browser's devel tools, which depending on your browser
     <br> may require additional preparation or  installation steps
@@ -134,8 +160,16 @@ tools.two_columns(fragment1)
 ## *Elements* navigator
 <!-- #endregion -->
 
-<!-- #region slideshow={"slide_type": ""} -->
+<!-- #region slideshow={"slide_type": ""} cell_style="split" -->
 ![](../media/inspect-element-elements.png) 
+<!-- #endregion -->
+
+<!-- #region cell_style="split" -->
+* left pane, navigate the elements
+* right pane, visualize the  
+  selected element's applicable  
+  *Styles* and *Computed* properties  
+  (more on this later)
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": ""} -->
@@ -143,13 +177,31 @@ tools.two_columns(fragment1)
     from that view you can navigate the elements tree, although in this case it is very simple with just 3 nodes</p>
 <!-- #endregion -->
 
-<!-- #region slideshow={"slide_type": "slide"} -->
-another interesting part is the (javascript) Console  
-where you can interact with the browser (more on this later)
+<!-- #region slideshow={"slide_type": "slide"} cell_style="split" -->
+* another interesting part is the   
+(javascript) *Console* tab  
+* this is where **debug messages**  
+  end up (if any; here of course  
+  there are none)
 <!-- #endregion -->
 
-<!-- #region slideshow={"slide_type": ""} -->
+<!-- #region slideshow={"slide_type": ""} cell_style="split" -->
 ![](../media/inspect-element-console.png) 
+<!-- #endregion -->
+
+<!-- #region cell_style="split" slideshow={"slide_type": "slide"} -->
+* the area with the `> ` is the REPL  
+  i.e. Read, Eval, Print Loop
+* (juste like the `>>> ` with Python)
+
+
+where you can type and run 
+your first JavaScript code  
+
+<!-- #endregion -->
+
+<!-- #region cell_style="split" -->
+![](../media/inspect-element-console-code.png)
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "slide"} -->
@@ -162,8 +214,10 @@ where you can interact with the browser (more on this later)
 * referred to in all documentation as "*the DOM*"
 <!-- #endregion -->
 
-```javascript cell_style="split" hide_input=true slideshow={"slide_type": "slide"}
-tree_html = `<html>
+<!-- #region cell_style="split" hide_input=false slideshow={"slide_type": "slide"} trusted=true -->
+this HTML fragment
+```html
+<html>
   <head>
     <title> top title </title>
   </head>
@@ -171,11 +225,12 @@ tree_html = `<html>
     <p> a paragraph </p>
     <p> a paragraph </p>
   </body>
-</html>`;
-tools.one_column(tree_html)
+</html>
 ```
+<!-- #endregion -->
 
 <!-- #region cell_style="split" hide_input=true -->
+will result in this tree
 ![](../media/abstract-syntax.svg)
 <!-- #endregion -->
 
