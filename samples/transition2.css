@@ -3,12 +3,17 @@
 }
 
 img {
-    width: 200px;
+    margin-left: 30px;
+    width: 250px;
 }
 
 img:hover { 
-    width: 300px;
+    width: 350px;
 }
 .slow {
     transition: all 1.5s ease-in-out;
+}
+.outline {
+    font-size: 24px;
+    font-weight: bold;
 }

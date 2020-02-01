@@ -66,13 +66,13 @@ tools.init();
 
 <!-- #region slideshow={"slide_type": "slide"} -->
 ### transitions (ctd)
-* the browser has the ability to perform those changes smoothly
+* the browser has the ability to perform those changes **smoothly**
   * over a certain duration
   * in a continuous way
 * of course this applies to some properties only
   * lengths
   * colors
-* everything that can be mapped to a continuous space
+* everything that can be mapped to a **continuous** space
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "slide"} -->
