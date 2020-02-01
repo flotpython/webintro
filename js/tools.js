@@ -5,6 +5,8 @@ exports.one_column = show_html.one_column;
 exports.two_columns = show_html.two_columns;
 exports.iframe_html_css = show_html.iframe_html_css;
 exports.iframe_html_css_js = show_html.iframe_html_css_js;
+exports.iframe_samples_html_css = show_html.iframe_samples_html_css;
+exports.iframe_samples_html_css_js = show_html.iframe_samples_html_css_js;
 
 //////////
 var inject_css = require('./inject-css');

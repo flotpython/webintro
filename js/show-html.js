@@ -124,8 +124,26 @@ ${iframe_area}${external_button}
     return $$.html(whole);
 }
 
+
+function iframe_samples_html_css(stem, external) {
+    let filename = `../samples/${stem}`;
+    let html = fs.readFileSync(`${filename}.html`, 'utf8');
+    let css = fs.readFileSync(`${filename}.css`, 'utf8');
+    return iframe_html_css(stem, html, css, external);
+}
+
+function iframe_samples_html_css_js(stem, external) {
+    let filename = `../samples/${stem}`;
+    let html = fs.readFileSync(`${filename}.html`, 'utf8');
+    let css = fs.readFileSync(`${filename}.css`, 'utf8');
+    let js = fs.readFileSync(`${filename}.js`, 'utf8');
+    return iframe_html_css_js(stem, html, css, js, external);
+}
+
 //////////
 exports.one_column = one_column;
 exports.two_columns = two_columns;
 exports.iframe_html_css = iframe_html_css;
 exports.iframe_html_css_js = iframe_html_css_js;
+exports.iframe_samples_html_css = iframe_samples_html_css;
+exports.iframe_samples_html_css_js = iframe_samples_html_css_js;

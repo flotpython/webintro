@@ -47,13 +47,6 @@ jupyter:
 
 # objectives of this course
 
-```javascript
-// run this cell, and then 
-// click the created button
-tools = require('../js/tools');
-tools.init();
-```
-
 <!-- #region slideshow={"slide_type": "slide"} -->
 ## why a course on web frontend ?
 <!-- #endregion -->

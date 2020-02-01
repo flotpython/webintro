@@ -1,0 +1,14 @@
+.container {
+    display: flex;
+}
+
+img {
+    width: 200px;
+}
+
+img:hover { 
+    width: 300px;
+}
+.slow {
+    transition: all 1.5s ease-in-out;
+}

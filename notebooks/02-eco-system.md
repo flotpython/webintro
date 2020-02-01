@@ -47,13 +47,6 @@ jupyter:
 
 # introduction to web frontend
 
-```javascript
-// run this cell, and then 
-// click the created button
-tools = require('../js/tools');
-tools.init();
-```
-
 <!-- #region slideshow={"slide_type": "slide"} -->
 ## Web ecosystem (frontend)
 <!-- #endregion -->
