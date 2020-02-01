@@ -84,25 +84,109 @@ tools.iframe_samples_html_css("transition1")
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
+### how transitions work
+<!-- #endregion -->
+
+* you need to define a `transition` propery on the element
+* e.g. the `<section>` element has  
+  `transition: all 0.4s ease-in-out`
+* then its `background-color` property changes somehow  
+  here due to the `.chunk:hover` selector
+* because the transition applies to `all` properties  
+  it triggers to implement the color change
+* and the `ease-in-out` algorithm is used  
+  over a `0.4s` duration   
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+### the `transition` property
+<!-- #endregion -->
+
+<!-- #region slideshow={"slide_type": ""} -->
+* is a **shorthand** property for setting in one rule
+  * `transition-property` : comma separated names of properties  
+     here we could/should have used `background-color` instead
+  * `transition-duration`
+  * `transition-timing-function`
+  * `transition-delay` that we leave unchanged here (i.e. 0s)
+<!-- #endregion -->
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+### most common timing functions
+<!-- #endregion -->
+
+<!-- #region slideshow={"slide_type": ""} -->
+* `linear` is, well of course, linear interpolation 
+* the other 3: `ease-in`, `ease-out`, and `ease-in-out` make the move 
+  smoother at one or two ends of the duration range 
+* see a more detailed explanation from the *see also* section below
+<!-- #endregion -->
+
+<!-- #region slideshow={"slide_type": "slide"} -->
 ## transition example 2
 <!-- #endregion -->
 
-```javascript hide_input=false slideshow={"slide_type": "-"}
+```javascript hide_input=true slideshow={"slide_type": "-"}
 tools.iframe_samples_html_css("transition2")
 ```
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+### do not overuse !
+<!-- #endregion -->
+
+as a piece of advice
+
+* transitions can make user experience very nice
+* but **do not overuse them**
+* as too many moving pieces quickly become more confusing than helpful
+
+also notice that this starts to have to do with **responsiveness** 
+
+* that deals with defining layouts that cope with geometry changes
+* that we will cover later
+* here for example we have used a `flexbox` (more on this later)
+
 
 <!-- #region slideshow={"slide_type": "slide"} -->
 ## transition example 3
 <!-- #endregion -->
 
-```javascript hide_input=false slideshow={"slide_type": "-"}
+transitions apply **to all** changes, not only triggered by a user
+
+here we use JavaScript (studied later) to alter a div's size  
+with e.g. `growing.style.width = '200px'`
+
+```javascript hide_input=true slideshow={"slide_type": "-"}
 tools.iframe_samples_html_css_js("transition3")
 ```
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+## animations
+<!-- #endregion -->
+
+* there is also a notion of **animations** in CSS
+* simply put, an animation allows to define a succession of states  
+* each state being a collection of CSS properties
+* together the point in time where they should apply
+
+for example :
+* at the beginning of the duration (0%) background-color is red and color is blue
+* somewhere in the middle, say at 25% of the duration, they become green and yellow
+* then at the end of the period (100%) they become black and white
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+### more on animations
+<!-- #endregion -->
+
+<!-- #region slideshow={"slide_type": ""} -->
+* see [one example on codepen](https://codepen.io/team/css-tricks/pen/EjaJNd) for a better idea of what can be achived
+* extracted [from this blog on codepen](https://css-tricks.com/almanac/properties/a/animation/) that is left to the interested reader as an exercise
+* **WARNING** like with transitions, and fun as they are, these techniques should be used with extreme circumspection
+<!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "slide"} -->
 ## see also
 
 * [transitions on css-tricks](https://css-tricks.com/almanac/properties/t/transition/)
 * [animations on css-tricks](https://css-tricks.com/almanac/properties/a/animation/)
-* an explanation, among other things, [on `ease-in`, `ease-out`, `ease-in-out`, and `linear`](https://www.freecodecamp.org/news/css-transitions-explained-d67ab9a02049/)
+* an explanation, among other things, [about `linear`, `ease-in`, `ease-out`, and `ease-in-out`](https://www.freecodecamp.org/news/css-transitions-explained-d67ab9a02049/)
 <!-- #endregion -->

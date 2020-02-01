@@ -1,6 +1,5 @@
-// window.onload = run;
 WIDTH = 100;
-STEP = 100;
+STEP = 10;
 direction = 1;
 
 function grow() {
@@ -10,7 +9,6 @@ function grow() {
 }
 
 function grow_forever() {
-    console.log("PING");
     grow();
     window.setTimeout(grow_forever, 2500);
 }
