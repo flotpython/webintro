@@ -447,3 +447,51 @@ let person2 = new Person('John Doe')
 change_object(person2)
 person2
 ```
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+## arguments passing is loosely checked
+<!-- #endregion -->
+
+```javascript
+// just display arguments
+function foo(x, y, z) {
+    console.log(`x=${x}, y=${y}, z=${z}`);
+}
+
+```
+
+```javascript cell_style="split"
+foo(1, 2, 3)
+```
+
+```javascript cell_style="split"
+foo(1, 2)
+```
+
+```javascript
+foo(1, 2, 3, 4)
+```
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+### more on arguments
+<!-- #endregion -->
+
+* there is no equivalent in JavaScript of named arguments
+* nor of arguments with default values
+* **there is** however a way to deal with arguments in variable numbers
+
+```javascript
+// equivalent to Python's 
+// def bar(x, y, *args):
+
+function bar(x, y, ...arguments) {
+    console.log(`x=${x}, y=${y}`);
+    console.log(`arguments=${arguments}`);
+    // the arguments object can be iterated on
+    for (let arg of arguments) {
+        console.log(arg);
+    }
+}
+
+bar(1, 2, 3, 4)
+```
