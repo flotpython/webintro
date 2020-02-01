@@ -150,7 +150,7 @@ if ( ! false) console.log("not is ! ")
 ### see also
 <!-- #endregion -->
 
-<!-- #region slideshow={"slide_type": "slide"} -->
+<!-- #region slideshow={"slide_type": ""} -->
 for a deeper study :
 
 * [on numbers](https://javascript.info/number)
