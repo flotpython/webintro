@@ -139,9 +139,26 @@ as mentioned earlier already, you can
 <!-- #region slideshow={"slide_type": "slide"} -->
 ## Devel Tools : *Sources*
 <!-- #endregion -->
-occasionnally useful to browse the code actually loaded
+<!-- #region cell_style="split" -->
+* occasionnally useful to browse the code actually loaded
 
+<!-- #endregion -->
+
+<!-- #region cell_style="split" -->
 ![](../media/devel-tools-sources.png)
+<!-- #endregion -->
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+### Devel Tools : debugger
+<!-- #endregion -->
+
+<!-- #region cell_style="split" -->
+* the *Sources* tab has buit-in debugging features
+<!-- #endregion -->
+
+<!-- #region cell_style="split" -->
+![](../media/devel-tools-debugging.png)
+<!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "slide"} -->
 ## the browser cache (yet again)

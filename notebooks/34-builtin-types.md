@@ -91,7 +91,7 @@ s1 == s2
 ```
 
 <p class="rise-footnote">
-    be aware that <code>number</code> is similar to Python's </code>float</code> -- so with imprecision !  
+    <b>beware</b> that <code>number</code> is similar to Python's <code>float</code> -- so <b>with imprecision</b> !  
     <br>
     google for <code>bigint</code> for error-free calculus on integers - like Python's <code>int</code>
 </p>
@@ -109,6 +109,7 @@ s1 == s2
 <!-- #endregion -->
 
 ```javascript cell_style="split"
+// in anticipation
 object = { x: 10, y: 20}
 
 // this in Python would 
@@ -147,6 +148,10 @@ if ( ! false) console.log("not is ! ")
 
 <!-- #region slideshow={"slide_type": "slide"} -->
 ### see also
+<!-- #endregion -->
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+for a deeper study :
 
 * [on numbers](https://javascript.info/number)
 * [on strings](https://javascript.info/string)
@@ -160,7 +165,7 @@ if ( ! false) console.log("not is ! ")
 * similar to Python's `list`s
 
 ```javascript cell_style="split"
-// create non-empty
+// arrays can be heterogeous
 let array1 = [1, "two"]
 
 // you can also create an
@@ -228,14 +233,21 @@ console.log(array.indexOf("absent"))
 ### iterating over an array
 <!-- #endregion -->
 
-<!-- #region cell_style="center" -->
+<!-- #region cell_style="split" -->
 **common pitfall**
-* Python programmers tend to do `for (x in array)`
-* that is **not** right, use <code>for (x <b><i>of</i></b> array)</code>
+<!-- #endregion -->
 
+<!-- #region cell_style="split" -->
+* Python programmers tend to do  
+  `for (x in array)`
+* that is **not** right, in JavaScript write  
+  <b><code>for (x <b><i>of</i></b> array)</code></b>
+<!-- #endregion -->
+
+<!-- #region cell_style="split" -->
 * also notice how to use `let` to define  
   a variable **local** to the `for` loop
-* see also [more on arrays](https://javascript.info/array)
+* see also more on arrays on <https://javascript.info/array>
 <!-- #endregion -->
 
 ```javascript cell_style="split"
@@ -274,25 +286,25 @@ for (let i in array) {
 ### shared references
 <!-- #endregion -->
 
-* exactly like in Python, objects can be access from several references  
+* **exactly like in Python**, objects can be access from several references  
 * so you need to shallow- or deep-copy depending on your needs
 
 ```javascript cell_style="split"
-ref1 = [["shared", "data"], "unshared"];
+let ref1 = [["shared", "data"], "unshared"];
 ref1 
 ```
 
 ```javascript cell_style="split"
 // slice() works like Python's [:]
 // so it's a shallow copy
-ref2 = ref1.slice();
+let ref2 = ref1.slice();
 ref2
 ```
 
 ```javascript cell_style="split"
 // changing data from ref2 
-ref2[0][0] = "from ref2"
-ref2[1] = "from ref2"
+ref2[0][0] = "from 2 - deep"
+ref2[1] = "from 2 - shallow"
 ref2
 ```
 
@@ -303,6 +315,13 @@ ref1
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
+### pythontutor illustration
+
+
+![](../media/references-shared.png)
+<!-- #endregion -->
+
+<!-- #region slideshow={"slide_type": "slide"} -->
 ## hash-based data types
 <!-- #endregion -->
 
@@ -311,7 +330,6 @@ ref1
 * they exhibit the same constant-time lookup nice property
 * like in Python, **make sure to use them**   
   whenever you need fast searching and indexing
-* [read the full story](https://javascript.info/map-set)
 
 ```javascript cell_style="split"
 let map = new Map();
@@ -329,6 +347,12 @@ for (let k of map.keys()) {
     console.log(`key=${k}, value=${map.get(k)}`)
 }
 ```
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+### see also
+
+* read the [section on maps and sets on javascript.info](https://javascript.info/map-set)
+<!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "slide"} -->
 ## objects

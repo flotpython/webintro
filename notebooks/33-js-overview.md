@@ -379,11 +379,14 @@ as of ES6, the language has a proper `class` statement
 
 ```javascript
 class Vector {
+    // just like Python's __init__
+    // NO NEED to pass 'self' in JavaScript
     constructor(x, y) {
         this.x = x;
         this.y = y;
     }
-    
+
+    // same for a regular method 
     display() {
         console.log(`[Vector x=${this.x} y=${this.y}]`)
     }
@@ -405,7 +408,7 @@ vector.display()
 **NOTICE** the following from that first class example :
 
 * `constructor` is very much alike `__init__` in Python
-* the implicit `this` variable refers to the current object 
+* the **implicit** `this` variable refers to the current object 
 * it is very much alike the traditional `self` argument in Python
 * except that it is **not mentioned** as a method parameter
 * objects get created with `new Vector()` - Java and C++ style
@@ -417,7 +420,7 @@ vector.display()
     <code>`text ${variable}`</code>
     similar to Python's f-strings,
     <br>
-    except that an expression is inserted with  <code>${expr}</code> rather than simply <code>{expr}</code> in f-strings
+    except that an expression is inserted with <code>${expr}</code>, remember with f-strings it was just <code>{expr}</code>
 </p>
 
 <!-- #region slideshow={"slide_type": "slide"} -->
@@ -428,7 +431,6 @@ vector.display()
 * you may come across older-school code that uses other techniques
 * typically involving a `prototype` thingy
 * here again for new code you should stick to the new idiom
-* except in case of constraints, like support for older browsers
 
 <!-- #region slideshow={"slide_type": "slide"} -->
 ## `console.log`
@@ -448,7 +450,7 @@ console.log(1, "two", [3, "four"])
 ### `console.log` and objects
 <!-- #endregion -->
 
-<!-- #region slideshow={"slide_type": "slide"} -->
+<!-- #region slideshow={"slide_type": ""} -->
 **TIP** about debugging JS objects :
 <!-- #endregion -->
 
@@ -463,7 +465,7 @@ console.log("vector = ", vector)
 ```
 
 <p class="rise-footnote">
-    Try it out within the browser's console
+    Try it out within the browser's console :
     <br> try to run <code>log.console(document)</code> or any other JS object, 
     and see that you can navigate the inner structure of the object, 
     rather a flat representation that traditional languages have used us to.

@@ -130,6 +130,7 @@ in a jumble :
 # practice 
 <!-- #endregion -->
 
+<!-- #region cell_style="center" -->
 * as a conclusion of this first basic course
   * with all the knowledge you now have about HTML and CSS,
 * write your complete resume; you should have 2 files 
@@ -143,3 +144,4 @@ in a jumble :
 * **NOTE** that next course will address overall layout in greater details, 
   (i.e. the relative place of all pieces wrt one another)  
   so do not spend too much time on trying to make best usage of space at this point
+<!-- #endregion -->
