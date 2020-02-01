@@ -103,6 +103,18 @@ tools.iframe_html_css("svg", svg_html, svg_css)
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
+## form-oriented
+<!-- #endregion -->
+
+for building forms :
+* `<input>` for entering data
+* `<button>` for validating data
+* `<form>` to group user-provided input  
+
+out of scope for this course though, as it involves a backend
+
+
+<!-- #region slideshow={"slide_type": "slide"} -->
 ## miscell others
 <!-- #endregion -->
 
@@ -111,9 +123,6 @@ in a jumble :
 * `<br>` to insert a linebreak
 * `<hr>` to insert a horizontal line
 * `<iframe>` to insert another web page
-* `<form>` to group user-provided input  
-  out of scope for this course though,  
-  as it involves a backend
 * `<canvas>` is a more recent alternative to SVG for graphics,  
   [see more on css-tricks](https://css-tricks.com/learn-canvas-snake-game/)
 
