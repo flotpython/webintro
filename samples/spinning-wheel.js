@@ -3,7 +3,11 @@ const svgNS = "http://www.w3.org/2000/svg";
 
 class SpinningWheel {
 
-    constructor(svg, cx, cy, cr, dots, dot_r, freq) {
+    constructor(svg, 
+                cx, cy, cr, 
+                dots, dot_r,
+                freq, 
+                rgb_light, rgb_dark) {
         this.svg = svg;
         this.cx = cx;
         this.cy = cy;
@@ -11,6 +15,8 @@ class SpinningWheel {
         this.dots = dots;
         this.dot_r = dot_r;
         this._period = 1000/freq;
+        [this.redl, this.greenl, this.bluel] = rgb_light;
+        [this.redd, this.greend, this.blued] = rgb_dark;
         //
         this._offset = 0;
         this._theta = 2 * Math.PI / this.dots;
@@ -18,7 +24,7 @@ class SpinningWheel {
     }
 
     _alpha(n) {
-        return n * this._theta;
+        return - n * this._theta - Math.PI/2;
     }
 
     _x_y (n) {
@@ -32,9 +38,12 @@ class SpinningWheel {
         // stay in range
         n = n % this.dots;
         // grayscale for starters
-        let round = 255*(n/this.dots);
-        return `rgb(${round}, ${round}, ${round})`;
-    }
+        let ratio = (n/this.dots);
+        return `rgb(
+            ${this.redd + ratio*(this.redl-this.redd)},
+            ${this.greend + ratio*(this.greenl-this.greend)},
+            ${this.blued + ratio*(this.bluel-this.blued)})`;
+        }
 
     _init() {
         for (let index=0; index < this.dots; index ++) {
@@ -79,7 +88,8 @@ function start(element_id) {
     svg.setAttribute('height', 200);
     container.append(svg);
     let spin = new SpinningWheel(
-        svg, 100, 100, 80, 10, 20, 10);
+        svg, 100, 100, 80, 10, 20, 10, 
+        [240, 128, 145], [80, 60, 120]);
     spin.init();
     return spin;
 }
