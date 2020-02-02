@@ -82,6 +82,69 @@ tools.iframe_html_css("text-properties", text_html, text_css)
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
+## a lot of fonts available
+<!-- #endregion -->
+
+* see for example [a collection of google fonts](https://fonts.google.com/)
+* note also some less traditional fonts  
+  * that come with usual symbols 
+  * see [in particular fontawesome](https://fontawesome.com/icons?d=gallery&m=free)  
+    who offer a decent collection for free
+  
+the example below illustrates how to load and use them in your page
+
+
+```javascript hide_input=true slideshow={"slide_type": "slide"}
+tools.iframe_samples_html_css("font-demo")
+
+```
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+### **NOTES** on the fonts example (1)
+<!-- #endregion -->
+
+<!-- #region slideshow={"slide_type": ""} -->
+* for cosmetic reasons, the example is a bit simplified  
+  use something like this to import a font  
+  in all variants of bold/italic
+  
+```html 
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Raleway:200,200i,400,400i,500,500i,600,600i,700,700i">
+```
+<!-- #endregion -->
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+### **NOTES** on the fonts example (2)
+<!-- #endregion -->
+
+<!-- #region slideshow={"slide_type": ""} -->
+* the single CSS rule here allows to apply  
+  the font **to the whole document**  
+  we will see in a moment how that actually works  
+  
+* btw, it is strongly recommended to avoid  
+  mixing fonts in a document 
+<!-- #endregion -->
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+### **NOTES** on the fonts example (3)
+<!-- #endregion -->
+
+<!-- #region slideshow={"slide_type": ""} -->
+* also observe the import and use of fontawesome  
+  to display custom symbols before address and phone number  
+
+```html
+<span class="fa fa-home">
+```
+
+* these symbols are more convenient than bitmap pictured
+  in particular can be safely scaled / colorized 
+  using CSS
+<!-- #endregion -->
+
+<!-- #region slideshow={"slide_type": "slide"} -->
 ## the box model
 <!-- #endregion -->
 
