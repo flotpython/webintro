@@ -149,7 +149,8 @@ tools.iframe_samples_html_css("font-demo")
 ## the box model
 <!-- #endregion -->
 
-each visible element can be styled according to the box model, as shown in the browser devel tools
+each visible element can be styled according to the box model,  
+as shown in the browser devel tools
 
 <!-- #region cell_style="split" -->
 ![](../media/box-model.png)

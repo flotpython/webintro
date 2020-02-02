@@ -401,6 +401,29 @@ for (key in bond) {
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
+### assignment based on objects
+<!-- #endregion -->
+
+reminder : we had already seen array-based assignment  
+which is a Python-style idiom
+
+```javascript
+let [a1, a2] = [100, 200];
+
+`a1 now is ${a1}, a2 is ${a2}`
+```
+
+there a similar destructuring assignement on objects  
+
+```javascript
+let example_obj = {name: "doe", phone: '0123456', other: 'some stuff'};
+
+let {name, phone} = {...example_obj};
+
+`name now is ${name}, phone is ${phone}`
+```
+
+<!-- #region slideshow={"slide_type": "slide"} -->
 ## class instances are objects
 <!-- #endregion -->
 
@@ -461,14 +484,17 @@ function foo(x, y, z) {
 ```
 
 ```javascript cell_style="split"
+// works fine, of course
 foo(1, 2, 3)
 ```
 
 ```javascript cell_style="split"
+// works fine TOO !
 foo(1, 2)
 ```
 
 ```javascript
+// and this one AS WELL
 foo(1, 2, 3, 4)
 ```
 
@@ -485,6 +511,7 @@ foo(1, 2, 3, 4)
 // def bar(x, y, *args):
 
 function bar(x, y, ...arguments) {
+    // display what we receive
     console.log(`x=${x}, y=${y}`);
     console.log(`arguments=${arguments}`);
     // the arguments object can be iterated on
@@ -493,5 +520,6 @@ function bar(x, y, ...arguments) {
     }
 }
 
+// with this call, the 2 extra args are captured 
 bar(1, 2, 3, 4)
 ```

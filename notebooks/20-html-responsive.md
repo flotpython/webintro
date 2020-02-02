@@ -87,6 +87,7 @@ narrow viewport
 ## default layout policy
 <!-- #endregion -->
 
+* if you do not override `display:`, you use a historical layout policy 
 * very well summarized in [this document on MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow)  
   (MDN stands for Mozilla Developer Network)
 * mostly fits a written document flow  
