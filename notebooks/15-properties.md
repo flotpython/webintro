@@ -60,7 +60,8 @@ tools.init();
 
 <!-- #endregion -->
 
-* more than 100 properties defined in the standard ([see full list here](https://www.w3schools.com/cssref/))
+* more than 100 properties defined  
+  in the standard ([see full list here](https://www.w3schools.com/cssref/))
 * we just mention the most obviously needed
 
 <!-- #region slideshow={"slide_type": "slide"} -->
