@@ -89,7 +89,7 @@ narrow viewport
 <!-- #endregion -->
 
 * be aware also that all browsers have a feature that let users artificially zoom in and out
-* on Chrome on the mac e.g., this activated with `⌘ +` and `⌘ -`
+* e.g. on Chrome on the mac, this is activated with `⌘ +` and `⌘ -`
 * this also triggers a layout change, to which responsive pages are expected to react properly
 
 <!-- #region slideshow={"slide_type": "slide"} -->
