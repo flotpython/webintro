@@ -179,7 +179,7 @@ for example :
 
 <!-- #region slideshow={"slide_type": ""} -->
 * see [one example on codepen](https://codepen.io/team/css-tricks/pen/EjaJNd) for a better idea of what can be achived
-* extracted [from this blog on codepen](https://css-tricks.com/almanac/properties/a/animation/) that is left to the interested reader as an exercise
+* extracted [from this blog on CSS-Tricks](https://css-tricks.com/almanac/properties/a/animation/) that is left to the interested reader as an exercise
 * **WARNING** like with transitions, and fun as they are, these techniques should be used with extreme circumspection
 <!-- #endregion -->
 
