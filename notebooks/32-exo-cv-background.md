@@ -197,8 +197,8 @@ as mentioned earlier already, you can
 * see the CSS rules that apply to an element 
 * find out where these styles come from
 * see the computed values for each property
-* interactively change a property and see 
-  see effect immediately (shown on next slide)
+* interactively change a property and see effect immediately
+  (shown on next slide)
 
 <!-- #region slideshow={"slide_type": "slide"} -->
 ### visualizing a changed property
@@ -280,7 +280,7 @@ as mentioned earlier already, you can
 ## the browser cache (yet again)
 <!-- #endregion -->
 
-* the browser cache thing (see CSS loading)
+* the browser caches thing (see CSS loading)
 * applies exactly the same  
 * in the case of JavaScript code
 
