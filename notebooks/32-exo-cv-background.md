@@ -50,17 +50,24 @@ jupyter:
 # practice
 <!-- #endregion -->
 
+```javascript
+// run this cell, and then 
+// click the created button
+tools = require('../js/tools');
+tools.init();
+```
+
 <!-- #region slideshow={"slide_type": ""} -->
 in this notebook :
 * a simple assignment
 * plus a few tips to get started
+* **make sure you read this notebook thoroughly before you start**
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "slide"} -->
 ## assignment
 
-* create a HTML document
-* as a collection of 3 files, 
+* create a HTML document as a collection of 3 files, 
 * say : `resume.html`, `resume.css`, `resume.js`
 * make sure the html header loads the css and js companions
 <!-- #endregion -->
@@ -68,10 +75,105 @@ in this notebook :
 then 
 
 * edit the JavaScript code
-* so that your resume background
-* alternates every 1 second
-* between 2 different colours
-* see example 2 for inspiration
+* so that your resume background alternates  
+  every 1 second between 2 different colours
+
+```javascript slideshow={"slide_type": "slide"} hide_input=false
+tools.iframe_exo("resume", true)
+```
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+## tip : run code upon load
+
+<!-- #endregion -->
+
+<!-- #region slideshow={"slide_type": ""} -->
+so, you want to start some code, say call function `start()`,  
+right after the page loads  
+**BUT** it is unsafe to do something like 
+
+```html
+<script src="thecode.js"></script>
+<script>
+start('some-data')
+</script>
+```
+
+because at the time when `start('some-data')` gets executed,  
+your page is still in the middle of the loading phase  
+(even though that might accidentally work just fine)
+<!-- #endregion -->
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+### run code upon load : the proper way
+<!-- #endregion -->
+
+<!-- #region -->
+the proper way is to attach a **callback** to the 'load' event when triggered on the page
+
+```javascript
+// the rough way
+window.onload = function() { start('some-data');} 
+
+// a little nicer way
+window.addEventListener('load', function() { start('some-data');}
+```
+
+this time, `start()` will get called at a time where you can be sure the document is entirely loaded.
+<!-- #endregion -->
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+## tip : implement a cyclic task
+<!-- #endregion -->
+
+<!-- #region trusted=true -->
+implementing a cyclic task was done in example 2 already, here's a reminder  
+typical sequence is something like
+<!-- #endregion -->
+
+```javascript cell_style="split"
+function one_step() {
+    console.log("beep");
+}
+
+// so that we can stop the running loop
+active = true;
+
+function run_forever() {
+    if (active) 
+        one_step();
+    setTimeout(run_forever, 1000);
+}
+```
+
+```javascript cell_style="split"
+run_forever() 
+```
+
+```javascript
+// note that our JS interpreter is still responsive
+// fortunately, so I can stop the endless loop
+active = false
+```
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+### observations on cyclic tasks
+<!-- #endregion -->
+
+in a traditional language one would maybe consider writing something like 
+
+<!-- #region cell_style="split" -->
+```python
+while True:
+    if active:
+        one_step()
+    sleep 1
+```    
+<!-- #endregion -->
+
+<!-- #region cell_style="split" -->
+Note however that with such an approach, the Python interpreter remains busy, it can't do anything else at the same times
+<!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "slide"} -->
 ## tip : use devel tools
@@ -85,7 +187,7 @@ then
 
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-## Devel Tools : *Elements*
+### Devel Tools : *Elements*
 <!-- #endregion -->
 
 as mentioned earlier already, you can
@@ -105,7 +207,7 @@ as mentioned earlier already, you can
 ![](../media/devel-tools-change-properties.png)
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-## Devel Tools : *Console*
+### Devel Tools : *Console*
 <!-- #endregion -->
 
 * where lands the output of `console.log`  
@@ -137,7 +239,7 @@ as mentioned earlier already, you can
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-## Devel Tools : *Sources*
+### Devel Tools : *Sources*
 <!-- #endregion -->
 <!-- #region cell_style="split" -->
 * occasionnally useful to browse the code actually loaded
@@ -161,18 +263,6 @@ as mentioned earlier already, you can
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-## the browser cache (yet again)
-<!-- #endregion -->
-
-* the browser cache thing (see CSS loading)
-* applies exactly the same  
-* in the case of JavaScript code
-
-**Remember**
-* to use Shift-load, or other cache-cleaning tool  
-* if changes in a file do not seem to kick in
-
-<!-- #region slideshow={"slide_type": "slide"} -->
 ## more on devel tools
 <!-- #endregion -->
 
@@ -185,3 +275,15 @@ as mentioned earlier already, you can
   they come with a complete debugger
 * do not hesitate to search for some hands-on / video tuto
 <!-- #endregion -->
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+## the browser cache (yet again)
+<!-- #endregion -->
+
+* the browser cache thing (see CSS loading)
+* applies exactly the same  
+* in the case of JavaScript code
+
+**Remember**
+* to use Shift-load, or other cache-cleaning tool  
+* if changes in a file do not seem to kick in

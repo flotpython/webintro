@@ -83,7 +83,7 @@ more concurrency, and we will cover that briefly in later courses
 <!-- #region slideshow={"slide_type": ""} -->
 within the browser though, things are different
 
-* what should be the entry point ?
+* what is the entry point ?
 * the browser does many things on its own  
   or upon actions triggered by the user
   all at the same time
@@ -133,12 +133,13 @@ in this context, it is common to create functions **on the fly**
 ```javascript
 window.addEventListener(
     "load", 
-    function() { console.log("page loaded"); }  // <- a function object
+    // returns a function object
+    function() { console.log("page loaded"); }  
 );
 ```
 <!-- #endregion -->
 
-<p class="rise-footnote">this style of creating function objects is extremely common in JavaScript; it is close to `lambda` expressions in Python, without the limitations.
+<p class="rise-footnote">this style of creating function objects is extremely common in JavaScript; it is kind of close to `lambda` expressions in Python.
 
 <!-- #region slideshow={"slide_type": "slide"} -->
 ## closures
@@ -159,7 +160,7 @@ window.addEventListener(
         },
         2000);
     console.log("timeout armed");
-}
+} 
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->

@@ -234,7 +234,7 @@ class Board {
         }
         // this will cause run() to be called again in 400 ms
         // that's what makes it run forever
-        window.setTimeout(() => this.run(), 400);
+        setTimeout(() => this.run(), 400);
     }
 }
 
@@ -308,7 +308,7 @@ and also, about asynchronicity :
 in our 2 examples, we have seen 3 callbacks already
 
 * ex.1 : `onclick="toggle()"`  
-* ex.2 : `window.setTimeout(run, 400);` 
+* ex.2 : `setTimeout(run, 400);` 
 * ex.2 : `window.onload = function () { ` 
 
 <!-- #region slideshow={"slide_type": "slide"} -->
