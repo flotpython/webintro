@@ -9,6 +9,7 @@ jupyter:
       extension: .md
       format_name: markdown
       format_version: '1.2'
+      jupytext_version: 1.3.2
   kernelspec:
     display_name: Javascript (Node.js)
     language: javascript
@@ -162,3 +163,13 @@ tools.iframe_html_css("flex2", flex2_html, flex2_css, true)
 * in the sense that older models were essentially bottom up
   * i.e. an element had a size and the container was to deal with that size
   * but a flex container can influence the size of its contained items
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+## practice
+<!-- #endregion -->
+
+1. mimick the layout below
+
+```javascript hide_input=true
+!tools.iframe_exo("exo-flex", true, true)
+```
