@@ -143,12 +143,14 @@ function iframe_samples_html_css_js(stem, external) {
 
 
 
-function iframe_exo(stem, external) {
+function iframe_exo(stem, external, no_js) {
     let local = `./${stem}.html`;
     let filename = `../samples/${stem}`;
     let html = fs.readFileSync(`${filename}.html`, 'utf8');
     let css = fs.readFileSync(`${filename}.css`, 'utf8');
-    let js = fs.readFileSync(`${filename}.min.js`, 'utf8');
+    let js = "";
+    if (! no_js) 
+        js = fs.readFileSync(`${filename}.min.js`, 'utf8');
     let full_code = `${html}
 ${_injected_css(css)}
 ${_injected_js(js)}
