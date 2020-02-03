@@ -9,6 +9,7 @@ jupyter:
       extension: .md
       format_name: markdown
       format_version: '1.2'
+      jupytext_version: 1.3.2
   kernelspec:
     display_name: Javascript (Node.js)
     language: javascript
@@ -82,6 +83,14 @@ narrow viewport
 
 ![](../media/responsive-narrow.svg)
 <!-- #endregion -->
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+### logical zoom
+<!-- #endregion -->
+
+* be aware also that all browsers have a feature that let users artificially zoom in and out
+* on Chrome on the mac e.g., this activated with `⌘ +` and `⌘ -`
+* this also triggers a layout change, to which responsive pages are expected to react properly
 
 <!-- #region slideshow={"slide_type": "slide"} -->
 ## default layout policy
