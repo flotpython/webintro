@@ -192,7 +192,7 @@ randomdots_js = `const svgNS = "http://www.w3.org/2000/svg";
 
 /* generates random circles in specified area */
 class Board {
-
+    
     constructor(width, height, start_x, start_y, radius, active) {
         this.w = width;
         this.h = height;
@@ -201,8 +201,8 @@ class Board {
         this.r = radius;
         this.active = active;
     }
-
-     draw() {
+    
+    draw() {
         let svg = document.querySelector("svg");
         console.log(svg);
         let c = document.createElementNS(svgNS, 'circle');
@@ -210,31 +210,31 @@ class Board {
         c.setAttribute('cy', this.y);
         c.setAttribute('r', this.r);  // svg's circle radius
         svg.append(c);
-     }
-
+    }
+    
     // compute random position for next circle
     move(walker) {
-       let [rx, ry] = [Math.random(), Math.random()];
-       this.x = rx * this.w;
-       this.y = ry * this.h;
+        let [rx, ry] = [Math.random(), Math.random()];
+        this.x = rx * this.w;
+        this.y = ry * this.h;
     }
-
+    
     start_stop() {
-       this.active = ! this.active;
+        this.active = ! this.active;
     }
-
+    
     // heartbeat
     // calling run() once will run it forever
     // because run() installs itself through a timeout 
     run() {
         console.log("in RUN"); 
-      if (this.active) {
-        this.draw();
-        this.move();
-      }
-      // this will cause run() to be called again in 400 ms
-      // that's what makes it run forever
-      window.setTimeout(() => this.run(), 400);
+        if (this.active) {
+            this.draw();
+            this.move();
+        }
+        // this will cause run() to be called again in 400 ms
+        // that's what makes it run forever
+        window.setTimeout(() => this.run(), 400);
     }
 }
 
