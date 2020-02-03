@@ -30,7 +30,7 @@ body {
 
 @media (min-width: 512px) {
     div#main-grid {
-        grid-template-columns: [left] 172px [quarter] auto [center] 50% [right];
+        grid-template-columns: [left] 266px [quarter] auto [center] 50% [right];
         grid-template-areas: "header header header" "middle middle middle" "left left right";
     }
     #photo {
@@ -123,6 +123,10 @@ div#photo {
 }
 
 #header>span {
+    z-index: 10;
+}
+
+#header>span {
     background-color: #fefefe;
     border-radius: 8px;
     padding: 10px 20px;
@@ -205,17 +209,17 @@ div.where-what-when {
 .skills {
     display: grid;
     /* based on the longest label */
-    grid-template-columns: 17em auto;
+    grid-template-columns: 8em auto;
 }
 
 .features {
     display: grid;
-    grid-template-columns: 12em auto;
+    grid-template-columns: 17em auto;
 }
 
 .langs {
     display: grid;
-    grid-template-columns: 7em auto;
+    grid-template-columns: 14em auto;
 }
 
 .skill,
