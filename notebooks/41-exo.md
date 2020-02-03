@@ -71,6 +71,8 @@ tools.iframe_exo("spinning-wheel")
 ## a few hints
 <!-- #endregion -->
 
+For example (but that's entirely up to you)
+
 * write a JavaScript class `SpinningWheel` 
 * that can be created from :
   * a `svg` element
@@ -83,10 +85,13 @@ tools.iframe_exo("spinning-wheel")
   * `stop()`
   * `resume()`
   * `clear()` 
+  
+* it may be helpful to create a convenience function that creates an SVG element inside a container that is found through its id;  
+  e.g. `create_spinning_wheel("spin-container")` would create (and return) a `SpinningWheel` instance inside (the element found by selector) `#spin-container`
 
 
 * attach to the `load` event of your page
-* a function that creates the spinnig wheel
+* a function that creates the spinning wheel
   and then and stops it after a fixed duration
 
 <!-- #region slideshow={"slide_type": ""} -->
@@ -102,3 +107,56 @@ let dot = document.createElementNS(svgNS, 'circle');
 ```
 
 <!-- #endregion -->
+
+<!-- #region slideshow={"slide_type": ""} -->
+## the  HTML part
+<!-- #endregion -->
+
+your html part could look like the following  
+
+```javascript hide_input=true
+fs = require('fs');
+html = fs.readFileSync("../samples/spinning-wheel.html", "utf-8");
+[start, end ] = [html.indexOf("<body>"), html.indexOf("</body>")];
+extract = html.slice(start, end+7);
+$$.html(`<code><pre>${tools.escape(extract)}</pre></code>`);
+```
+
+<!-- #region slideshow={"slide_type": ""} -->
+## observe
+
+* the HTML document is mostly empty, and gets populated by program
+
+* the way we attach a callback to the `load` event  
+  which is a little more subtle than assigning `window.onload` as we did in past examples:
+  * using `addEventListener` **adds** behaviour and so is the **preferred method**
+  * while assigning `window.onload` has the potential of erasing what other modules may have done
+<!-- #endregion -->
+
+<!-- #region slideshow={"slide_type": ""} -->
+## observe (2)
+
+* how tedious it is to have to pass all arguments to the class constructor - because JavaScript does not support (yet?) default values parameters  
+  in similar situations, a common practice is to impose only a small set of required parameters, and then to accept a single `options` argument
+  
+So one could offer instead:
+
+```javascript
+SpinningWheel(radius, options) {
+   ...
+}
+```
+
+and allow callers to set specific parameters in the `options` object; for examples one could call
+
+```javascript
+let spin = SpinningWheel(100, 
+                         { bg_color: [200, 100, 50], period=500})
+```
+and have the `SpinningClass` code provide default for missing parameters.
+<!-- #endregion -->
+
+### optional assignment 
+
+
+Students who have finished the exercise should consider tweaking their code to adapt to this more convenient interface.

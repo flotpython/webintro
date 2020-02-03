@@ -3,7 +3,7 @@
 let fs = require('fs');
 
 // helper
-function _escape(string) {
+function escape(string) {
     return string
         .replace(/</g, '&lt;')
         .replace(/>/g, '&gt;')
@@ -23,7 +23,7 @@ ${css}
 }
 
 function _verbatim(html) {
-    return `<pre class="labeled">${_escape(html)}</pre>`;
+    return `<pre class="labeled">${escape(html)}</pre>`;
 }
 
 function _label(cls) {
@@ -173,6 +173,7 @@ function iframe_samples_html_css_minjs(stem, external) {
 }
 
 //////////
+exports.escape = escape;
 exports.one_column = one_column;
 exports.two_columns = two_columns;
 exports.iframe_html_css = iframe_html_css;

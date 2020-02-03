@@ -85,7 +85,7 @@ class SpinningWheel {
     }
 }
 
-function start(element_id) {
+function create_spinning_wheel(element_id) {
     let container = document.getElementById(element_id);
     let svg = document.createElementNS(svgNS, 'svg');
     svg.setAttribute('width', 200);
@@ -99,11 +99,3 @@ function start(element_id) {
     spin.start();
     return spin;
 }
-
-window.addEventListener(
-    "load",
-    () => {
-        let spin = start("spin-container");
-        window.setTimeout(() => spin.stop(), 5000);
-    }
-);

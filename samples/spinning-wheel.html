@@ -9,5 +9,14 @@
     <body>
         <h3>wheel will spin for 5 s</h3>
         <div id="spin-container" class="spinning"></div>
+        <script>
+            window.addEventListener(
+                "load",
+                () => {
+                    let spin = create_spinning_wheel("spin-container");
+                    window.setTimeout(() => spin.stop(), 5000);
+                }
+           );
+        </script>
     </body>
 </html>

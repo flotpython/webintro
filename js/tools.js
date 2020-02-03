@@ -1,6 +1,7 @@
 //////////
 var show_html = require('./show-html');
 
+exports.escape = show_html.escape;
 exports.one_column = show_html.one_column;
 exports.two_columns = show_html.two_columns;
 exports.iframe_html_css = show_html.iframe_html_css;
