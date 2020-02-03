@@ -1,0 +1,297 @@
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+
+/* ----------------- *
+ * responsive layout *
+ * ----------------- */
+
+
+/*  
+* { box-sizing: border-box;}
+*/
+
+@media only screen and (max-width: 512px) {
+    div#main-grid {
+        grid-template-columns: repeat(auto-fit, 1fr);
+        grid-template-areas: "header" "photo" "middle" "left" "right";
+    }
+    #photo {
+        grid-area: photo;
+    }
+}
+
+
+/* photo is 1013 × 1175 
+   and we set its height to 200px so 
+   we need a 172 px width
+ */
+
+@media (min-width: 512px) {
+    div#main-grid {
+        grid-template-columns: [left] 172px [quarter] auto [center] 50% [right];
+        grid-template-areas: "header header header" "middle middle middle" "left left right";
+    }
+    #photo {
+        /* rowstart colstart rowend colend*/
+        grid-area: 1 / left / 3 / quarter;
+    }
+    #gadgets {
+        grid-area: 2 / quarter / 3 / right;
+    }
+}
+
+
+/* -------------- *
+ * generic layout *
+ * -------------- */
+
+#header {
+    grid-area: header;
+}
+
+#left-panel {
+    grid-area: left;
+}
+
+#right-panel {
+    grid-area: right;
+}
+
+#main-grid {
+    display: grid;
+}
+
+#gadgets {
+    display: grid;
+}
+
+
+/* gadgets */
+
+#gadgets {
+    grid-template-columns: [left] 50% [center] 50% [right];
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: "title title" "address phone" "mail mail" "linkedin linkedin";
+}
+
+#gadgets div#title {
+    grid-area: title;
+}
+
+div#gadgets div#address {
+    grid-area: address;
+}
+
+div#gadgets div#phone {
+    grid-area: phone;
+}
+
+div#gadgets div#mail {
+    grid-area: mail;
+}
+
+div#gadgets div#linkedin {
+    grid-area: linkedin;
+}
+
+
+/* ------- *
+ * styling *
+ * ------- */
+
+#photo>img {
+    height: 200px;
+}
+
+a {
+    text-decoration: none;
+}
+
+div#photo {
+    text-align: center;
+}
+
+#header {
+    font-size: 160%;
+    text-align: right;
+    padding: 16px 8% 16px 0px;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+#header>span {
+    background-color: #fefefe;
+    border-radius: 8px;
+    padding: 10px 20px;
+    border: 1px solid #666;
+}
+
+
+/* gadgets styling */
+
+#gadgets {
+    font-size: 90%;
+}
+
+#gadgets>#title {
+    font-weight: bold;
+    padding-bottom: 8px;
+}
+
+span.fa {
+    font-size: larger;
+}
+
+#gadgets {
+    text-align: center;
+    padding: 12px;
+}
+
+
+/* content panels */
+
+.uni {
+    background-color: #f4f4f4;
+}
+
+#left-panel,
+#right-panel {
+    padding-left: 4%;
+    padding-right: 4%;
+    font-size: 90%;
+    padding-bottom: 25px;
+}
+
+span.where {
+    color: darkorange;
+    font-size: 120%;
+}
+
+span.what::before,
+span.when::before {
+    content: '|';
+    padding-right: 3px;
+}
+
+span.what,
+span.when {
+    font-weight: bold;
+}
+
+span.outline {
+    color: orange;
+}
+
+.details>ul {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-inline-start: 1em;
+}
+
+div.where-what-when:not(:first-child) {
+    margin-top: 2ex;
+}
+
+div.where-what-when {
+    margin-bottom: 0.5ex;
+}
+
+
+/* sections with progress bars */
+
+.skills {
+    display: grid;
+    /* based on the longest label */
+    grid-template-columns: 17em auto;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: 12em auto;
+}
+
+.langs {
+    display: grid;
+    grid-template-columns: 7em auto;
+}
+
+.skill,
+.feature,
+.lang {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.skill>span,
+.feature>span,
+.lang>span {
+    font-size: 125%;
+    margin-right: 1em;
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+
+.meter {
+    height: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    /* Can be anything */
+    position: relative;
+    background: #fefefe;
+    border-radius: 8px;
+    margin-right: 2em;
+    border: 1px solid #aaa;
+}
+
+.meter>span {
+    display: block;
+    padding: 2px;
+    height: 16px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    border-right: 0.5px solid #999;
+}
+
+.green-bar {
+    background-color: rgb(43, 194, 83);
+    background-image: linear-gradient(center bottom, rgb(43, 194, 83) 37%, rgb(84, 240, 84) 69%);
+}
+
+.blue-bar {
+    background-color: rgb(68, 106, 233);
+    background-image: linear-gradient(center bottom, rgb(68, 106, 233) 37%, rgb(191, 215, 247) 69%);
+}
+
+.squares {
+    background: radial-gradient(black 3px, transparent 4px), radial-gradient(black 3px, transparent 4px), linear-gradient(#fff 4px, transparent 0), linear-gradient(45deg, transparent 74px, transparent 75px, #a4a4a4 75px, #a4a4a4 76px, transparent 77px, transparent 109px), linear-gradient(-45deg, transparent 75px, transparent 76px, #a4a4a4 76px, #a4a4a4 77px, transparent 78px, transparent 109px), #fff;
+    background-size: 109px 109px, 109px 109px, 100% 6px, 109px 109px, 109px 109px;
+    background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+}
+
+
+/* printing */
+
+@media print {
+    body {
+        -webkit-print-color-adjust: exact;
+    }
+    @page {
+        size: A4 portrait;
+        margin-left: 1cm;
+        margin-right: 1cm;
+        margin-top: 1cm;
+        margin-bottom: 0px;
+        -webkit-print-color-adjust: exact;
+    }
+    .shadow {
+        box-shadow: none !important;
+    }
+}
