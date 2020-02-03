@@ -9,6 +9,7 @@ jupyter:
       extension: .md
       format_name: markdown
       format_version: '1.2'
+      jupytext_version: 1.3.2
   kernelspec:
     display_name: Javascript (Node.js)
     language: javascript
@@ -186,59 +187,69 @@ circle {
   fill: none;
   stroke-width: 2;
 }`;
-randomdots_js = `let svgNS = "http://www.w3.org/2000/svg";
+randomdots_js = `const svgNS = "http://www.w3.org/2000/svg";
 
-// a JavaScript object looks like this
-let the_walker = {
-  w: 400, h: 100, 
-  x: 100, y: 50,
-  r: 4,
+
+/* generates random circles in specified area */
+class Board {
+
+    constructor(width, height, start_x, start_y, radius, active) {
+        this.w = width;
+        this.h = height;
+        this.x = start_x;
+        this.y = start_y;
+        this.r = radius;
+        this.active = active;
+    }
+
+     draw() {
+        let svg = document.querySelector("svg");
+        console.log(svg);
+        let c = document.createElementNS(svgNS, 'circle');
+        c.setAttribute('cx', this.x); // svg's circle center
+        c.setAttribute('cy', this.y);
+        c.setAttribute('r', this.r);  // svg's circle radius
+        svg.append(c);
+     }
+
+    // compute random position for next circle
+    move(walker) {
+       let [rx, ry] = [Math.random(), Math.random()];
+       this.x = rx * this.w;
+       this.y = ry * this.h;
+    }
+
+    start_stop() {
+       this.active = ! this.active;
+    }
+
+    // heartbeat
+    // calling run() once will run it forever
+    // because run() installs itself through a timeout 
+    run() {
+        console.log("in RUN"); 
+      if (this.active) {
+        this.draw();
+        this.move();
+      }
+      // this will cause run() to be called again in 400 ms
+      // that's what makes it run forever
+      window.setTimeout(() => this.run(), 400);
+    }
 }
 
-// messing with the DOM: adds a circle inside <svg>
-function draw(walker) {
-  let svg = document.querySelector("svg");
-  console.log(svg);
-  let circle = document.createElementNS(svgNS, 'circle');
-  circle.setAttribute('cx', walker.x);
-  circle.setAttribute('cy', walker.y);
-  circle.setAttribute('r', walker.r);
-  svg.append(circle);
-}
-
-// compute next random position
-function move(walker) {
-  let [rx, ry] = [Math.random(), Math.random()];
-  walker.x = rx * walker.w;
-  walker.y = ry * walker.h;
-}
-
-// start disabled
-let active = false;
+let the_board = new Board(400, 100, 100, 50, 4, true);
 
 function start_stop() {
-  active = ! active;
-}
-
-// heartbeat
-// calling run() once will run it forever
-// because run() installs itself through a timeout 
-function run() {
-  if (active) {
-    draw(the_walker);
-    move(the_walker);
-  }
-  // this will cause run() to be called again in 400 ms
-  // that's what makes it run forever
-  window.setTimeout(run, 400);
+    the_board.start_stop();
 }
 
 // start the loop, but only once the page is loaded
 window.onload = function () { 
-  let svg = document.querySelector("svg");
-  svg.setAttribute('width', the_walker.w);
-  svg.setAttribute('height', the_walker.h);
-  run();
+    let svg = document.querySelector("svg");
+    svg.setAttribute('width', the_board.w);
+    svg.setAttribute('height', the_board.h);
+    the_board.run();
 }`;
 tools.iframe_html_css_js("randomdots", randomdots_html, randomdots_css, randomdots_js, true)
 ```
