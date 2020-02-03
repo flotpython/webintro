@@ -32,8 +32,8 @@ jupyter:
     toc_cell: false
     toc_position:
       height: 247.688px
-      left: 23.5px
-      top: 552.333px
+      left: 1377.5px
+      top: 138.625px
       width: 165px
     toc_section_display: true
     toc_window_display: true
@@ -93,6 +93,141 @@ within the browser though, things are different
 * but users expect the browser to be always responsive  
 <!-- #endregion -->
 
+<!-- #region slideshow={"slide_type": "slide"} -->
+## callbacks everywhere
+<!-- #endregion -->
+
+<!-- #region -->
+**callbacks** are one first relatively naive approach to asynchronicity 
+
+* a function that is passed as an argument
+* so that it gets triggered in the future
+* when some conditions are met
+
+we have seen many examples already
+
 ```javascript
-https://javascript.info/callbacks#pyramid-of-doom
+window.addEventListener(
+    "load", 
+    function() { console.log("page loaded"); }
+);
 ```
+
+or 
+
+```javascript
+window.setTimeout(
+    function () { console.load("10 seconds later"); },
+    10000);
+```
+
+
+<!-- #endregion -->
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+### callbacks
+<!-- #endregion -->
+
+<!-- #region -->
+in this context, it is common to create functions **on the fly**
+```javascript
+window.addEventListener(
+    "load", 
+    function() { console.log("page loaded"); }  // <- a function object
+);
+```
+<!-- #endregion -->
+
+<p class="rise-footnote">this style of creating function objects is extremely common in JavaScript; it is close to `lambda` expressions in Python, without the limitations.
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+## closures
+<!-- #endregion -->
+
+* it is rather frequent that a callback needs to access context data
+* it is safe to use lexically-bound variables inside the callback
+* see the `context` variable in the example below
+
+```javascript
+// remember this code runs in a node.js instance
+// so there is no 'window' global in this runtime 
+{ 
+    let context = {a:1, b:2};
+    setTimeout( 
+        function() {
+            console.log("context is", context);
+        },
+        2000);
+    console.log("timeout armed");
+}
+```
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+### closures - ctd
+<!-- #endregion -->
+
+<!-- #region cell_style="split" -->
+```javascript
+{ 
+  let context = {a:1, b:2};
+  setTimeout( 
+    function() {
+      console.log(context);
+    },
+    2000);
+  console.log("armed");
+}
+```
+<!-- #endregion -->
+
+<!-- #region cell_style="split" -->
+* `context` is created in a block
+* that is long gone at the time  
+  the callback triggers
+* but it is still reachable  
+  from the callback
+* as it was *captured* in the closure
+
+<!-- #endregion -->
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+## arrow functions
+<!-- #endregion -->
+
+an alternative syntax to create functions on the fly
+
+```javascript cell_style="split"
+// create a function
+(x) => { console.log(`PING x=${x}`); }
+```
+
+```javascript cell_style="split"
+// we could have named it
+foo = (x) => { console.log(`PING x=${x}`); }
+```
+
+```javascript cell_style="split"
+// so that we could call it
+foo(10)
+```
+
+```javascript cell_style="split"
+// a common idiom 
+setTimeout(
+    () => {console.log("PONG")},
+    1000);
+console.log("armed")
+```
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+## the limits of callbacks
+<!-- #endregion -->
+
+* highly recommended to study the  
+  [introduction to callbacks in javascript.info](https://javascript.info/callbacks)
+* that highlights the fundamental drawback  
+  of using callbacks
+* which is that you need to split your code into pieces  
+  and fit the pieces into functions
+* it easily becomes hard to read and modify  
+  especially if there is logic involved

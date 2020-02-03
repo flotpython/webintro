@@ -424,6 +424,53 @@ vector.display()
 </p>
 
 <!-- #region slideshow={"slide_type": "slide"} -->
+### properties
+<!-- #endregion -->
+
+* modern JavaScript has a native notion of properties
+* i.e. expose an apparently mundane access  
+  to an instance attribute
+* through **getter** and **setter** functions
+* that intercept read/write attempts  
+  on the attribute
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+### property example
+<!-- #endregion -->
+
+```javascript cell_style="split"
+class Temperature {
+    constructor(kelvin) {
+        this.kelvin = kelvin;
+    }
+    
+    get kelvin() {
+        return this._kelvin;
+    }
+
+    set kelvin(kelvin) {
+        if (kelvin < 0) {
+            console.log("negative");
+            return
+        }
+        this._kelvin = kelvin;
+    }
+}
+```
+
+```javascript cell_style="split"
+let temp = new Temperature(10)
+```
+
+```javascript cell_style="split"
+temp.kelvin = -10
+```
+
+```javascript cell_style="split"
+temp
+```
+
+<!-- #region slideshow={"slide_type": "slide"} -->
 ### old-school classes
 <!-- #endregion -->
 

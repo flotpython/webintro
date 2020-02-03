@@ -99,4 +99,4 @@ function myonload() {
     window.setTimeout(() => spin.stop(), 5000);
 }
 
-window.onload = myonload
+window.addEventListener("load", myonload);

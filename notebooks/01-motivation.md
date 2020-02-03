@@ -9,6 +9,7 @@ jupyter:
       extension: .md
       format_name: markdown
       format_version: '1.2'
+      jupytext_version: 1.3.2
   kernelspec:
     display_name: Javascript (Node.js)
     language: javascript
@@ -144,3 +145,13 @@ this means that we will **not** address :
     used for writing backends as well
   * and even for traditional computing
 <!-- #endregion -->
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+## objectives
+<!-- #endregion -->
+
+* make sure you are aware of the enormous potential
+* make you aware of the specific types of problems  
+  esp. non-sequential nature of user interaction and network activity
+* mention and shallowly study a few technological bricks 
+* start to build a mental map where you can place the current buzzwords
