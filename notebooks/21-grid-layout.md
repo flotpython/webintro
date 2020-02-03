@@ -65,7 +65,7 @@ tools.init();
   * the `<table>` tag has long been overused  
     to address that sort of needs
   * **do not use** `<table>`'s for that in 2020 !
-* now available in [all popular modern browsers](https://caniuse.com/#feat=css-grid)
+* `grid` is now available in [all popular modern browsers](https://caniuse.com/#feat=css-grid)
 
 <!-- #region slideshow={"slide_type": "slide"} -->
 ## example (1)
