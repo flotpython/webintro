@@ -60,7 +60,7 @@ tools.init();
 ## transitions
 <!-- #endregion -->
 
-* we have seen that properties can change over time
+* properties can change over time
 * either on events (e.g. a hyperlink when you hover over or click it)
 * or programmatically (typically through JavaScript)
 
@@ -143,7 +143,7 @@ also notice that this starts to have to do with **responsiveness**
 
 * that deals with defining layouts that cope with geometry changes
 * that we will cover later
-* here for example we have used a `flexbox` (more on this later)
+* here for example we have used `flex` (more on this later)
 
 
 <!-- #region slideshow={"slide_type": "slide"} -->
