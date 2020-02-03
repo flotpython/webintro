@@ -94,3 +94,7 @@ div.labeled {
     display: block;
     position: relative;
 }
+
+iframe.exo {
+    height: 600px;
+}

@@ -39,9 +39,10 @@ function _labeled_area(code, code_class, label_class) {
 </div>`;
 }
 
-function _iframe_for_stored_html(filename, html) {
+function _iframe_for_stored_html(filename, html, extra_class) {
     fs.writeFileSync(filename, html);
-    return `<iframe class="show-html" src="${filename}" />`;
+    extra_class = extra_class || "";
+    return `<iframe class="show-html ${extra_class}" src="${filename}" />`;
 }
 
 
@@ -140,6 +141,37 @@ function iframe_samples_html_css_js(stem, external) {
     return iframe_html_css_js(stem, html, css, js, external);
 }
 
+
+
+function iframe_exo(stem, external) {
+    let local = `./${stem}.html`;
+    let filename = `../samples/${stem}`;
+    let html = fs.readFileSync(`${filename}.html`, 'utf8');
+    let css = fs.readFileSync(`${filename}.css`, 'utf8');
+    let js = fs.readFileSync(`${filename}.min.js`, 'utf8');
+    let full_code = `${html}
+${_injected_css(css)}
+${_injected_js(js)}
+`;
+    /* produce html file */
+    let iframe_area = _iframe_for_stored_html(local, full_code, "exo");
+    let [external_class, external_button] = ['', ''];
+    if (external) {
+        external_class = 'external';
+        external_button = _external_iframe_button(local);
+    }
+    let result_area = `<div class="${external_class}">
+${iframe_area}${external_button}
+</div>`;
+    return $$.html(result_area);
+}
+
+
+
+function iframe_samples_html_css_minjs(stem, external) {
+    return iframe_html_css_js(stem, html, css, js, external);
+}
+
 //////////
 exports.one_column = one_column;
 exports.two_columns = two_columns;
@@ -147,3 +179,4 @@ exports.iframe_html_css = iframe_html_css;
 exports.iframe_html_css_js = iframe_html_css_js;
 exports.iframe_samples_html_css = iframe_samples_html_css;
 exports.iframe_samples_html_css_js = iframe_samples_html_css_js;
+exports.iframe_exo = iframe_exo;

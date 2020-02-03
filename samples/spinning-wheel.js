@@ -6,7 +6,7 @@ class SpinningWheel {
     constructor(svg, 
                 cx, cy, cr, 
                 dots, dot_r,
-                freq, 
+                period, 
                 rgb_light, rgb_dark) {
         this.svg = svg;
         this.cx = cx;
@@ -14,7 +14,8 @@ class SpinningWheel {
         this.cr = cr;
         this.dots = dots;
         this.dot_r = dot_r;
-        this._period = 1000/freq;
+        // duration between 2 dots
+        this._period = period/dots;
         [this.redl, this.greenl, this.bluel] = rgb_light;
         [this.redd, this.greend, this.blued] = rgb_dark;
         //
@@ -72,12 +73,15 @@ class SpinningWheel {
             window.setTimeout( () => this.next(), this._period);
     }
 
-    init() {
+    start() {
         this._init();
         this.next();
     }
     stop() {
         this.active = false;
+    }
+    resume() {
+        this.active = true;
     }
 }
 
@@ -88,15 +92,18 @@ function start(element_id) {
     svg.setAttribute('height', 200);
     container.append(svg);
     let spin = new SpinningWheel(
-        svg, 100, 100, 80, 10, 20, 10, 
-        [240, 128, 145], [80, 60, 120]);
-    spin.init();
+        svg, 100, 100, 80, 
+        12, 18, 
+        700, 
+        [100, 240, 145], [80, 60, 120]);
+    spin.start();
     return spin;
 }
 
-function myonload() {
-    let spin = start("spin-container");
-    window.setTimeout(() => spin.stop(), 5000);
-}
-
-window.addEventListener("load", myonload);
+window.addEventListener(
+    "load",
+    () => {
+        let spin = start("spin-container");
+        window.setTimeout(() => spin.stop(), 5000);
+    }
+);
