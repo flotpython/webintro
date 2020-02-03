@@ -112,7 +112,9 @@ all3_css = `#button {
   padding: 10px;
   background-color: #f5f0e3;
 }`;
-all3_js = `function toggle() {
+all3_js = `/* we will see in the next notebook
+   how to load javascript code     */
+function toggle() {
   // from the 'document' global variable
   // locate the element that we want to toggle
   let to_toggle = document.getElementById("area");

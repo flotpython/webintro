@@ -78,24 +78,24 @@ most of the elements we have seen so far are said to be *in-flow* 
 ```javascript hide_input=true
 fixed1_html = `<div style="height: 300px; width: 100%; 
             background-color: #52de97">
-scroll up</div>
+scroll me up !</div>
 <div class="header">
-  This out-of-flow, fixed header needs to have
-  its height configured statically, so that the
-  body's top margin can be tailored accordingly
+  I am an out-of-flow fixed header. My height must be configured
+  statically! So that the body's top margin can be tailored
+  accordingly.
 </div>
 <div style="height: 400px; width: 100%; 
             background-color: #c0ffb3">
-the header sticks at the top</div>`;
+you can see that the header sticks at the top !</div>`;
 fixed1_css = `div.header {
     /* this is hard-wired */
     height: 50px;
     position: fixed;
     font-size: 20px;    
     top: 0px;
-    left: 0px;
-    width: 100%;
-    background-color: #d89cf6;
+    left: 10%;
+    width: 80%;
+    background-color: #f800ff;
     color: #0f4c75;
 }
 body {
