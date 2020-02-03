@@ -10,5 +10,5 @@ function grow() {
 
 function grow_forever() {
     grow();
-    window.setTimeout(grow_forever, 2500);
+    setTimeout(grow_forever, 2500);
 }

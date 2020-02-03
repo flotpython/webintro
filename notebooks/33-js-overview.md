@@ -295,7 +295,7 @@ console.log("level 0", y);
 * context (browser components mostly) is exposed to programer
 * through a set of **global variables**, e.g.
   * `document` to access the DOM
-  * `window`, remember `window.setTimeout()`
+  * `window`, remember `setTimeout()`
   * `console` like in `console.log()`
   * `this` - a tricky one
 * may depend on the runtime  

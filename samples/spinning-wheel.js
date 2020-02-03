@@ -70,7 +70,7 @@ class SpinningWheel {
         this._offset += 1;
         this._paint();
         if (this.active)
-            window.setTimeout( () => this.next(), this._period);
+            setTimeout( () => this.next(), this._period);
     }
 
     start() {

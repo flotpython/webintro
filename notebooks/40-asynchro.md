@@ -116,7 +116,7 @@ window.addEventListener(
 or 
 
 ```javascript
-window.setTimeout(
+setTimeout(
     function () { console.load("10 seconds later"); },
     10000);
 ```
@@ -129,7 +129,9 @@ window.setTimeout(
 <!-- #endregion -->
 
 <!-- #region -->
-in this context, it is common to create functions **on the fly**
+in this context, it is common to create functions **on the fly**  
+with e.g. the `function` expression
+
 ```javascript
 window.addEventListener(
     "load", 

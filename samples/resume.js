@@ -11,7 +11,7 @@ function run() {
     index += 1;
     index %= 2;
     set_body_background(colors[index]);
-    window.setTimeout(run, 1000);
+    setTimeout(run, 1000);
 }
 
 window.onload = run;
