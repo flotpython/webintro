@@ -89,7 +89,7 @@ tools.iframe_exo("spinning-wheel")
 * a function that creates the spinnig wheel
   and then and stops it after a fixed duration
 
-<!-- #region slideshow={"slide_type": "slide"} -->
+<!-- #region slideshow={"slide_type": ""} -->
 ## remember also that
 <!-- #endregion -->
 
