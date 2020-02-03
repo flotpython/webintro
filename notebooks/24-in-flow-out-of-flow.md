@@ -9,6 +9,7 @@ jupyter:
       extension: .md
       format_name: markdown
       format_version: '1.2'
+      jupytext_version: 1.3.2
   kernelspec:
     display_name: Javascript (Node.js)
     language: javascript
@@ -124,16 +125,6 @@ tools.iframe_html_css("fixed1", fixed1_html, fixed1_css, true)
     not to mention the `float` property
   * see these as **last resort**,  
     only if grid/flex really won't work for you
-
-<!-- #region slideshow={"slide_type": "slide"} -->
-## assignment
-<!-- #endregion -->
-
-* as a conclusion of this overview on CSS, 
-* review your resume so that it becomes responsive
-* it should display properly on a phone, tablet, and laptop
-* hint : each section of course remains untouched no matter the device
-* but the arrangement of the sections on the page changes
 
 <!-- #region slideshow={"slide_type": "slide"} -->
 ## extras

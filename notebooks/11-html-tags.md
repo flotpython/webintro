@@ -9,6 +9,7 @@ jupyter:
       extension: .md
       format_name: markdown
       format_version: '1.2'
+      jupytext_version: 1.3.2
   kernelspec:
     display_name: Javascript (Node.js)
     language: javascript
@@ -256,19 +257,17 @@ tools.two_columns(group_html)
 ### second example of `<div>`
 <!-- #endregion -->
 
-```javascript slideshow={"slide_type": ""} hide_input=false
+```javascript slideshow={"slide_type": ""} hide_input=true
 group2_html = `<div> 
-&lt;div&gt; it is an essential unit brick for creating a page layout
+the 'div' tag is an essential unit brick for creating a page layout
 </div>
-
 <div style="position: absolute;
             bottom: 20px; right: 20px;
             background-color: aquamarine;"> 
-<p>if you inspect a real page, you will see </p>
-<p>that &lt;div&gt; elements are
-   typically all over the place</p>
-</div>
-`;
+  <p>if you inspect a real page, you will see </p>
+  <p>that 'div's elements are
+     typically all over the place</p>
+</div>`;
 tools.two_columns(group2_html)
 ```
 

@@ -126,7 +126,7 @@ tools.iframe_samples_html_css("transition1")
 <!-- #endregion -->
 
 ```javascript hide_input=true slideshow={"slide_type": "-"}
-tools.iframe_samples_html_css("transition2")
+tools.iframe_samples_html_css("transition2", true)
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->

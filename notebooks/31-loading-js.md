@@ -87,7 +87,7 @@ tools.init();
 * through a `<script>` tag
 <!-- #endregion -->
 
-<!-- #region cell_style="center" hide_input=false slideshow={"slide_type": ""} -->
+<!-- #region cell_style="center slideshow={"slide_type": ""} -->
 ```html
 <script>
     
