@@ -9,11 +9,12 @@ jupyter:
       extension: .md
       format_name: markdown
       format_version: '1.2'
+      jupytext_version: 1.3.2
   kernelspec:
     display_name: Javascript (Node.js)
     language: javascript
     name: javascript
-  notebookname: placeholder
+  notebookname: tools intro
   rise:
     autolaunch: true
     slideNumber: c/t
@@ -47,7 +48,7 @@ jupyter:
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": ""} -->
-# optional topics
+# tools - intro
 <!-- #endregion -->
 
 ```javascript
