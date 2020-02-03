@@ -230,11 +230,7 @@ console.log(array.indexOf("absent"))
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-### iterating over an array
-<!-- #endregion -->
-
-<!-- #region cell_style="split" -->
-**common pitfall**
+### iterating over an array (common pitfall)
 <!-- #endregion -->
 
 <!-- #region cell_style="split" -->

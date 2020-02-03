@@ -107,15 +107,13 @@ within the browser though, things are different
 we have seen many examples already
 
 ```javascript
+// trigger once the document is loaded
 window.addEventListener(
     "load", 
     function() { console.log("page loaded"); }
 );
-```
 
-or 
-
-```javascript
+// trigger in a fixed amount of time
 setTimeout(
     function () { console.load("10 seconds later"); },
     10000);
@@ -152,8 +150,7 @@ window.addEventListener(
 * see the `context` variable in the example below
 
 ```javascript
-// remember this code runs in a node.js instance
-// so there is no 'window' global in this runtime 
+// here the 'context' variable is not visible
 { 
     let context = {a:1, b:2};
     setTimeout( 
@@ -161,8 +158,14 @@ window.addEventListener(
             console.log("context is", context);
         },
         2000);
-    console.log("timeout armed");
+    console.log("NOW timeout armed");
 } 
+// here neither
+try {
+    context
+} catch(err) {
+    console.log(`OOPS ${err.message})`)
+}
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
@@ -190,7 +193,6 @@ window.addEventListener(
 * but it is still reachable  
   from the callback
 * as it was *captured* in the closure
-
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "slide"} -->
@@ -234,3 +236,62 @@ console.log("armed")
   and fit the pieces into functions
 * it easily becomes hard to read and modify  
   especially if there is logic involved
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+## promises
+<!-- #endregion -->
+
+a relatively new alternative to callbacks that tries to address the 'pyramid of Doom' as described in the article mentioned above
+
+the following example tries to illustrate
+* that promises can deal with error conditions
+* and that they allow to pass return values along the chain
+
+as you will see however, it clearly gets some time to be able to read promises fluently :)
+
+```javascript slideshow={"slide_type": "slide"}
+// this is just an accessory cell
+
+// we declare a variable that will 
+
+// the next cell will run OK 
+// for the first time
+// and fail for the second time
+
+failure_toggle = 1
+```
+
+```javascript slideshow={"slide_type": "slide"}
+new Promise(
+    function(resolve, reject) {
+
+        // make it work or fail every other time
+        failure_toggle = ! failure_toggle;
+      
+        // a promise must use resolve or reject exactly once
+        // depending on successful or not
+        if ( failure_toggle) {
+            // in case of failure, do not wait
+            reject(1);
+        } else {
+            // in case of success, wait for 1 s
+            setTimeout(() => resolve(1), 500);
+        }
+    }).then(
+        // first argument to then is in case of success (resolve is used)
+        (result) => { console.log(result); 
+                      return result * 2;},
+        // second is for the cases where reject is called
+        (result) => console.log(`error with ${result}`)
+    ).then(
+      function(result) { 
+          console.log(result); 
+          return result * 3;
+});
+```
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+### more on promises and async
+
+for those interested, more details on promises can be found in the rest of [this chapter on javascript.info](https://javascript.info/async) [starting here](https://javascript.info/promise-basics)
+<!-- #endregion -->
