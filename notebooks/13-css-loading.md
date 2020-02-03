@@ -9,6 +9,7 @@ jupyter:
       extension: .md
       format_name: markdown
       format_version: '1.2'
+      jupytext_version: 1.3.2
   kernelspec:
     display_name: Javascript (Node.js)
     language: javascript
@@ -117,10 +118,10 @@ tools.init();
 * it is **less recommended** as it kind of ruins
 * desired **separation** between **contents** and **presentation**
 
-<!-- #region slideshow={"slide_type": "slide"} hide_input=false -->
+<!-- #region slideshow={"slide_type": "slide"} -->
 ```html
 <p> CSS can be inlined right into the HTML 
-    as a &lt;style&gt; tag
+    as a <style> tag
 </p>
 <style>
   p {

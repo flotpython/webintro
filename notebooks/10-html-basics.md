@@ -9,6 +9,7 @@ jupyter:
       extension: .md
       format_name: markdown
       format_version: '1.2'
+      jupytext_version: 1.3.2
   kernelspec:
     display_name: Javascript (Node.js)
     language: javascript
@@ -214,7 +215,7 @@ your first JavaScript code
 * referred to in all documentation as "*the DOM*"
 <!-- #endregion -->
 
-<!-- #region cell_style="split" hide_input=false slideshow={"slide_type": "slide"} trusted=true -->
+<!-- #region cell_style="split" slideshow={"slide_type": "slide"} trusted=true -->
 this HTML fragment
 ```html
 <html>

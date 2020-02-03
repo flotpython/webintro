@@ -76,6 +76,6 @@ tools.init();
     and observe its responsive behaviour
 <!-- #endregion -->
 
-```javascript hide_input=true
+```javascript hide_input=true slideshow={"slide_type": "slide"}
 tools.iframe_exo("monarque/resume", true, true)
 ```
