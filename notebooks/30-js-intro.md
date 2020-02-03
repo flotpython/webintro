@@ -258,7 +258,8 @@ tools.iframe_html_css_js("randomdots", randomdots_html, randomdots_css, randomdo
 #### things to note about example #2 :
 
 * adding to the DOM to create new content
-* `the_walker` is a JavaScript *object*,  
+  (createElementNS and append)
+* `the_board` is a JavaScript *object*,  
   i.e. composite data keyed on `w`, `h`, etc…  
   more on this later
 <!-- #endregion -->
@@ -308,7 +309,7 @@ and also, about asynchronicity :
 in our 2 examples, we have seen 3 callbacks already
 
 * ex.1 : `onclick="toggle()"`  
-* ex.2 : `window.setTimeout(run, 400);` 
+* ex.2 : `window.setTimeout(() => this.run(), 400)` 
 * ex.2 : `window.onload = function () { ` 
 
 <!-- #region slideshow={"slide_type": "slide"} -->
