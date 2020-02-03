@@ -102,7 +102,7 @@ tools.init();
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-## `<script src="...">` : load a URL
+## `<script src="..."></script>` : load a URL
 <!-- #endregion -->
 
 * most often though, code is stored in a separate location
@@ -111,7 +111,7 @@ tools.init();
 * for that, use `<script src="some-url"></script>` 
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-### `<script src="...">` - exemples
+### `<script src="..."></script>` - examples
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": ""} -->
@@ -124,6 +124,6 @@ tools.init();
   <span style="font-size:0.4em"><code>&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js&quot;&gt; &lt;/script&gt;</code></span>  
   loads jQuery (more on that later)  
     from a publicly available CDN
-  
+    (Content Delivery Network)  
   
 <!-- #endregion -->
