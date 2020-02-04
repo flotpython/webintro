@@ -102,6 +102,10 @@ that we will cover briefly later on
 however this remains quite convenient  
 if you use only a handful of 3rd party tools
 
+
+<p class="rise-footnote"> jQuery being mostly <b>browser-oriented</b>, 
+    running jQuery examples right in the notebook is not possible at this time</p>
+
 <!-- #region slideshow={"slide_type": "slide"} -->
 ## back to jQuery
 <!-- #endregion -->
@@ -118,14 +122,129 @@ as per <https://jquery.com>
 ## how to use
 <!-- #endregion -->
 
-* after importing jQuery, the whole module is available as the global `$` variable 
-* (and yes, this is legal in JavaScript)
+* after importing jQuery, the whole module is available as the global `$` variable  
+  (and yes, this is legal in JavaScript)
+* you can use `jQuery` instead of `$` if you prefer
 
-
-```javascript slideshow={"slide_type": "slide"}
+```javascript slideshow={"slide_type": "slide"} hide_input=true
 tools.iframe_exo("jquery", true, true)
 ```
 
-```javascript
+<!-- #region slideshow={"slide_type": "slide"} -->
+## CSS selectors
+<!-- #endregion -->
 
+* the `$` function, when called with a string, interprets it as a CSS selector
+* and returns a JavaScript object
+* on which further jQuery treatments can be applied
+* it will implicitly apply those treatments **on all the matching DOM elements**
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+### CSS selectors example
+<!-- #endregion -->
+
+<!-- #region slideshow={"slide_type": ""} -->
+for example this one-liner would hide  
+all elements of class `to-hide`
+```javascript
+$(".to-hide").hide()
 ```
+
+which is admittedly **much simpler** than using native JavaScript functions 
+<!-- #endregion -->
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+## event handlers
+<!-- #endregion -->
+
+likewise jQuery makes event handling nicer
+```
+$("#button-container button").on( 
+    "click",
+     function( event ) {
+        $("#banner-message").show();
+});
+```
+
+would require much more verbose code if written in pure JavaScript
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+## common idiom to run code at load-time
+<!-- #endregion -->
+
+<!-- #region -->
+the `$` function, when called **on a function**, means to add it to the list of things to do once the page has loaded
+
+```javascript
+// using an arrow function
+$(() => console.log("loaded"))
+
+// using an anonymous function
+$(function() {console.log("loaded")})
+
+// using a named function
+function loaded() {console.log("loaded")}
+$(loaded)
+```
+<!-- #endregion -->
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+## networking
+<!-- #endregion -->
+
+* your javascript code is allowed to issue network requests
+* here again jQuery has a convenience tool called `$.ajax`
+* which makes things easier than with pure JavaScript
+* let us see how the example works exactly
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+### xkcd in the example (1)
+<!-- #endregion -->
+
+<!-- #region cell_style="center" -->
+* first step is to issue a request to the `url`  
+  you can use a new browser page, and paste the URL in the address bar  
+  you will see the kind of text that the request returns 
+  
+![](../media/xkcd-pass1.png)
+
+* this format is called JSON  
+  it is a rather portable, and easy to read, format
+  you probably already have used data exposed in JSON
+<!-- #endregion -->
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+### xkcd in the example (2)
+<!-- #endregion -->
+
+* this first request returns can, and probably will, take a noticeable time
+* `$.ajax` arranges so that once it returns:
+  * the result is parsed as being a JSON format (`dataType: "json"`)
+  * and the `success` callback function triggers
+* what the callback does step by step is:
+  * search by id the element `#xkcd-content`
+  * create under it 2 new sibling elements `<h1>` and `<img>`
+  * and fill them with data from the responsed JSON
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+### xkcd in the example (3)
+<!-- #endregion -->
+
+this is what the DOM looks like after the success callback has completed  
+because `<img>`'s `src` attribute has changed  
+the browser goes and fetches the actual image content and displays it
+
+![](../media/xkcd-pass2.png)
+
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+## and much more
+<!-- #endregion -->
+
+* jQuery was there at the very beginning  
+* as it was both **concise**
+  * and **cross-browser**  
+    (ensuring the API worked the same everywhere)
+* it has become a de facto standard
+* it is worth taking [a look at the API documentation](https://api.jquery.com/) to get a sense of all the possibilities
+* starting maybe with [the section on manipulation](https://api.jquery.com/category/manipulation/)

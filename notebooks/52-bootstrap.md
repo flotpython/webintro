@@ -71,6 +71,6 @@ originally developped by twitter, [bootstrap](https://getbootstrap.com/docs/4.4/
 
 
 
-```javascript slideshow={"slide_type": "slide"}
+```javascript slideshow={"slide_type": "slide"} hide_input=true
 tools.iframe_exo("bootstrap", true, true)
 ```
