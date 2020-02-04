@@ -78,7 +78,7 @@ then
 * so that your resume background alternates  
   every 1 second between 2 different colours
 
-```javascript slideshow={"slide_type": "slide"} hide_input=false
+```javascript slideshow={"slide_type": "slide"} hide_input=true
 tools.iframe_exo("resume", true)
 ```
 
@@ -132,28 +132,30 @@ typical sequence is something like
 <!-- #endregion -->
 
 ```javascript cell_style="split"
-function one_step() {
-    console.log("beep");
-}
-
 // so that we can stop the running loop
 active = true;
 
-function run_forever() {
-    if (active) 
-        one_step();
-    setTimeout(run_forever, 1000);
+function one_step() {
+    if (active)
+        console.log("beep");
 }
+
+let interval = setInterval(one_step, 1000)
+
 ```
 
 ```javascript cell_style="split"
-run_forever() 
+// note that our JS interpreter 
+// is still responsive
+// we can stop the endless loop
+active = false
 ```
 
-```javascript
-// note that our JS interpreter is still responsive
-// fortunately, so I can stop the endless loop
-active = false
+```javascript cell_style="split"
+// it's also possible to stop it
+// altogether
+active = true;
+clearInterval(interval)
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
@@ -197,8 +199,8 @@ as mentioned earlier already, you can
 * see the CSS rules that apply to an element 
 * find out where these styles come from
 * see the computed values for each property
-* interactively change a property and see effect immediately
-  (shown on next slide)
+* interactively change a property and  
+  see effect immediately (shown on next slide)
 
 <!-- #region slideshow={"slide_type": "slide"} -->
 ### visualizing a changed property
@@ -280,7 +282,7 @@ as mentioned earlier already, you can
 ## the browser cache (yet again)
 <!-- #endregion -->
 
-* the browser caches thing (see CSS loading)
+* the browser cache thing (see CSS loading)
 * applies exactly the same  
 * in the case of JavaScript code
 
