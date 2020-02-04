@@ -74,3 +74,11 @@ originally developped by twitter, [bootstrap](https://getbootstrap.com/docs/4.4/
 ```javascript slideshow={"slide_type": "slide"} hide_input=true
 tools.iframe_exo("bootstrap", true, true)
 ```
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+## practice
+<!-- #endregion -->
+
+* make sure you use `git` to store the latest version of your resume
+* inject `bootstrap.css` into your resume
+* 
