@@ -18,7 +18,7 @@ def tracks(coursedir):
                         coursedir=coursedir,
                         notebooks=notebooks_by_pattern(coursedir,"notebooks/1*.md")),
                 ],
-              description="n/a"),
+              description="the elements of style"),
         Track(coursedir,
               name="D2 : CSS layout - JS intro",
               sections=[
@@ -29,9 +29,9 @@ def tracks(coursedir):
                         coursedir=coursedir,
                         notebooks=notebooks_by_pattern(coursedir,"notebooks/3*.md")),
                 ],
-              description="n/a"),
+              description="layout and programming"),
 #        Track(coursedir,
-#              name="D3 : popular tools",
+#              name="D3 : some tools",
 #              sections=[
 #                # Section(name="JS unleashed",
 #                #        coursedir=coursedir,
@@ -40,7 +40,7 @@ def tracks(coursedir):
 #                        coursedir=coursedir,
 #                        notebooks=notebooks_by_pattern(coursedir,"notebooks/5*.md")),
 #                ],
-#              description="n/a"),
+#              description="popular tools"),
 #        Track(coursedir,
 #              name="Optional content",
 #              sections=[
@@ -51,5 +51,5 @@ def tracks(coursedir):
 #                        coursedir=coursedir,
 #                        notebooks=notebooks_by_pattern(coursedir,"notebooks/7*.md")),
 #                ],
-#              description="n/a"),
+#              description="optional material"),
         ]
