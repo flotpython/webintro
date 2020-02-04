@@ -8,7 +8,4 @@ function grow() {
     WIDTH += STEP;
 }
 
-function grow_forever() {
-    grow();
-    setTimeout(grow_forever, 2500);
-}
+setInterval(grow, 2000);
