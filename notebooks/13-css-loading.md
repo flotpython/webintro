@@ -171,8 +171,10 @@ tools.two_columns(embedded_html)
 * create a more realistic skeleton for a résumé
   * with 4 sections 'experience', 'education', 'skills' and 'languages'
   * keep it simple for now, nothing too elaborate
-  * make sure all the text gets attached to adapted tags like `<p>` or `<li>` 
-  * and **not** directly under `<body>` like it was done in `hello.html`
+  * make sure all the text gets attached to  
+    adapted tags like `<p>` or `<li>` 
+  * and **not** directly under `<body>`  
+    like it was done in `hello.html`
   * make sure to insert at least one `<a href=...>` hyperlink
 <!-- #endregion -->
 
@@ -185,7 +187,9 @@ tools.two_columns(embedded_html)
   * with some settings that should apply to `mycv.html`
 * add a `<link>` tag in the html `<head>` area
   * load `mycv.html` in a browser
-  * change the CSS and reload the browser page to see the effect
+  * change the CSS and reload  
+    the browser page to see the effect
+* we recommend you use a local git repo all along
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "slide"} -->
