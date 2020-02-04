@@ -173,6 +173,7 @@ tools.two_columns(embedded_html)
   * keep it simple for now, nothing too elaborate
   * make sure all the text gets attached to adapted tags like `<p>` or `<li>` 
   * and **not** directly under `<body>` like it was done in `hello.html`
+  * make sure to insert at least one `<a href=...>` hyperlink
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "slide"} -->
