@@ -58,8 +58,8 @@ tools = require('../js/tools');
 tools.init();
 ```
 
-<!-- #region slideshow={"slide_type": "slide"} -->
-## pythagore
+<!-- #region slideshow={"slide_type": ""} -->
+## exo #1 - pythagore (level: 2/5)
 <!-- #endregion -->
 
 you are tasked to write a "graphical demonstration" for the Pythagorean Theorem, getting inspiration from the page below
@@ -70,8 +70,8 @@ the sample app is not responsive, you will need to open it in a separate window
 tools.iframe_exo("pythagore", true)
 ```
 
-<!-- #region slideshow={"slide_type": "slide"} -->
-## fibonacci and the golden number
+<!-- #region slideshow={"slide_type": ""} -->
+## fibonacci and the golden number (level 3/5)
 
 you are asked to write a small app as a html+css+js that explores the neighbourhood between fibonacci numbers and the golden number, taking - as loose as you want - inspiration from the page below
 
@@ -83,4 +83,28 @@ here again the sample app is not responsive, you will need to open it in a separ
 ```javascript hide_input=true
 // the minified version somehow was not working...
 tools.iframe_exo("fibonacci", true, 'plain-js')
+```
+
+## a snake 
+
+
+* clone the github repo from https://github.com/patorjk/JavaScript-Snake.git
+* open `index.html` in your browser - check that the game works for you
+* could you read the code ?  
+  if not what percentage can you read ?
+
+<!-- #region slideshow={"slide_type": ""} -->
+## a calculator
+<!-- #endregion -->
+
+start from this tutorial here
+https://www.freecodecamp.org/news/how-to-build-an-html-calculator-app-from-scratch-using-javascript-4454b8714b98/
+
+this comes with the html and css template for a - rather nice btw - calculator
+
+the game is to write the javascript companion so that the device actually does calculations
+
+
+```javascript hide_input=true
+tools.iframe_exo("calculator", true, true)
 ```
