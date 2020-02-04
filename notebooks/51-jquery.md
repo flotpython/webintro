@@ -99,7 +99,7 @@ real applications will use more sophisticated tools to deal with dependencies
 most popular being essentially `npm` and/or `yarn`  
 that we will cover briefly later on
 
-however this remains quite convenient  
+however `cdnjs` remains quite convenient  
 if you use only a handful of 3rd party tools
 
 
@@ -122,7 +122,8 @@ as per <https://jquery.com>
 ## how to use
 <!-- #endregion -->
 
-* after importing jQuery, the whole module is available as the global `$` variable  
+* after importing jQuery, the module is available as  
+  the global `$` variable  
   (and yes, this is legal in JavaScript)
 * you can use `jQuery` instead of `$` if you prefer
 
@@ -169,13 +170,18 @@ $("#button-container button").on(
 would require much more verbose code if written in pure JavaScript
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-## common idiom to run code at load-time
+##  run code at load-time
 <!-- #endregion -->
 
 <!-- #region -->
-the `$` function, when called **on a function**, means to add it to the list of things to do once the page has loaded
+a **very common idiom** :  
+
+the `$` function, when called **on a function**,  
+means to add it to the list of things  
+to be done once the page has loaded
 
 ```javascript
+////// 3 equivalent forms 
 // using an arrow function
 $(() => console.log("loaded"))
 
@@ -197,27 +203,25 @@ $(loaded)
 * which makes things easier than with pure JavaScript
 * let us see how the example works exactly
 
-<!-- #region slideshow={"slide_type": "slide"} -->
+<!-- #region cell_style="center" slideshow={"slide_type": "slide"} -->
 ### xkcd in the example (1)
-<!-- #endregion -->
 
-<!-- #region cell_style="center" -->
 * first step is to issue a request to the `url`  
   you can use a new browser page, and paste the URL in the address bar  
   you will see the kind of text that the request returns 
   
 ![](../media/xkcd-pass1.png)
 
-* this format is called JSON  
-  it is a rather portable, and easy to read, format
-  you probably already have used data exposed in JSON
+* this format is called JSON; it is easy to read  
+  from any language; you probably already   
+  have used data exposed in JSON
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "slide"} -->
 ### xkcd in the example (2)
 <!-- #endregion -->
 
-* this first request returns can, and probably will, take a noticeable time
+* this first request can, and probably will, take a noticeable time
 * `$.ajax` arranges so that once it returns:
   * the result is parsed as being a JSON format (`dataType: "json"`)
   * and the `success` callback function triggers
