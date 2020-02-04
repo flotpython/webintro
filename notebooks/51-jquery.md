@@ -206,6 +206,8 @@ $(loaded)
 <!-- #region cell_style="center" slideshow={"slide_type": "slide"} -->
 ### xkcd in the example (1)
 
+[available in a jsfiddle](http://jsfiddle.net/bbalkenhol/mMPXG/)
+
 * first step is to issue a request to the `url`  
   you can use a new browser page, and paste the URL in the address bar  
   you will see the kind of text that the request returns 
