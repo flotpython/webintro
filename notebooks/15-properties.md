@@ -317,11 +317,11 @@ margins are **always excluded**
 ## `box-sizing` (continued)
 <!-- #endregion -->
 
-typical use case is 
+not often needed, but typical use case is 
 
 * you want a given component to take 500px **in total**
 * so the borders and paddings *push content inside*
-* then use `border-padding`
+* then use `box-sizing: border-box`
 
 see also https://css-tricks.com/box-sizing/ 
 that has a live demo
