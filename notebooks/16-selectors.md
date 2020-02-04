@@ -180,15 +180,15 @@ note that here we build a selector that applies on elements that have <b>both</b
 
 ```javascript hide_input=true
 rank_html = `<ul>
-  <li>the first buller</li>
-  <li>the 2nd buller</li>
-  <li>the 3rd buller</li>
-  <li>the 4th buller</li>
-  <li>the 5th buller</li>
-  <li>the 6th buller</li>
-  <li>the 7th buller</li>
-  <li>the 8th buller</li>
-</ul
+  <li>the first bullet</li>
+  <li>the 2nd bullet</li>
+  <li>the 3rd bullet</li>
+  <li>the 4th bullet</li>
+  <li>the 5th bullet</li>
+  <li>the 6th bullet</li>
+  <li>the 7th bullet</li>
+  <li>the 8th bullet</li>
+</ul>
 `;
 rank_css = `li:nth-child(2n+1) {
   background-color: #fee;
