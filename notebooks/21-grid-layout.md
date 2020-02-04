@@ -250,15 +250,3 @@ tools.iframe_html_css("autosize", autosize_html, autosize_css, true)
 <!-- #region slideshow={"slide_type": "slide"} -->
 ![](../media/devel-tools-phone.png)
 <!-- #endregion -->
-
-<!-- #region slideshow={"slide_type": "slide"} -->
-## practice
-<!-- #endregion -->
-
-1. write an HTML document and related CSS style so that the overall layou looks as follows; 
-1. check out how our example displays on narrow devices (width < 512)  
-   implement that behaviour as well (note that the order of sections is changed in narrow mode)
-
-```javascript hide_input=true
-tools.iframe_exo("exo-grid", true, true)
-```

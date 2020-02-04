@@ -169,3 +169,15 @@ another way to use media rules is from `<head>`
 * [this w3schools page](https://www.w3schools.com/cssref/css3_pr_mediaquery.asp) has more details  
   on the admissible **syntax for media rules**
 <!-- #endregion -->
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+## practice
+<!-- #endregion -->
+
+1. write an HTML document and related CSS style so that the overall layou looks as follows; 
+1. check out how our example displays on narrow devices (width < 512)  
+   implement that behaviour as well (note that the order of sections is changed in narrow mode)
+
+```javascript hide_input=true
+tools.iframe_exo("exo-grid", true, true)
+```
