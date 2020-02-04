@@ -149,7 +149,9 @@ function iframe_exo(stem, external, no_js) {
     let html = fs.readFileSync(`${filename}.html`, 'utf8');
     let css = fs.readFileSync(`${filename}.css`, 'utf8');
     let js = "";
-    if (! no_js) 
+    if (no_js == 'plain-js') 
+        js = fs.readFileSync(`${filename}.js`, 'utf8');
+    else if (! no_js) 
         js = fs.readFileSync(`${filename}.min.js`, 'utf8');
     let full_code = `${html}
 ${_injected_css(css)}

@@ -94,7 +94,7 @@ a cool way to play with d3 is to use <https://observablehq.com>, that was develo
     
 <!-- #endregion -->
 
-<!-- #region slideshow={"slide_type": "slide"} -->
+<!-- #region slideshow={"slide_type": ""} -->
 ## a selection
 
 * my favorite, on [Obama's 2013 budget proposal](https://archive.nytimes.com/www.nytimes.com/interactive/2012/02/13/us/politics/2013-budget-proposal-graphic.html)
