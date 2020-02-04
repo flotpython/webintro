@@ -171,5 +171,5 @@ tools.iframe_html_css("flex2", flex2_html, flex2_css, true)
 1. mimick the layout below
 
 ```javascript hide_input=true
-!tools.iframe_exo("exo-flex", true, true)
+tools.iframe_exo("exo-flex", true, true)
 ```

@@ -260,9 +260,5 @@ tools.iframe_html_css("autosize", autosize_html, autosize_css, true)
    implement that behaviour as well (note that the order of sections is changed in narrow mode)
 
 ```javascript hide_input=true
-!tools.iframe_exo("exo-grid", true, true)
-```
-
-```javascript
-
+tools.iframe_exo("exo-grid", true, true)
 ```
