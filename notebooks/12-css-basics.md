@@ -110,7 +110,8 @@ tools.init();
 
 <p class="rise-footnote"> here we also use `target='_'`
 to tell the browser to open the link in another tab/window<br>
-    this is a small detail, so that unintentionally clicking on the link will keep you on this page
+    this is a small detail, so that unintentionally clicking on the link will keep you on this page<br>
+    note that to add a css fragment inside your html code put it inside a &lt;style&gt;&lt;/style&gt;
 </p>
 
 
