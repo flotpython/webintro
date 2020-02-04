@@ -9,6 +9,7 @@ jupyter:
       extension: .md
       format_name: markdown
       format_version: '1.2'
+      jupytext_version: 1.3.2
   kernelspec:
     display_name: Javascript (Node.js)
     language: javascript
@@ -285,6 +286,20 @@ several formats are supported to describe a color :
   * `rgb(128, 0, 255)`
 * opacity (in the [0-1.] range can be given as a fourth argument
   * `rgb(128, 0, 255, 0.2)` will be only 10% opaque, i.e. almost transparent
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+### online resources
+
+* like always, many online sites can help pick a decent color palette
+* personnally I like this one  
+  https://colorhunt.co/palette
+<!-- #endregion -->
+
+<!-- #region slideshow={"slide_type": ""} -->
+<p class="rise-footnote"> 
+    note that you can copy a color code by just clicking it
+</p>
+<!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "slide"} -->
 ## `box-sizing`
