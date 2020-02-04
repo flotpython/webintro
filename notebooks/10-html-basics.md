@@ -158,6 +158,22 @@ tools.two_columns(fragment1)
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "slide"} -->
+## check for devel tools
+<!-- #endregion -->
+
+* if you cannot see the devel tools (see next slide for a glimpse)
+  it means your browser may need additional installation (google for how to do that)
+
+* here's how to check your browser (all this on mac at least)
+
+ * on Safari: you should have a *Develop* menu in the main menubar:  
+  *File Edit View History Bookmarks **Develop** Window*
+ * on Chrome: you should have a ***Developer*** submenu in the *View* menu in the main menubar
+ * on Firefox: you should have a ***Web Developer*** entry in the *Tools* menu in the main menubar
+
+
+
+<!-- #region slideshow={"slide_type": "slide"} -->
 ## *Elements* navigator
 <!-- #endregion -->
 
