@@ -285,7 +285,7 @@ several formats are supported to describe a color :
 * same in decimal: 
   * `rgb(128, 0, 255)`
 * opacity (in the [0-1.] range can be given as a fourth argument
-  * `rgb(128, 0, 255, 0.2)` will be only 10% opaque, i.e. almost transparent
+  * `rgb(128, 0, 255, 0.2)` will be only 20% opaque, i.e. almost transparent
 
 <!-- #region slideshow={"slide_type": "slide"} -->
 ### online resources
