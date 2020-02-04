@@ -299,7 +299,7 @@ and also, about asynchronicity :
 * one very pervasive programming pattern in JavaScript 
 * is the notion of a **callback** 
 * which is a **function**
-* attached to some sort of event
+* attached to some sort of **event**
 * function gets fired when event occurs
 
 <!-- #region slideshow={"slide_type": "slide"} -->
