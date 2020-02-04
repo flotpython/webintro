@@ -64,7 +64,7 @@ our first CSS clause
 
 ```
 a {
-  color: red;
+  color: magenta;
   font-family: times;
 }
 ```
@@ -98,7 +98,7 @@ id_css = `/* will apply ONLY to
  */
 
 p#only-me {
-    background-color: red;
+    background-color: pink;
 }`;
 tools.iframe_html_css("id1", id_html, id_css)
 ```
@@ -314,7 +314,7 @@ inherit_html = `<div class="inheritance">
 <li> under a common ancestor</li>
 </ul>`
 inherit_css = `.inheritance {
-    color: green;
+    color: maroon;
     font-family: times;
 }`;
 tools.iframe_html_css("inheritance", inherit_html, inherit_css)
