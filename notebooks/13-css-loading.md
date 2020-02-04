@@ -176,7 +176,7 @@ tools.two_columns(embedded_html)
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-### practice (ctd)
+### practice (continued)
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": ""} hide_input=true -->
@@ -202,7 +202,7 @@ for performance reasons primarily :
 * may **not reload** the css because it is cached
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-## the browser cache (ctd)
+## the browser cache (continued)
 <!-- #endregion -->
 
 a couple hints and workarounds

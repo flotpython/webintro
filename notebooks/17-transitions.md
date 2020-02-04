@@ -65,7 +65,7 @@ tools.init();
 * or programmatically (typically through JavaScript)
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-### transitions (ctd)
+### transitions (continued)
 * the browser has the ability to perform those changes **smoothly**
   * over a certain duration
   * in a continuous way

@@ -321,7 +321,7 @@ tools.iframe_html_css("inheritance", inherit_html, inherit_css)
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-### inheritance (ctd)
+### inheritance (continued)
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": ""} -->

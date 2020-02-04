@@ -303,7 +303,7 @@ and also, about asynchronicity :
 * function gets fired when event occurs
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-## callbacks - ctd
+## callbacks - continued
 <!-- #endregion -->
 
 in our 2 examples, we have seen 3 callbacks already

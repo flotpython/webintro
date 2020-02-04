@@ -97,7 +97,7 @@ s1 == s2
 </p>
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-### atomic types (ctd)
+### atomic types (continued)
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": ""} -->

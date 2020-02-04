@@ -200,7 +200,7 @@ tools.iframe_html_css("rank-child", rank_html, rank_css);
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-### pseudo-class selectors (ctd)
+### pseudo-class selectors (continued)
 
 * see also [more detailed list of pseudo-class selectors](https://css-tricks.com/pseudo-class-selectors/)
 * in particular `:not()` for negations

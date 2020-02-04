@@ -299,7 +299,7 @@ the `box-sizing` property affects the way `width` and `height` properties are co
 margins are **always excluded** 
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-## `box-sizing` (ctd)
+## `box-sizing` (continued)
 <!-- #endregion -->
 
 typical use case is 
@@ -326,7 +326,7 @@ there are 8 elementary properties that make an element's background
 * `background-color`
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-## `background` (ctd)
+## `background` (continued)
 <!-- #endregion -->
 
 most often this is set through a unique shorthand property `background`

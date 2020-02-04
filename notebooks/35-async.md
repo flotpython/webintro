@@ -169,7 +169,7 @@ try {
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-### closures - ctd
+### closures - continued
 <!-- #endregion -->
 
 <!-- #region cell_style="split" -->
