@@ -9,7 +9,6 @@ jupyter:
       extension: .md
       format_name: markdown
       format_version: '1.2'
-      jupytext_version: 1.3.2
   kernelspec:
     display_name: Javascript (Node.js)
     language: javascript
@@ -192,14 +191,20 @@ tools.iframe_html_css("display-grid-2", grid2_html, grid2_css, true)
 ## auto-sizing
 <!-- #endregion -->
 
+<!-- #region cell_style="split" -->
 * a nice feature of grid display
 * is its ability to auto-organize the grid
 * using an idiom based on
   * `repeat`
   * `auto-fit` 
   * `minmax`
+<!-- #endregion -->
+
+<!-- #region cell_style="split" -->
 * that we illustrate in the next example  
+* see [this doc about minmax()](https://developer.mozilla.org/en-US/docs/Web/CSS/minmax)
 * see also [this blogpost on css-tricks.com](https://css-tricks.com/auto-sizing-columns-css-grid-auto-fill-vs-auto-fit/)
+<!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "slide"} -->
 ## auto-sizing example
