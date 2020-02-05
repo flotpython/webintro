@@ -9,7 +9,6 @@ jupyter:
       extension: .md
       format_name: markdown
       format_version: '1.2'
-      jupytext_version: 1.3.2
   kernelspec:
     display_name: Javascript (Node.js)
     language: javascript
@@ -164,7 +163,7 @@ window.addEventListener(
 try {
     context
 } catch(err) {
-    console.log(`OOPS ${err.message})`)
+    console.log(`OOPS ${err.message}`)
 }
 ```
 
@@ -202,12 +201,14 @@ try {
 an alternative syntax to create functions on the fly
 
 ```javascript cell_style="split"
-// create a function
+// this expression returns 
+// a function object
 (x) => { console.log(`PING x=${x}`); }
 ```
 
 ```javascript cell_style="split"
-// we could have named it
+// we could also have named it
+// 
 foo = (x) => { console.log(`PING x=${x}`); }
 ```
 
@@ -236,6 +237,47 @@ console.log("armed")
   and fit the pieces into functions
 * it easily becomes hard to read and modify  
   especially if there is logic involved
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+## events
+<!-- #endregion -->
+
+so far we have seen a few types of events
+* mostly "load" that is rather crucial
+* there are also builtin events for keyboard / mouse interaction  
+  illustrated on the next example (we use `click` and `keydown`)
+* for more details, see [this section in javascript.info](https://javascript.info/event-details) on all the available events
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+### `addEventListener`
+<!-- #endregion -->
+
+* a fundamental tool to record callback with an event
+* available on most objects
+* observe on the example how the callbacks receive the event in parameter
+* and because we use `console.log(event)` we have the option to inspect the event object in the console, and see all its attributes
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+### events example
+<!-- #endregion -->
+
+```javascript
+
+```
+
+```javascript
+tools.iframe_samples_html_css_js("events", true)
+```
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+### example - observations
+<!-- #endregion -->
+
+notice from the example :
+* how `addEventLister()` are cascaded, just like in the 'pyramid of Doom`
+* how we display the events with `console.log()`; this is useful technique for debugging / inspecting data
+* how we leverage the event object to display meaningful data
+* also that the `.js` file does not export any symbol 
 
 <!-- #region slideshow={"slide_type": "slide"} -->
 ## promises
