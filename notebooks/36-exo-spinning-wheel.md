@@ -9,7 +9,6 @@ jupyter:
       extension: .md
       format_name: markdown
       format_version: '1.2'
-      jupytext_version: 1.3.2
   kernelspec:
     display_name: Javascript (Node.js)
     language: javascript
@@ -31,10 +30,10 @@ jupyter:
     title_sidebar: Contents
     toc_cell: false
     toc_position:
-      height: 247.688px
-      left: 1377.5px
-      top: 138.625px
-      width: 165px
+      height: 247.676px
+      left: 1632.5px
+      top: 122.613px
+      width: 236.484px
     toc_section_display: true
     toc_window_display: true
   version: '1.0'
@@ -156,7 +155,13 @@ let spin = SpinningWheel(100,
 and have the `SpinningClass` code provide default for missing parameters.
 <!-- #endregion -->
 
-### optional assignment 
+### optional assignments
 
 
-Students who have finished the exercise should consider tweaking their code to adapt to this more convenient interface.
+students who have finished the exercise can :
+* tweak their code to adapt to this more convenient interface
+* make the wheel vanish automatically after the timeout
+* add some interactive means to
+  * clear the wheel
+  * create new wheels upon mouse clicks
+* etc…
