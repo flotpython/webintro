@@ -9,7 +9,6 @@ jupyter:
       extension: .md
       format_name: markdown
       format_version: '1.2'
-      jupytext_version: 1.3.2
   kernelspec:
     display_name: Javascript (Node.js)
     language: javascript
@@ -159,99 +158,7 @@ in this further example :
 * button to start / suspend
 
 ```javascript hide_input=true slideshow={"slide_type": "slide"}
-randomdots_html = `<div class="top">
-<span 
-  id="button"
-  onclick="start_stop()">
-start / suspend
-</span>
-
-<svg> </svg>
-</div>`;
-randomdots_css = `.top {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  height: 100%;
-}
-#button {
-  border: 1px solid blue;
-  border-radius: 6px;
-  padding: 10px;
-}
-svg {
-  border: 5px solid #75b79e;
-}
-circle {
-  stroke: #6e5773; 
-  fill: none;
-  stroke-width: 2;
-}`;
-randomdots_js = `const svgNS = "http://www.w3.org/2000/svg";
-
-
-/* generates random circles in specified area */
-class Board {
-    
-    constructor(width, height, start_x, start_y, radius, active) {
-        this.w = width;
-        this.h = height;
-        this.x = start_x;
-        this.y = start_y;
-        this.r = radius;
-        this.active = active;
-    }
-    
-    draw() {
-        let svg = document.querySelector("svg");
-        console.log(svg);
-        let c = document.createElementNS(svgNS, 'circle');
-        c.setAttribute('cx', this.x); // svg's circle center
-        c.setAttribute('cy', this.y);
-        c.setAttribute('r', this.r);  // svg's circle radius
-        svg.append(c);
-    }
-    
-    // compute random position for next circle
-    move(walker) {
-        let [rx, ry] = [Math.random(), Math.random()];
-        this.x = rx * this.w;
-        this.y = ry * this.h;
-    }
-    
-    start_stop() {
-        this.active = ! this.active;
-    }
-    
-    // heartbeat
-    // calling run() once will run it forever
-    // because run() installs itself through a timeout 
-    run() {
-        console.log("in RUN"); 
-        if (this.active) {
-            this.draw();
-            this.move();
-        }
-        // this will cause run() to be called again in 400 ms
-        // that's what makes it run forever
-        setTimeout(() => this.run(), 400);
-    }
-}
-
-let the_board = new Board(400, 100, 100, 50, 4, true);
-
-function start_stop() {
-    the_board.start_stop();
-}
-
-// start the loop, but only once the page is loaded
-window.onload = function () { 
-    let svg = document.querySelector("svg");
-    svg.setAttribute('width', the_board.w);
-    svg.setAttribute('height', the_board.h);
-    the_board.run();
-}`;
-tools.iframe_html_css_js("randomdots", randomdots_html, randomdots_css, randomdots_js, true)
+tools.iframe_samples_html_css_js("randomdots", true)
 ```
 
 <!-- #region slideshow={"slide_type": "slide"} -->
@@ -318,10 +225,8 @@ in our 2 examples, we have seen 3 callbacks already
 
 as far as Web frontend, JavaScript :
 
-* runs **in the browser**  <span style="font-size: small">(FYI can also be used as a regular prog. lang)</span>
-* **full-fledged** modern language,  
-  with objects, modules
+* runs **in the browser**  <span style="font-size: small">(FYI can also be used as a regular programming language)</span>
+* **full-fledged** modern language, with objects, modules…
 * aware of browser objects through globals  
   e.g. `document`, `window`, `console`
 * highly influenced by asynchronicity
-  
