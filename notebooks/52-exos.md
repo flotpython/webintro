@@ -34,7 +34,7 @@ jupyter:
       left: 1477px
       top: 164px
       width: 159.824px
-    toc_section_display: false
+    toc_section_display: true
     toc_window_display: true
   version: '1.0'
 ---
@@ -58,7 +58,19 @@ tools.init();
 ```
 
 <!-- #region slideshow={"slide_type": ""} -->
-## exo #1 - pythagore (level: 2/5)
+## a calculator
+<!-- #endregion -->
+
+start from this tutorial here
+https://www.freecodecamp.org/news/how-to-build-an-html-calculator-app-from-scratch-using-javascript-4454b8714b98/
+
+this comes with the html and css template for a - rather nice btw - calculator
+
+the game is to write the javascript companion so that the device actually does calculations
+
+
+<!-- #region slideshow={"slide_type": ""} -->
+## pythagore
 <!-- #endregion -->
 
 you are tasked to write a "graphical demonstration" for the Pythagorean Theorem, getting inspiration from the page below
@@ -70,7 +82,7 @@ tools.iframe_exo("pythagore", true)
 ```
 
 <!-- #region slideshow={"slide_type": ""} -->
-## fibonacci and the golden number (level 3/5)
+## fibonacci and the golden number 
 
 you are asked to write a small app as a html+css+js that explores the neighbourhood between fibonacci numbers and the golden number, taking - as loose as you want - inspiration from the page below
 
@@ -91,18 +103,10 @@ tools.iframe_exo("fibonacci", true, 'plain-js')
 * open `index.html` in your browser - check that the game works for you
 * could you read the code ?  
   if not what percentage can you read ?
-
-<!-- #region slideshow={"slide_type": ""} -->
-## a calculator
-<!-- #endregion -->
-
-start from this tutorial here
-https://www.freecodecamp.org/news/how-to-build-an-html-calculator-app-from-scratch-using-javascript-4454b8714b98/
-
-this comes with the html and css template for a - rather nice btw - calculator
-
-the game is to write the javascript companion so that the device actually does calculations
-
+* imagine some change that you'd like to make on the game  
+  be it in terms of colors, speed, behaviour, whatever you  
+  think could improve the game  
+  are you able to implement that change ?
 
 ```javascript hide_input=true
 tools.iframe_exo("calculator", true, true)
