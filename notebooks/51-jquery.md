@@ -9,7 +9,6 @@ jupyter:
       extension: .md
       format_name: markdown
       format_version: '1.2'
-      jupytext_version: 1.3.2
   kernelspec:
     display_name: Javascript (Node.js)
     language: javascript
@@ -62,13 +61,16 @@ tools.init();
 ## jQuery is everywhere
 <!-- #endregion -->
 
-jQuery has been very early available  
-with the objective to make common operations,  
-like interactions with the DOM   
+jQuery has been around for a very long time  
+with the objective to make **common operations**,  
+like **interactions with the DOM**   
 much **smoother**, and more **cross-browser**
 
-it is embedded in **many applications**,  
+it is embedded in many applications,  
 so it is a **must know** component
+
+
+<p class="rise-footnote"><i>cross-browser</i> means it provides abstractions that will work everywhere, even if the user's browser is old and lacks some features</p>
 
 <!-- #region slideshow={"slide_type": "slide"} -->
 ## digression : cdnjs
@@ -91,13 +93,15 @@ so it is a **must know** component
 ![](../media/cdnjs-paste.png)
 <!-- #endregion -->
 
+it is easy to import the library from your own html documents
+
 <!-- #region slideshow={"slide_type": "slide"} -->
 ## digression$^2$ 
 <!-- #endregion -->
 
 real applications will use more sophisticated tools to deal with dependencies  
 most popular being essentially `npm` and/or `yarn`  
-that we will cover briefly later on
+that we will cover briefly in the optional material
 
 however `cdnjs` remains quite convenient  
 if you use only a handful of 3rd party tools
@@ -126,6 +130,8 @@ as per <https://jquery.com>
   the global `$` variable  
   (and yes, this is legal in JavaScript)
 * you can use `jQuery` instead of `$` if you prefer
+
+let us start with an example
 
 ```javascript slideshow={"slide_type": "slide"} hide_input=true
 tools.iframe_exo("jquery", true, true)
@@ -244,6 +250,35 @@ the browser goes and fetches the actual image content and displays it
 
 
 <!-- #region slideshow={"slide_type": "slide"} -->
+## example 2
+<!-- #endregion -->
+
+```javascript
+tools.iframe_samples_html_css_js("jquery-colors")
+```
+
+<!-- #region slideshow={"slide_type": "slide"} -->
+## chaining
+<!-- #endregion -->
+
+<!-- #region -->
+a very general idiom is to select, then apply a **series of changes**  
+observe in the example above
+
+```javascript
+        $( "#result" )
+            .html( `That div is ${color}` )
+            .css("color", color);
+```
+
+* selection of the target elements  
+  (here just one, could have been many)
+* apply them the `html()` method to change their content
+* and on the same set of elements
+* change their css property
+<!-- #endregion -->
+
+<!-- #region slideshow={"slide_type": "slide"} -->
 ## and much more
 <!-- #endregion -->
 
@@ -251,6 +286,6 @@ the browser goes and fetches the actual image content and displays it
 * as it was both **concise**
   * and **cross-browser**  
     (ensuring the API worked the same everywhere)
-* it has become a de facto standard
+* it has become a **de facto standard**
 * it is worth taking [a look at the API documentation](https://api.jquery.com/) to get a sense of all the possibilities
 * starting maybe with [the section on manipulation](https://api.jquery.com/category/manipulation/)
