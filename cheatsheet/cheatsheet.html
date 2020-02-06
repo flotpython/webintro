@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="cheatsheet.css">
+    </head>
+<body>
+    <div class="overall">
+
+        <div id="DOM-locating" class="group">
+            <div class="title">DOM locating elements</div>
+
+            <div class="bullet">
+            <code class="code">my_element = document.getElementById("foo")</code>
+            → <span class="what">returns the DOM element with that <code>id</code></span>
+            </div>
+
+            <div class="bullet bullet-sep">
+            <code class="code">my_element = document.querySelector("div#foo")</code>
+            → <span class="what">returns the first DOM element that matches a CSS selector 
+            <br> see also <code>querySelectorAll</code> to get the full list or matching elements.
+            </span>
+            </div>
+
+            <div class="bullet">
+            <code class="code">for (let child of my_element.children) {...}</code>
+            <span class="what">iterates over the children of a given DOM element
+            </span>
+            </div>
+        </div>
+
+        <div id="DOM-changing" class="group">
+            <div class="title">DOM changing / inspecting elements</div>
+
+
+            <div class="bullet">
+            <code class="code">my_element.style.display = "none"</code>
+            <span class="what">change propery <code>display</code> 
+                on <code>my_element</code>
+                <br>to change a property whose name contains a dash,
+                <br> like <code>background-color</code>, use 
+                <br><code>my_element.style.backgroundColor = "none"</code>
+            </div>
+
+            <div class="bullet">
+            <code class="code">my_element.textContent = "text"</code>
+            <span class="what">change the text inside a HTML element
+            </div>
+        </div>
+
+        <div id="arming callbacks" class="group">
+            <div class="title">arm callbacks <span class="normal">
+              <code>a_function</code> denotes a function object</code></span></div>
+
+            <div class="bullet">
+            <code class="code">setInterval(a_function, 400);</code>
+            <span class="what">causes <code>a_function()</code> to be called
+            <br> every 400ms <b>forever</b></span>
+            </div>
+
+            <div class="bullet bullet-sep">
+            <code class="code">setTimeout(a_function, 400);</code>
+            <span class="what">causes <code>a_function()</code> to be called<br><b>once</b> in 400ms</span>
+            </div>
+
+            <div class="bullet">
+            <code class="code">window.onload(a_function);</code>
+            <span class="what">to call <code>a_function()</code> once the page is loaded;</span>
+            </div>
+
+            <div class="bullet">
+            <code class="code">window.addEventListener("load", a_function);</code>
+            <span class="what"><i>same effect as previous one</i>
+            <br>to call <code>a_function()</code> once the page is loaded;</span>
+            </div>
+
+            <div class="bullet">
+            <code class="code">my_element.addEventListener("click", a_function);</code>
+            <span class="what">will cause <code>a_function(event)</code> to be called 
+                <br>each time a user clicks on that element
+                <br>using <i>event</i> the function can access details on that event
+                <br>other event names are available instead of <code>"click"</code>
+                </span>
+            </div>
+
+        </div>
+    </div>
+</body>
