@@ -50,23 +50,11 @@ jupyter:
 # practice : a calculator
 <!-- #endregion -->
 
-```javascript
-// run this cell, and then 
-// click the created button
-tools = require('../js/tools');
-
-tools.init();
-```
-
-<!-- #region slideshow={"slide_type": "slide"} -->
-## a calculator
-<!-- #endregion -->
-
 start from this tutorial here
 https://www.freecodecamp.org/news/how-to-build-an-html-calculator-app-from-scratch-using-javascript-4454b8714b98/
 
-it comes with the html and css template for a - rather nice btw - yet simple, calculator
+it comes **with the html and css template** for a - rather nice btw - yet simple, calculator
 
-the assignment is to write the javascript companion so that the device actually does calculations
-
-
+the assignment is to write the **javascript companion** so that
+* the device **actually does calculations**
+* in a first step, ignore the '.' and just write an integer calculator
