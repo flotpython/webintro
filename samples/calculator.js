@@ -20,6 +20,7 @@ const calculator = document.querySelector('.calculator');
                     let digit = key.textContent;
                     if (needs_clear || displayed == "0") { 
                         display.textContent = digit;
+                        needs_clear = false;
                     } else {
                         display.textContent += digit;
                     }
