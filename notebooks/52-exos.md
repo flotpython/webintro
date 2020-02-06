@@ -47,7 +47,7 @@ jupyter:
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": ""} -->
-# exercices
+# practice - additional assignments
 <!-- #endregion -->
 
 ```javascript
@@ -56,18 +56,6 @@ jupyter:
 tools = require('../js/tools');
 tools.init();
 ```
-
-<!-- #region slideshow={"slide_type": ""} -->
-## a calculator
-<!-- #endregion -->
-
-start from this tutorial here
-https://www.freecodecamp.org/news/how-to-build-an-html-calculator-app-from-scratch-using-javascript-4454b8714b98/
-
-this comes with the html and css template for a - rather nice btw - calculator
-
-the game is to write the javascript companion so that the device actually does calculations
-
 
 <!-- #region slideshow={"slide_type": ""} -->
 ## pythagore
