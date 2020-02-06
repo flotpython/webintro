@@ -2,7 +2,7 @@
     font-size: larger;
     font-weight: bold;
     margin-bottom: 6px;
-    border-bottom: 1px solid blue;
+    border-bottom: 1px solid darkgrey;
 }
 .normal {
     font-size: initial;

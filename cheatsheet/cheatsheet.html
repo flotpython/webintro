@@ -3,7 +3,7 @@
         <link rel="stylesheet" href="cheatsheet.css">
     </head>
 <body>
-    <div class="overall">
+    <div id="overall">
 
         <div id="DOM-locating" class="group">
             <div class="title">DOM locating elements</div>
@@ -14,9 +14,10 @@
             </div>
 
             <div class="bullet bullet-sep">
-            <code class="code">my_element = document.querySelector("div#foo")</code>
-            → <span class="what">returns the first DOM element that matches a CSS selector 
-            <br> see also <code>querySelectorAll</code> to get the full list or matching elements.
+            <code class="code">my_element = document.querySelector(".myclass")</code>
+            → <span class="what">returns <b>the first</b> DOM element that matches
+            <br> a CSS selector; see also <code>querySelectorAll()</code>
+            <br> to get the full list or matching elements.
             </span>
             </div>
 
@@ -46,7 +47,36 @@
             </div>
         </div>
 
-        <div id="arming callbacks" class="group">
+        <div id="DOM-adding" class="group">
+            <div class="title">DOM adding elements</div>
+
+
+            <div class="bullet">
+            <code class="code">my_div = document.createElement('div');</code>
+            <span class="what">create a <code>&lt;div&gt;</code>element; <b>warning</b>
+                <br>it still needs to be inserted somewhere !
+            </div>
+
+            <div class="bullet bullet-sep">
+            <code class="code"><pre>const svgNS = "http://www.w3.org/2000/svg";
+my_circle.createElementNS(svgNS, 'circle');</pre></code>
+            <span class="what">same but for the tags 
+            that belong 
+            <br>in the SVG family (svg itself, circle, rect, etc...)
+            <br>likewise it needs to be grafted in the tree somewhere
+            </div>
+
+            <div class="bullet">
+            <code class="code">father.append(my_div);</code>
+            <span class="what">inserts element <code>my_div</code> 
+            as the last child of element <code>parent</code>
+            <br>this is how the newly-created element can become<br>
+            part of the whole tree
+            </div>
+
+        </div>
+
+        <div id="callbacks" class="group">
             <div class="title">arm callbacks <span class="normal">
               <code>a_function</code> denotes a function object</code></span></div>
 
@@ -61,10 +91,10 @@
             <span class="what">causes <code>a_function()</code> to be called<br><b>once</b> in 400ms</span>
             </div>
 
-            <div class="bullet">
+<!--            <div class="bullet">
             <code class="code">window.onload(a_function);</code>
             <span class="what">to call <code>a_function()</code> once the page is loaded;</span>
-            </div>
+            </div> -->
 
             <div class="bullet">
             <code class="code">window.addEventListener("load", a_function);</code>
