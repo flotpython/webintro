@@ -2,19 +2,23 @@ Calculator = function () {
     const calculator = document.querySelector('.calculator');
     const keys = calculator.querySelector('.calculator__keys');
 
+    let operand = 0;
+    let operator = '';
+    let needs_clear = true;
+
     keys.addEventListener(
         'click', 
-        e => {
+        function(event) {
             let display = document.querySelector(".calculator__display");
             let displayed = display.textContent;
-            if (e.target.matches('button')) {
+            if (event.target.matches('button')) {
                 console.log("click");
-                let key = e.target;
+                let key = event.target;
                 let action = key.dataset.action;
                 if (!action) {
                     console.log("number key");
                     let digit = key.textContent;
-                    if (displayed == "0") { 
+                    if (needs_clear || displayed == "0") { 
                         display.textContent = digit;
                     } else {
                         display.textContent += digit;
@@ -27,21 +31,29 @@ Calculator = function () {
                     } else {
                         display.textContent += '.';
                     }
-
                 } else if (action == 'clear') {
-                    console.log("clearing");
                     display.textContent = '0';
 
                 } else if (action == 'calculate') {
-
+                    let result = operator(parseInt(operand), 
+                                          parseInt(displayed));
+                    display.textContent = `${result}`;
                 } else if (action == 'divide') {
-
+                    operand = displayed;
+                    operator = (x, y) => (x / y);
+                    display.textContent = '0';
                 } else if (action == 'multiply') {
-
+                    operand = displayed;
+                    operator = (x, y) => (x * y);
+                    display.textContent = '0';
                 } else if (action == 'substract') {
-
+                    operand = displayed;
+                    operator = (x, y) => (x - y);
+                    display.textContent = '0';
                 } else if (action == 'add') {
-
+                    operand = displayed;
+                    operator = (x, y) => (x + y);
+                    display.textContent = '0';
                 }
             }
         })
