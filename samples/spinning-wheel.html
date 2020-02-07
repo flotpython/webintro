@@ -3,20 +3,14 @@
     <head>
         <title>a spinning wheel</title>
         <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-        <script type="text/javascript" src="spinning-wheel.min.js" charset="utf-8"></script>
+        <script type="text/javascript" src="spinning-wheel.js" charset="utf-8"></script>
         <link rel="stylesheet" type="text/css" href="spinning-wheel.css">
     </head>
     <body>
-        <h3>wheel will spin for 5 s</h3>
-        <div id="spin-container" class="spinning"></div>
-        <script>
-            window.addEventListener(
-                "load",
-                () => {
-                    let spin = create_spinning_wheel("spin-container");
-                    setTimeout(() => spin.stop(), 5000);
-                }
-           );
-        </script>
+        <div class="flexbox">
+            <div id="message">wheel will spin for 3 s</div>
+            <div id="button">pause/resume</div>
+            <svg id="spin" width="200" height="200"></svg>
+        </div>
     </body>
 </html>
