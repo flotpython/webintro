@@ -48,6 +48,7 @@ jupyter:
 
 # vscode extensions
 
+based on my experience and on this youtube video
 https://www.youtube.com/watch?v=Z5RkLrSDlFA
 
 in an opinionated order of usefulness
@@ -71,6 +72,26 @@ when you rename a tag, it will rename the other (closing or opening) side
 
 say you want to take a fragment and insert a <div> around that, just select and type `⌃ I` (control-i)
 
+<!-- #region slideshow={"slide_type": ""} -->
+## emmet
+
+not technically an extension, a builtin tool to enter html fragments
+
+check out the video, it's kind of like you type a css selector and the tool creates the html tag; cool really
+
+I had never used that because I did not even know about it, but that sounds awesome for productivity
+
+<!-- #endregion -->
+
+## JS-CSS-HTML Formatting
+
+control-click in the document to find tools that will format it nicely
+
+<!-- #region slideshow={"slide_type": ""} -->
+## HTML CSS support
+
+* can't remember exactly what that brings precisely, but it has 5M downloads and I have been using it for a long time
+<!-- #endregion -->
 
 ## open in browser
 
@@ -80,13 +101,4 @@ you can control-click a file in the browser left pane, this gives you the option
 ## auto close tag
 
 well, I take it you guess what that does; although it felt like this was working for me already before I installed this extension
-<!-- #endregion -->
-
-<!-- #region slideshow={"slide_type": ""} -->
-## emmet
-
-not technically an extension, a builtin tool to enter html fragments
-
-check out the video, it's kind of like you type a css selector and the tool creates the html tag; cool really
-
 <!-- #endregion -->
