@@ -70,7 +70,7 @@ when you rename a tag, it will rename the other (closing or opening) side
 
 ## html tag wrapper
 
-say you want to take a fragment and insert a <div> around that, just select and type `⌃ I` (control-i)
+say you want to take a fragment and insert a <code>&lt;div&gt;</code> around that, just select and type `⌃I` (Control-i)
 
 <!-- #region slideshow={"slide_type": ""} -->
 ## emmet
@@ -91,6 +91,8 @@ control-click in the document to find tools that will format it nicely
 ## HTML CSS support
 
 * can't remember exactly what that brings precisely, but it has 5M downloads and I have been using it for a long time
+* my environment has completion for all property names and javascript native methods, I believe all this comes from that extension, although I cannot be 100% positive
+
 <!-- #endregion -->
 
 ## open in browser
@@ -100,5 +102,6 @@ you can control-click a file in the browser left pane, this gives you the option
 <!-- #region slideshow={"slide_type": ""} -->
 ## auto close tag
 
-well, I take it you guess what that does; although it felt like this was working for me already before I installed this extension
+when you type, say <code>&lt;div&gt;</code>, it will automatically add the closing tag; 
+I feel like this was working for me already before I installed this extension, so it's my feeling that it is not (no longer ?) needed 
 <!-- #endregion -->
